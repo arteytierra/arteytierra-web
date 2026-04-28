@@ -1,0 +1,134 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: img/uploads
+public_folder: /img/uploads
+
+site_url: https://arteytierra.org
+display_url: https://arteytierra.org
+logo_url: https://arteytierra.org/assets/logos/ayt-arbol-negro.png
+
+locale: es
+
+collections:
+  # ─────────────────────────────────────────────
+  # CONFIGURACIÓN GENERAL DEL SITIO
+  # ─────────────────────────────────────────────
+  - name: settings
+    label: "⚙️ Configuración general"
+    files:
+      - file: _data/site.json
+        label: "Datos generales y contacto"
+        name: contacto
+        fields:
+          - {label: "Email principal", name: email, widget: string}
+          - {label: "WhatsApp (con código país)", name: whatsapp, widget: string}
+          - {label: "Instagram (handle sin @)", name: instagram, widget: string}
+          - {label: "Dirección", name: direccion, widget: string}
+          - {label: "Frase principal del Hero (ES)", name: hero_es, widget: text}
+          - {label: "Frase principal del Hero (EN)", name: hero_en, widget: text}
+
+  # ─────────────────────────────────────────────
+  # PROYECTOS
+  # ─────────────────────────────────────────────
+  - name: proyectos
+    label: "🏠 Proyectos"
+    label_singular: "Proyecto"
+    folder: _data/proyectos
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - {label: "Nombre del proyecto", name: title, widget: string}
+      - {label: "Tipo", name: tipo, widget: select, options: ["Bioarquitectura","Hidrología","Permacultura","Comunidad","Otro"]}
+      - {label: "Ubicación", name: ubicacion, widget: string}
+      - {label: "Año", name: anio, widget: number, value_type: int, min: 2000, max: 2100}
+      - {label: "Foto principal (cover)", name: foto, widget: image}
+      - label: "Galería (carrusel de fotos)"
+        name: galeria
+        widget: list
+        required: false
+        field: {label: "Foto", name: foto, widget: image}
+      - {label: "Descripción ES", name: descripcion_es, widget: text}
+      - {label: "Descripción EN", name: descripcion_en, widget: text, required: false}
+      - {label: "Mostrar en sitio", name: activo, widget: boolean, default: true}
+
+  # ─────────────────────────────────────────────
+  # CURSOS
+  # ─────────────────────────────────────────────
+  - name: cursos
+    label: "📚 Cursos"
+    label_singular: "Curso"
+    folder: _data/cursos
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - {label: "Nombre del curso", name: title, widget: string}
+      - {label: "Modalidad", name: modalidad, widget: select, options: ["Online","Presencial - Tay Pichín","Presencial - En tu predio"]}
+      - {label: "Duración", name: duracion, widget: string, hint: "Ej: 8 semanas, 5 días, etc."}
+      - {label: "Precio (texto libre)", name: precio, widget: string, hint: "Ej: $80 USD, ARS 120.000, Consultar..."}
+      - {label: "Próxima edición / fecha", name: fecha, widget: string, required: false}
+      - {label: "Imagen", name: imagen, widget: image, required: false}
+      - {label: "Descripción ES", name: descripcion_es, widget: text}
+      - {label: "Descripción EN", name: descripcion_en, widget: text, required: false}
+      - {label: "Mostrar en sitio", name: activo, widget: boolean, default: true}
+
+  # ─────────────────────────────────────────────
+  # TESTIMONIOS
+  # ─────────────────────────────────────────────
+  - name: testimonios
+    label: "💬 Testimonios"
+    label_singular: "Testimonio"
+    folder: _data/testimonios
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - {label: "Nombre", name: title, widget: string}
+      - {label: "Lugar / contexto", name: lugar, widget: string, hint: "Ej: Córdoba, Argentina · Curso Tadelakt 2024"}
+      - {label: "Foto (opcional)", name: foto, widget: image, required: false}
+      - {label: "Testimonio ES", name: cita_es, widget: text}
+      - {label: "Testimonio EN", name: cita_en, widget: text, required: false}
+
+  # ─────────────────────────────────────────────
+  # EQUIPO
+  # ─────────────────────────────────────────────
+  - name: equipo
+    label: "👥 Equipo"
+    label_singular: "Miembro"
+    folder: _data/equipo
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - {label: "Nombre completo", name: title, widget: string}
+      - {label: "Rol", name: rol, widget: string}
+      - {label: "Foto", name: foto, widget: image}
+      - {label: "Bio ES", name: bio_es, widget: text}
+      - {label: "Bio EN", name: bio_en, widget: text, required: false}
+      - {label: "Orden de aparición", name: orden, widget: number, value_type: int, default: 1}
+
+  # ─────────────────────────────────────────────
+  # NOTICIAS / BLOG
+  # ─────────────────────────────────────────────
+  - name: noticias
+    label: "📰 Noticias / Blog"
+    label_singular: "Entrada"
+    folder: _data/noticias
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: "Título", name: title, widget: string}
+      - {label: "Fecha", name: fecha, widget: datetime, default: ""}
+      - {label: "Imagen destacada", name: imagen, widget: image, required: false}
+      - {label: "Resumen corto", name: resumen, widget: text, hint: "1-2 líneas que aparecen en el listado"}
+      - {label: "Contenido", name: body, widget: markdown}
+      - {label: "Publicada", name: publicada, widget: boolean, default: true}

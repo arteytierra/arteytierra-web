@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arte y Tierra — Diseño Ecosistémico del Territorio</title>
+  <meta name="description" content="Bioarquitectura, hidrología regenerativa y aprendizaje vivencial. Colectivo itinerante con sede en Tay Pichín, Sierras de Córdoba, Argentina.">
+  <link rel="icon" type="image/png" href="assets/logos/ayt-arbol-negro.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arte y Tierra">
+  <meta property="og:title" content="Arte y Tierra — Diseño Ecosistémico del Territorio">
+  <meta property="og:description" content="Bioarquitectura, hidrología regenerativa y aprendizaje vivencial. Con sede en Tay Pichín, Sierras de Córdoba, Argentina.">
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1FIiu87VZeJx9D2QH7Xnmk0rZXT-3e6so&sz=w1200">
+  <meta property="og:url" content="https://arteytierra.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Netlify Identity widget (necesario para Decap CMS / login admin) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">ARTE Y TIERRA</div>
+        <div class="nav-logo-sub"><span class="lang-es">Diseño Ecosistémico</span><span class="lang-en">Ecosystemic Design</span></div>
+      </div>
+    </a>
+    <div class="desktop-nav">
+      <a href="servicios.html" class="nav-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="proyectos.html" class="nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+      <a href="cursos.html" class="nav-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+      <a href="taypichin.html" class="nav-link">Tay Pichín</a>
+      <a href="nosotros.html" class="nav-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+      <a href="contacto.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      <button class="lang-btn" onclick="toggleLang()"><span class="lang-es">EN</span><span class="lang-en">ES</span></button>
+    </div>
+    <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══════ MOBILE MENU ═══════ -->
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="servicios.html" onclick="toggleMenu()"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="proyectos.html" onclick="toggleMenu()"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+  <a href="cursos.html" onclick="toggleMenu()"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+  <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
+  <a href="nosotros.html" onclick="toggleMenu()"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+  <a href="contacto.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+  <button class="lang-btn" onclick="toggleLang();toggleMenu();" style="width:fit-content;padding:0.6rem 1.2rem;font-size:0.75rem;"><span class="lang-es">SWITCH TO ENGLISH</span><span class="lang-en">CAMBIAR A ESPAÑOL</span></button>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://drive.google.com/thumbnail?id=1FIiu87VZeJx9D2QH7Xnmk0rZXT-3e6so&sz=w2400" alt="Vista aérea del territorio">
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag"><span class="lang-es">Arte y Tierra · Diseño Ecosistémico del Territorio</span><span class="lang-en">Arte y Tierra · Ecosystemic Territory Design</span></div>
+    <h1 class="hero-title">
+      <span class="lang-es">Diseñamos el territorio<br>como <em>sistema vivo.</em></span>
+      <span class="lang-en">We design territory<br>as a <em>living system.</em></span>
+    </h1>
+    <p class="hero-sub">
+      <span class="lang-es">Bioarquitectura, hidrología regenerativa y aprendizaje vivencial — en cualquier lugar del mundo.</span>
+      <span class="lang-en">Bioarchitecture, regenerative hydrology and experiential learning — anywhere in the world.</span>
+    </p>
+    <div class="cta-row">
+      <a href="proyectos.html" class="btn-primary"><span class="lang-es">Ver proyectos</span><span class="lang-en">See projects</span></a>
+      <a href="servicios.html" class="btn-outline"><span class="lang-es">Nuestros servicios</span><span class="lang-en">Our services</span></a>
+      <a href="contacto.html" class="btn-outline"><span class="lang-es">Escribinos</span><span class="lang-en">Write to us</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>scroll</span></div>
+</section>
+
+<!-- ═══════ MANIFIESTO ═══════ -->
+<section class="section bg-dark">
+  <p class="manif-text">
+    <span class="lang-es">Acompañamos el diseño de hábitats que expresan una forma más <strong>consciente, amorosa y regenerativa</strong> de habitar el planeta.<br><br>Tejemos vínculos entre personas, territorios y propósitos. Escuchamos el paisaje, el agua, quienes lo habitan y quienes sueñan construir allí una vida nueva.<br><br>Trabajamos desde el paradigma del <strong>Sumaq Kawsay</strong> — el Buen Vivir.</span>
+    <span class="lang-en">We accompany the design of habitats that express a more <strong>conscious, loving and regenerative</strong> way of inhabiting the planet.<br><br>We weave connections between people, territories and purpose. We listen to the landscape, the water, those who live there and those who dream of building a new life on that land.<br><br>We work from the paradigm of <strong>Sumaq Kawsay</strong> — the Good Life.</span>
+  </p>
+</section>
+
+<!-- ═══════ STATS ═══════ -->
+<section class="section bg-tierra" style="padding:4rem 2rem;">
+  <div class="stats-grid">
+    <div><div class="stat-number">+10k</div><div class="stat-label"><span class="lang-es">personas impactadas</span><span class="lang-en">people impacted</span></div></div>
+    <div><div class="stat-number">+40</div><div class="stat-label"><span class="lang-es">proyectos realizados</span><span class="lang-en">completed projects</span></div></div>
+    <div><div class="stat-number">+150</div><div class="stat-label"><span class="lang-es">talleres dictados</span><span class="lang-en">workshops held</span></div></div>
+    <div><div class="stat-number">7</div><div class="stat-label"><span class="lang-es">países</span><span class="lang-en">countries</span></div></div>
+  </div>
+</section>
+
+<!-- ═══════ SERVICIOS ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow">
+    <div style="margin-bottom:3.5rem;">
+      <div class="section-label" style="color:var(--monte);"><span class="lang-es">Lo que hacemos</span><span class="lang-en">What we do</span></div>
+      <h2 class="section-title"><span class="lang-es">Cómo transformamos<br>el <em>territorio.</em></span><span class="lang-en">How we transform<br><em>territory.</em></span></h2>
+    </div>
+    <div class="cards-grid">
+      <div class="service-card">
+        <div class="card-img"><img src="https://drive.google.com/thumbnail?id=1nNnv8ToYAmIkJbPA3CN20BjBb9JVeXIX&sz=w1200" alt="Bioarquitectura"></div>
+        <div class="card-body">
+          <div class="card-num">01</div>
+          <h3><span class="lang-es">Bioarquitectura y diseño de hábitat</span><span class="lang-en">Bioarchitecture & habitat design</span></h3>
+          <p><span class="lang-es">Construimos con tierra, madera, piedra y paja. Espacios que no interrumpen el paisaje — que forman parte de él.</span><span class="lang-en">We build with earth, timber, stone and straw. Spaces that don't interrupt the landscape — they become part of it.</span></p>
+          <a href="servicios.html#bioconstruccion" class="card-link"><span class="lang-es">Conocer más →</span><span class="lang-en">Learn more →</span></a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img"><img src="https://drive.google.com/thumbnail?id=1Px9CZqya6KoYqncBbBm2kuMjXHCpWKLA&sz=w1200" alt="Hidrología regenerativa"></div>
+        <div class="card-body">
+          <div class="card-num">02</div>
+          <h3><span class="lang-es">Hidrología regenerativa</span><span class="lang-en">Regenerative hydrology</span></h3>
+          <p><span class="lang-es">El agua no es un recurso que se administra — es un sistema vivo que se puede sanar. Diseñamos para que vuelva a fluir.</span><span class="lang-en">Water is not a resource to be managed — it's a living system that can be healed. We design for it to flow again.</span></p>
+          <a href="servicios.html#hidrologia" class="card-link"><span class="lang-es">Conocer más →</span><span class="lang-en">Learn more →</span></a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img"><img src="https://drive.google.com/thumbnail?id=1jZJ8F-X8qZGRi4j8ZsGMuSLbDVqDFV-q&sz=w1200" alt="Talleres"></div>
+        <div class="card-body">
+          <div class="card-num">03</div>
+          <h3><span class="lang-es">Talleres vivenciales</span><span class="lang-en">Experiential workshops</span></h3>
+          <p><span class="lang-es">Aprendizaje en minga. En Tay Pichín o en tu propio predio — en cualquier parte del mundo.</span><span class="lang-en">Learning through collective work. At Tay Pichín or on your own land — anywhere in the world.</span></p>
+          <a href="cursos.html" class="card-link"><span class="lang-es">Conocer más →</span><span class="lang-en">Learn more →</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROYECTOS HIGHLIGHT ═══════ -->
+<section class="section bg-dark">
+  <div class="section-narrow">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:3.5rem;">
+      <div>
+        <div class="section-label" style="color:var(--ocre);"><span class="lang-es">Obra realizada</span><span class="lang-en">Completed work</span></div>
+        <h2 class="section-title"><span class="lang-es">El territorio<br>como <em>obra.</em></span><span class="lang-en">Territory<br>as <em>craft.</em></span></h2>
+      </div>
+      <a href="proyectos.html" class="btn-outline"><span class="lang-es">Ver todos →</span><span class="lang-en">See all →</span></a>
+    </div>
+    <div class="cards-grid">
+      <a href="proyectos.html#alihuen" class="project-card" style="text-decoration:none;">
+        <div class="card-img"><img src="https://drive.google.com/thumbnail?id=1tbss9WKhyvZE4zSl2UE_rpclHbtClFvB&sz=w1400" alt="Casa Alihuen"></div>
+        <div class="proj-info"><div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div><div class="proj-name">Casa Alihuen</div><div class="proj-meta">Santa Isabel, Córdoba · 2024</div></div>
+      </a>
+      <a href="proyectos.html#armonia" class="project-card" style="text-decoration:none;">
+        <div class="card-img"><img src="https://drive.google.com/thumbnail?id=1Sv2laF9BdDBkJkuHO2vXpwYtXsjCBj6u&sz=w1400" alt="Proyecto Armonía"></div>
+        <div class="proj-info"><div class="proj-type"><span class="lang-es">Hidrología</span><span class="lang-en">Hydrology</span></div><div class="proj-name">Proyecto Armonía</div><div class="proj-meta">Capilla del Monte, Córdoba · 2025</div></div>
+      </a>
+      <a href="proyectos.html#sol" class="project-card" style="text-decoration:none;">
+        <div class="card-img"><img src="https://drive.google.com/thumbnail?id=1CHXf-tI5xGNjM2B2hCO4Sat19KZOn_Kr&sz=w1400" alt="Casa del Sol"></div>
+        <div class="proj-info"><div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div><div class="proj-name">Casa del Sol</div><div class="proj-meta">Santa Isabel, Córdoba · 2023</div></div>
+      </a>
+      <a href="proyectos.html#chelo" class="project-card" style="text-decoration:none;">
+        <div class="card-img"><img src="https://drive.google.com/thumbnail?id=1YSkjWsUtvDqXgfkpnUo3ty-s557scAuC&sz=w1400" alt="La Casa del Chelo"></div>
+        <div class="proj-info"><div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div><div class="proj-name">La Casa del Chelo</div><div class="proj-meta">María Juana, Santa Fé · 2019</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ TAY PICHÍN PREVIEW ═══════ -->
+<section class="bg-blanco">
+  <div class="taypichin-grid">
+    <div class="taypichin-img"><img src="https://drive.google.com/thumbnail?id=1Kw99EG9ZjS_PL9NRGJ-cH1aKxct28Aow&sz=w1600" alt="Tay Pichín"></div>
+    <div class="taypichin-content">
+      <div class="section-label">Tay Pichín · San Marcos Sierras, Córdoba</div>
+      <h2 class="section-title"><span class="lang-es">Un lugar donde<br>todo esto <em>vive.</em></span><span class="lang-en">A place where<br>all of this <em>lives.</em></span></h2>
+      <p class="section-sub"><span class="lang-es">La sede física de Arte y Tierra. Un espacio construido con tierra, madera y piedra donde se enseña, se construye, se hospeda y se aprende juntos.</span><span class="lang-en">The physical home of Arte y Tierra. A space built with earth, timber and stone where we teach, build, host and learn together.</span></p>
+      <div class="tp-items">
+        <div class="tp-item"><div class="tp-item-dot"></div><div class="tp-item-text"><strong><a href="cursos.html" style="color:var(--blanco);text-decoration:none;border-bottom:1px solid var(--ocre);"><span class="lang-es">Ecoescuela →</span><span class="lang-en">Ecoschool →</span></a></strong><span class="lang-es">Cursos intensivos de bioarquitectura y diseño del agua.</span><span class="lang-en">Intensive courses in bioarchitecture and water design.</span></div></div>
+        <div class="tp-item"><div class="tp-item-dot"></div><div class="tp-item-text"><strong>Ecohostel</strong><span class="lang-es">Alojamiento en arquitectura de tierra. Reservas vía Booking y Airbnb.</span><span class="lang-en">Accommodation in earthen architecture. Book via Booking and Airbnb.</span></div></div>
+        <div class="tp-item"><div class="tp-item-dot"></div><div class="tp-item-text"><strong><a href="voluntariado.html" style="color:var(--blanco);text-decoration:none;border-bottom:1px solid var(--ocre);"><span class="lang-es">Inmersión Viva →</span><span class="lang-en">Living Immersion →</span></a></strong><span class="lang-es">15 o 30 días en práctica permacultural.</span><span class="lang-en">15 or 30-day permacultural practice.</span></div></div>
+      </div>
+      <a href="taypichin.html" class="btn-primary" style="align-self:flex-start;"><span class="lang-es">Conocer Tay Pichín →</span><span class="lang-en">Discover Tay Pichín →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ TESTIMONIOS ═══════ -->
+<section class="section bg-tierra">
+  <div class="section-narrow">
+    <div class="section-label" style="color:var(--ocre);text-align:center;margin-bottom:3rem;"><span class="lang-es">Lo que dicen quienes vivieron la experiencia</span><span class="lang-en">What those who lived the experience say</span></div>
+    <div class="cards-grid">
+      <div class="testi-card">
+        <p class="testi-quote"><span class="lang-es">"La Formación Integral en Bioconstrucción me cambió la manera de mirar el habitar. No es solo técnica — es una forma de estar en el mundo."</span><span class="lang-en">"The Integral Bioconstruction Training changed how I look at inhabiting. It's not just technique — it's a way of being in the world."</span></p>
+        <div class="testi-author">— Diego · <span class="lang-es">participante Formación Integral</span><span class="lang-en">Integral Training participant</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote"><span class="lang-es">"Trabajar con Jonatan y el equipo fue encontrar gente que diseña desde el lugar — no desde un catálogo. Cada decisión nació del territorio."</span><span class="lang-en">"Working with Jonatan and the team was finding people who design from the place itself — not from a catalogue. Every decision was born from the land."</span></p>
+        <div class="testi-author">— Franco Colavita · <span class="lang-es">comitente</span><span class="lang-en">client</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote"><span class="lang-es">"Llegué a Tay Pichín pensando que iba a aprender a construir. Me fui sabiendo escuchar el agua, la tierra, y a quienes la habitan."</span><span class="lang-en">"I arrived at Tay Pichín thinking I would learn to build. I left knowing how to listen to water, earth, and those who inhabit them."</span></p>
+        <div class="testi-author">— <span class="lang-es">participante taller bioconstrucción</span><span class="lang-en">bioconstruction workshop participant</span></div>
+      </div>
+    </div>
+    <!-- Videos testimoniales -->
+    <div class="video-grid" style="margin-top:3rem;">
+      <div class="video-thumb" onclick="openLightbox('tj0cO4OC2lw')" role="button" tabindex="0" aria-label="Ver testimonio de Sofía">
+        <img src="https://img.youtube.com/vi/tj0cO4OC2lw/maxresdefault.jpg" alt="Testimonio Sofía" loading="lazy">
+        <div class="video-play"><div class="video-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+        <div class="video-caption">Sofía</div>
+      </div>
+      <div class="video-thumb" onclick="openLightbox('p-ckc6jbu9k')" role="button" tabindex="0" aria-label="Ver testimonio de Diego">
+        <img src="https://img.youtube.com/vi/p-ckc6jbu9k/maxresdefault.jpg" alt="Testimonio Diego" loading="lazy">
+        <div class="video-play"><div class="video-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+        <div class="video-caption">Diego</div>
+      </div>
+      <div class="video-thumb" onclick="openLightbox('hL37TaUY9qE')" role="button" tabindex="0" aria-label="Ver testimonio de Franco Colavita">
+        <img src="https://img.youtube.com/vi/hL37TaUY9qE/maxresdefault.jpg" alt="Testimonio Franco Colavita" loading="lazy">
+        <div class="video-play"><div class="video-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+        <div class="video-caption">Franco Colavita</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA FINAL ═══════ -->
+<section class="cta-block">
+  <h2 class="cta-title"><span class="lang-es">¿Tenés un proyecto<br>en mente?</span><span class="lang-en">Do you have a project<br>in mind?</span></h2>
+  <p class="cta-sub"><span class="lang-es">Contanos sobre tu terreno, tu idea, tu sueño. Trabajamos en cualquier parte del mundo.</span><span class="lang-en">Tell us about your land, your idea, your vision. We work anywhere in the world.</span></p>
+  <a href="contacto.html" class="btn-primary" style="font-size:0.75rem;padding:1rem 2.5rem;"><span class="lang-es">Escribinos</span><span class="lang-en">Write to us</span></a>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img class="footer-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+          <div>
+            <div class="footer-logo">ARTE Y TIERRA</div>
+            <div class="footer-tagline"><span class="lang-es">Diseño Ecosistémico del Territorio</span><span class="lang-en">Ecosystemic Territory Design</span></div>
+          </div>
+        </div>
+        <p class="footer-addr">Tay Pichín · San Marcos Sierras<br>Córdoba, Argentina</p>
+      </div>
+      <div>
+        <div class="footer-col-title"><span class="lang-es">Secciones</span><span class="lang-en">Sections</span></div>
+        <a href="servicios.html" class="footer-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+        <a href="proyectos.html" class="footer-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+        <a href="cursos.html" class="footer-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+        <a href="taypichin.html" class="footer-link">Tay Pichín</a>
+        <a href="nosotros.html" class="footer-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+        <a href="contacto.html" class="footer-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      </div>
+      <div>
+        <div class="footer-col-title">Social</div>
+        <a href="https://instagram.com/arteytierrabioconstruccion" class="footer-link">Instagram</a>
+        <a href="https://youtube.com/@arteytierra24" class="footer-link">YouTube</a>
+        <a href="https://wa.me/5493549431594" class="footer-link">WhatsApp</a>
+        <a href="mailto:info.arteytierra@gmail.com" class="footer-link">Email</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Arte y Tierra. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span></p>
+      <p class="footer-copy">arteytierra.org</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5493549431594" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<div id="lightbox" class="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">✕</button>
+    <iframe allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

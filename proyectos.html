@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos — Arte y Tierra</title>
+  <meta name="description" content="Portfolio de proyectos de bioarquitectura e hidrología regenerativa en Argentina, Colombia, Perú, Bolivia, Italia y Francia.">
+  <link rel="icon" type="image/png" href="assets/logos/ayt-arbol-negro.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arte y Tierra">
+  <meta property="og:title" content="Proyectos — Arte y Tierra">
+  <meta property="og:description" content="Portfolio de proyectos de bioarquitectura e hidrología regenerativa en Argentina, Colombia, Perú, Bolivia, Italia y Francia.">
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1tbss9WKhyvZE4zSl2UE_rpclHbtClFvB&sz=w1200">
+  <meta property="og:url" content="https://arteytierra.org/proyectos.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="solid-nav">
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">ARTE Y TIERRA</div>
+        <div class="nav-logo-sub"><span class="lang-es">Diseño Ecosistémico</span><span class="lang-en">Ecosystemic Design</span></div>
+      </div>
+    </a>
+    <div class="desktop-nav">
+      <a href="servicios.html" class="nav-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="proyectos.html" class="nav-link active"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+      <a href="cursos.html" class="nav-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+      <a href="taypichin.html" class="nav-link">Tay Pichín</a>
+      <a href="nosotros.html" class="nav-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+      <a href="contacto.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      <button class="lang-btn" onclick="toggleLang()"><span class="lang-es">EN</span><span class="lang-en">ES</span></button>
+    </div>
+    <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="servicios.html" onclick="toggleMenu()"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="proyectos.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+  <a href="cursos.html" onclick="toggleMenu()"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+  <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
+  <a href="nosotros.html" onclick="toggleMenu()"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+  <a href="contacto.html" onclick="toggleMenu()"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+</div>
+
+<!-- ═══════ PAGE HERO ═══════ -->
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="https://drive.google.com/thumbnail?id=1tbss9WKhyvZE4zSl2UE_rpclHbtClFvB&sz=w2000" alt=""></div>
+  <div class="page-hero-content">
+    <div class="page-hero-tag"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></div>
+    <h1><span class="lang-es">Cada proyecto,<br>un <em>territorio distinto.</em></span><span class="lang-en">Every project,<br>a <em>different territory.</em></span></h1>
+    <p><span class="lang-es">+40 proyectos realizados en Argentina, Colombia, Perú, Bolivia, Italia y Francia. Cada lugar tiene su propio lenguaje — y cada obra responde a él.</span><span class="lang-en">+40 projects across Argentina, Colombia, Peru, Bolivia, Italy and France. Every place has its own language — and every work responds to it.</span></p>
+  </div>
+</section>
+
+<!-- ═══════ FILTROS + GALERÍA ═══════ -->
+<section class="section bg-dark">
+  <div class="section-narrow">
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterProjects('all')"><span class="lang-es">Todos</span><span class="lang-en">All</span></button>
+      <button class="filter-btn" onclick="filterProjects('bio')"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></button>
+      <button class="filter-btn" onclick="filterProjects('hidro')"><span class="lang-es">Hidrología</span><span class="lang-en">Hydrology</span></button>
+      <button class="filter-btn" onclick="filterProjects('taller')"><span class="lang-es">Talleres</span><span class="lang-en">Workshops</span></button>
+    </div>
+
+    <div class="cards-grid">
+
+      <!-- 1. Casa Alihuen -->
+      <div id="alihuen" class="project-card" data-type="bio">
+        <div class="proj-carousel">
+          <div class="slides">
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1tbss9WKhyvZE4zSl2UE_rpclHbtClFvB&sz=w1400" alt="Casa Alihuen — bioarquitectura en Santa Isabel" loading="lazy"></div>
+          </div>
+          <button class="arrow prev" aria-label="Anterior">‹</button>
+          <button class="arrow next" aria-label="Siguiente">›</button>
+          <div class="proj-counter">1 / 1</div>
+          <div class="dots"><button class="dot active" aria-label="1"></button></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
+          <div class="proj-name">Casa Alihuen</div>
+          <div class="proj-meta">Santa Isabel, Córdoba, Argentina · 2024</div>
+          <p class="proj-desc"><span class="lang-es">Vivienda familiar en bioconstrucción con técnicas de tierra cruda. Diseño bioclimático adaptado al clima serrano de Córdoba.</span><span class="lang-en">Family home built with bioconstruction and raw-earth techniques. Bioclimatic design adapted to Córdoba's mountain climate.</span></p>
+          <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
+        </div>
+      </div>
+
+      <!-- 2. Proyecto Armonía -->
+      <div id="armonia" class="project-card" data-type="hidro">
+        <div class="proj-carousel">
+          <div class="slides">
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1Sv2laF9BdDBkJkuHO2vXpwYtXsjCBj6u&sz=w1400" alt="Proyecto Armonía — hidrología regenerativa en Capilla del Monte" loading="lazy"></div>
+          </div>
+          <button class="arrow prev" aria-label="Anterior">‹</button>
+          <button class="arrow next" aria-label="Siguiente">›</button>
+          <div class="proj-counter">1 / 1</div>
+          <div class="dots"><button class="dot active" aria-label="1"></button></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-type"><span class="lang-es">Hidrología</span><span class="lang-en">Hydrology</span></div>
+          <div class="proj-name">Proyecto Armonía</div>
+          <div class="proj-meta">Capilla del Monte, Córdoba, Argentina · 2025</div>
+          <p class="proj-desc"><span class="lang-es">Diseño hidrológico Keyline para captación e infiltración del agua de lluvia. Recuperación del cañadón y regeneración del suelo.</span><span class="lang-en">Keyline hydrological design for rainwater capture and infiltration. Gully recovery and soil regeneration.</span></p>
+          <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
+        </div>
+      </div>
+
+      <!-- 3. Casa del Sol -->
+      <div id="sol" class="project-card" data-type="bio">
+        <div class="proj-carousel">
+          <div class="slides">
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1CHXf-tI5xGNjM2B2hCO4Sat19KZOn_Kr&sz=w1400" alt="Casa del Sol — bioconstrucción en Santa Isabel" loading="lazy"></div>
+          </div>
+          <button class="arrow prev" aria-label="Anterior">‹</button>
+          <button class="arrow next" aria-label="Siguiente">›</button>
+          <div class="proj-counter">1 / 1</div>
+          <div class="dots"><button class="dot active" aria-label="1"></button></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
+          <div class="proj-name">Casa del Sol</div>
+          <div class="proj-meta">Santa Isabel, Córdoba, Argentina · 2023</div>
+          <p class="proj-desc"><span class="lang-es">Vivienda con orientación solar pasiva, muros de adobe y techos verdes. Energéticamente autónoma.</span><span class="lang-en">Home with passive solar orientation, adobe walls and green roofs. Energy-autonomous.</span></p>
+          <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
+        </div>
+      </div>
+
+      <!-- 4. Casa del Chelo -->
+      <div id="chelo" class="project-card" data-type="bio">
+        <div class="proj-carousel">
+          <div class="slides">
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1YSkjWsUtvDqXgfkpnUo3ty-s557scAuC&sz=w1400" alt="La Casa del Chelo — bioconstrucción en Santa Fé" loading="lazy"></div>
+          </div>
+          <button class="arrow prev" aria-label="Anterior">‹</button>
+          <button class="arrow next" aria-label="Siguiente">›</button>
+          <div class="proj-counter">1 / 1</div>
+          <div class="dots"><button class="dot active" aria-label="1"></button></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
+          <div class="proj-name">La Casa del Chelo</div>
+          <div class="proj-meta">María Juana, Santa Fé, Argentina · 2019</div>
+          <p class="proj-desc"><span class="lang-es">Una de las primeras obras del colectivo. Adobe, fardos de paja y madera local en armonía con el paisaje pampeano.</span><span class="lang-en">One of the collective's first works. Adobe, straw bales and local wood in harmony with the pampean landscape.</span></p>
+          <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
+        </div>
+      </div>
+
+      <!-- 5. Ecoescuela Tay Pichín -->
+      <div class="project-card" data-type="taller">
+        <div class="proj-carousel">
+          <div class="slides">
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1Kw99EG9ZjS_PL9NRGJ-cH1aKxct28Aow&sz=w1400" alt="Ecoescuela Tay Pichín — sede en San Marcos Sierras" loading="lazy"></div>
+          </div>
+          <button class="arrow prev" aria-label="Anterior">‹</button>
+          <button class="arrow next" aria-label="Siguiente">›</button>
+          <div class="proj-counter">1 / 1</div>
+          <div class="dots"><button class="dot active" aria-label="1"></button></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-type"><span class="lang-es">Talleres</span><span class="lang-en">Workshops</span></div>
+          <div class="proj-name">Ecoescuela Tay Pichín</div>
+          <div class="proj-meta">San Marcos Sierras, Córdoba, Argentina · 2019–presente</div>
+          <p class="proj-desc"><span class="lang-es">Sede física de Arte y Tierra. Espacio vivo de aprendizaje en bioconstrucción, hidrología y agroecología — construido con las mismas técnicas que se enseñan.</span><span class="lang-en">Arte y Tierra's physical home. Living learning space for bioconstruction, hydrology and agroecology — built with the same techniques we teach.</span></p>
+          <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
+        </div>
+      </div>
+
+      <!-- 6. Casa Aurea (10 fotos) -->
+      <div id="aurea" class="project-card" data-type="bio">
+        <div class="proj-carousel">
+          <div class="slides">
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1855C_f-OVCsgm9auiYweCrzkJ5gbI4mC&sz=w1400" alt="Casa Aurea — vista general" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1ggo7Fug1-4YUSN2v_M2bwoS7esTHPRZw&sz=w1400" alt="Casa Aurea — exterior" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=15QTM2c9sdypOnlBdCYG7H36XCDOl93Xm&sz=w1400" alt="Casa Aurea — detalle constructivo" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=12uNwzc_H9rFEZx2DLsD9lZpUfvcv4JpU&sz=w1400" alt="Casa Aurea — interior" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1QHjA5l7sFE9L9YAYKuGi1qbbuJN05_o2&sz=w1400" alt="Casa Aurea — proceso" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1kAmCep3FQpi77D21wayJTxagRU8vkFVE&sz=w1400" alt="Casa Aurea — detalle de obra" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1dX111ayir4kzc7fEISjIZoTLBagACT5W&sz=w1400" alt="Casa Aurea — terminaciones" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=130xznlzmq66VN_4cZRwnnQTe3fZYJkvm&sz=w1400" alt="Casa Aurea — vista lateral" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1OLfgsgAFqgznDNYd8UyrWbx524FzT8ji&sz=w1400" alt="Casa Aurea — entorno" loading="lazy"></div>
+            <div class="slide"><img src="https://drive.google.com/thumbnail?id=1pquvB0B0OTqx8s6ESiCZqL7U1ZcxNBZM&sz=w1600" alt="Casa Aurea — panorámica del predio" loading="lazy"></div>
+          </div>
+          <button class="arrow prev" aria-label="Anterior">‹</button>
+          <button class="arrow next" aria-label="Siguiente">›</button>
+          <div class="proj-counter">1 / 10</div>
+          <div class="dots">
+            <button class="dot active" aria-label="1"></button>
+            <button class="dot" aria-label="2"></button>
+            <button class="dot" aria-label="3"></button>
+            <button class="dot" aria-label="4"></button>
+            <button class="dot" aria-label="5"></button>
+            <button class="dot" aria-label="6"></button>
+            <button class="dot" aria-label="7"></button>
+            <button class="dot" aria-label="8"></button>
+            <button class="dot" aria-label="9"></button>
+            <button class="dot" aria-label="10"></button>
+          </div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
+          <div class="proj-name">Casa Aurea</div>
+          <div class="proj-meta">Córdoba, Argentina · 2022–2026</div>
+          <p class="proj-desc"><span class="lang-es">Vivienda en bioconstrucción de proceso largo. Bioarquitectura, arquitectura bioclimática y técnicas con tierra cruda integradas al paisaje serrano cordobés. Diseño desde cero — del análisis del sitio a las terminaciones.</span><span class="lang-en">Long-process bioconstruction dwelling. Bioarchitecture, bioclimatic design and raw-earth techniques integrated into Córdoba's mountain landscape. Designed from scratch — site analysis to finishes.</span></p>
+          <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;margin-top:3rem;font-size:0.7rem;color:rgba(232,213,163,0.5);letter-spacing:0.15em;">
+      <span class="lang-es">Más proyectos serán incorporados próximamente</span>
+      <span class="lang-en">More projects will be added soon</span>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════ COUNTRIES ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="text-align:center;">
+    <div class="section-label" style="color:var(--monte);"><span class="lang-es">Donde hemos trabajado</span><span class="lang-en">Where we've worked</span></div>
+    <h2 class="section-title"><span class="lang-es">7 países,<br>un mismo <em>lenguaje.</em></span><span class="lang-en">7 countries,<br>one same <em>language.</em></span></h2>
+    <div class="countries-flags" style="justify-content:center;">
+      <div class="country-chip">🇦🇷 Argentina</div>
+      <div class="country-chip">🇨🇴 Colombia</div>
+      <div class="country-chip">🇵🇪 <span class="lang-es">Perú</span><span class="lang-en">Peru</span></div>
+      <div class="country-chip">🇧🇴 Bolivia</div>
+      <div class="country-chip">🇮🇹 <span class="lang-es">Italia</span><span class="lang-en">Italy</span></div>
+      <div class="country-chip">🇫🇷 <span class="lang-es">Francia</span><span class="lang-en">France</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<section class="cta-block">
+  <h2 class="cta-title"><span class="lang-es">¿Querés ser<br>el próximo proyecto?</span><span class="lang-en">Want to be<br>the next project?</span></h2>
+  <p class="cta-sub"><span class="lang-es">Trabajamos en cualquier parte del mundo. Contanos del tuyo.</span><span class="lang-en">We work anywhere in the world. Tell us about yours.</span></p>
+  <a href="contacto.html" class="btn-primary" style="font-size:0.75rem;padding:1rem 2.5rem;"><span class="lang-es">Empecemos →</span><span class="lang-en">Let's begin →</span></a>
+</section>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img class="footer-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+          <div>
+            <div class="footer-logo">ARTE Y TIERRA</div>
+            <div class="footer-tagline"><span class="lang-es">Diseño Ecosistémico del Territorio</span><span class="lang-en">Ecosystemic Territory Design</span></div>
+          </div>
+        </div>
+        <p class="footer-addr">Tay Pichín · San Marcos Sierras<br>Córdoba, Argentina</p>
+      </div>
+      <div>
+        <div class="footer-col-title"><span class="lang-es">Secciones</span><span class="lang-en">Sections</span></div>
+        <a href="servicios.html" class="footer-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+        <a href="proyectos.html" class="footer-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+        <a href="cursos.html" class="footer-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+        <a href="taypichin.html" class="footer-link">Tay Pichín</a>
+        <a href="nosotros.html" class="footer-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+        <a href="contacto.html" class="footer-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      </div>
+      <div>
+        <div class="footer-col-title">Social</div>
+        <a href="https://instagram.com/arteytierrabioconstruccion" class="footer-link">Instagram</a>
+        <a href="https://youtube.com/@arteytierra24" class="footer-link">YouTube</a>
+        <a href="https://wa.me/5493549431594" class="footer-link">WhatsApp</a>
+        <a href="mailto:info.arteytierra@gmail.com" class="footer-link">Email</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Arte y Tierra.</p>
+      <p class="footer-copy">arteytierra.org</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5493549431594" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<div id="lightbox" class="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">✕</button>
+    <iframe allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

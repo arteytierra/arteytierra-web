@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Arte y Tierra</title>
+  <meta name="description" content="Contactanos para proyectos de bioarquitectura, hidrología regenerativa, talleres, ecohostel o voluntariado.">
+  <link rel="icon" type="image/png" href="assets/logos/ayt-arbol-negro.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arte y Tierra">
+  <meta property="og:title" content="Contacto — Arte y Tierra">
+  <meta property="og:description" content="Contactanos para proyectos de bioarquitectura, hidrología regenerativa, talleres, ecohostel o voluntariado.">
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1FIiu87VZeJx9D2QH7Xnmk0rZXT-3e6so&sz=w1200">
+  <meta property="og:url" content="https://arteytierra.org/contacto.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="solid-nav">
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">ARTE Y TIERRA</div>
+        <div class="nav-logo-sub"><span class="lang-es">Diseño Ecosistémico</span><span class="lang-en">Ecosystemic Design</span></div>
+      </div>
+    </a>
+    <div class="desktop-nav">
+      <a href="servicios.html" class="nav-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="proyectos.html" class="nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+      <a href="cursos.html" class="nav-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+      <a href="taypichin.html" class="nav-link">Tay Pichín</a>
+      <a href="nosotros.html" class="nav-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+      <a href="contacto.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      <button class="lang-btn" onclick="toggleLang()"><span class="lang-es">EN</span><span class="lang-en">ES</span></button>
+    </div>
+    <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="servicios.html" onclick="toggleMenu()"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="proyectos.html" onclick="toggleMenu()"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+  <a href="cursos.html" onclick="toggleMenu()"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+  <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
+  <a href="nosotros.html" onclick="toggleMenu()"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+  <a href="contacto.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+</div>
+
+<!-- ═══════ PAGE HERO ═══════ -->
+<section class="page-hero" style="padding-bottom:4rem;">
+  <div class="page-hero-bg" style="opacity:0.3;"><img src="https://drive.google.com/thumbnail?id=1FIiu87VZeJx9D2QH7Xnmk0rZXT-3e6so&sz=w2000" alt=""></div>
+  <div class="page-hero-content" style="text-align:center;">
+    <div class="page-hero-tag"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></div>
+    <h1 style="margin-left:auto;margin-right:auto;"><span class="lang-es">Empecemos<br>la <em>conversación.</em></span><span class="lang-en">Let's start<br>the <em>conversation.</em></span></h1>
+    <p style="margin:0 auto;"><span class="lang-es">Contanos sobre tu terreno, tu idea, tu sueño. Trabajamos en cualquier parte del mundo.</span><span class="lang-en">Tell us about your land, your idea, your vision. We work anywhere in the world.</span></p>
+  </div>
+</section>
+
+<!-- ═══════ FORM ═══════ -->
+<section class="section bg-tierra">
+  <form id="contact-form" class="form-grid" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+    <input type="hidden" name="form-name" value="contacto">
+    <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+    <div class="form-row-2">
+      <input type="text" required name="nombre" class="form-input" placeholder="Nombre completo / Full name">
+      <input type="email" required name="email" class="form-input" placeholder="Email">
+    </div>
+    <div class="form-row-2">
+      <input type="text" name="pais" class="form-input" placeholder="País y región / Country and region">
+      <input type="tel" name="whatsapp" class="form-input" placeholder="WhatsApp (opcional / optional)">
+    </div>
+
+    <div>
+      <label style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ocre);font-weight:700;display:block;margin-bottom:0.8rem;"><span class="lang-es">¿Qué buscás? · podés marcar varios</span><span class="lang-en">What are you looking for? · select multiple</span></label>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" name="interes_bioarq" value="si"> <span class="lang-es">Proyecto de bioarquitectura</span><span class="lang-en">Bioarchitecture project</span></label>
+        <label class="form-check"><input type="checkbox" name="interes_hidro" value="si"> <span class="lang-es">Proyecto de hidrología</span><span class="lang-en">Hydrology project</span></label>
+        <label class="form-check"><input type="checkbox" name="interes_taller_predio" value="si"> <span class="lang-es">Taller en mi predio</span><span class="lang-en">Workshop on my land</span></label>
+        <label class="form-check"><input type="checkbox" name="interes_taller_tp" value="si"> <span class="lang-es">Taller en Tay Pichín</span><span class="lang-en">Workshop at Tay Pichín</span></label>
+        <label class="form-check"><input type="checkbox" name="interes_hostel" value="si"> <span class="lang-es">Ecohostel · estadía</span><span class="lang-en">Ecohostel stay</span></label>
+        <label class="form-check"><input type="checkbox" name="interes_inmersion" value="si"> <span class="lang-es">Voluntariado</span><span class="lang-en">Volunteering</span></label>
+        <label class="form-check"><input type="checkbox" name="interes_otro" value="si"> <span class="lang-es">Otro</span><span class="lang-en">Other</span></label>
+      </div>
+    </div>
+
+    <textarea name="mensaje" class="form-textarea" placeholder="Contanos más sobre tu proyecto... / Tell us about your project..."></textarea>
+
+    <button type="submit" class="btn-primary" style="align-self:flex-start;"><span class="lang-es">Enviar mensaje →</span><span class="lang-en">Send message →</span></button>
+
+    
+  </form>
+
+  <div class="contact-direct" style="max-width:700px;margin-left:auto;margin-right:auto;">
+    <a href="mailto:info.arteytierra@gmail.com"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span> info.arteytierra@gmail.com</a>
+    <a href="https://wa.me/5493549431594"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> +54 9 3549 431594</a>
+    <a href="https://instagram.com/arteytierrabioconstruccion">☞ @arteytierrabioconstruccion</a>
+  </div>
+</section>
+
+<!-- ═══════ FAQ ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:780px;">
+    <div class="section-label" style="color:var(--monte);"><span class="lang-es">Preguntas frecuentes</span><span class="lang-en">Frequently asked</span></div>
+    <h2 class="section-title" style="margin-bottom:3rem;"><span class="lang-es">Antes de <em>escribirnos.</em></span><span class="lang-en">Before <em>writing us.</em></span></h2>
+
+    <details style="border-top:1px solid rgba(193,127,58,0.3);padding:1.5rem 0;">
+      <summary style="font-size:0.95rem;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;"><span class="lang-es">¿Trabajan fuera de Argentina?</span><span class="lang-en">Do you work outside Argentina?</span><span style="color:var(--ocre);">+</span></summary>
+      <p style="font-size:0.9rem;line-height:1.7;color:var(--tierra);margin-top:1rem;"><span class="lang-es">Sí. Hemos trabajado en Argentina, Colombia, Perú, Bolivia, Italia y Francia. Operamos de manera itinerante en cualquier parte del mundo donde nos inviten a sembrar.</span><span class="lang-en">Yes. We have worked in Argentina, Colombia, Peru, Bolivia, Italy and France. We operate as an itinerant collective anywhere in the world where we are invited to sow.</span></p>
+    </details>
+
+    <details style="border-top:1px solid rgba(193,127,58,0.3);padding:1.5rem 0;">
+      <summary style="font-size:0.95rem;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;"><span class="lang-es">¿Cuánto cuesta un proyecto?</span><span class="lang-en">How much does a project cost?</span><span style="color:var(--ocre);">+</span></summary>
+      <p style="font-size:0.9rem;line-height:1.7;color:var(--tierra);margin-top:1rem;"><span class="lang-es">Cada proyecto es único — depende de la escala, los materiales locales disponibles, la complejidad del terreno y el alcance del acompañamiento. Después de una primera conversación podemos darte un rango estimativo.</span><span class="lang-en">Every project is unique — it depends on scale, locally available materials, site complexity and scope of accompaniment. After an initial conversation we can give you a ballpark range.</span></p>
+    </details>
+
+    <details style="border-top:1px solid rgba(193,127,58,0.3);padding:1.5rem 0;">
+      <summary style="font-size:0.95rem;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;"><span class="lang-es">¿Necesito experiencia para los talleres?</span><span class="lang-en">Do I need experience for workshops?</span><span style="color:var(--ocre);">+</span></summary>
+      <p style="font-size:0.9rem;line-height:1.7;color:var(--tierra);margin-top:1rem;"><span class="lang-es">No. Los talleres están pensados para todo nivel — se aprende haciendo, con acompañamiento del equipo. Lo que sí hace falta es disposición real a trabajar con el cuerpo y aprender en grupo.</span><span class="lang-en">No. Workshops are designed for all levels — you learn by doing, with team guidance. What's needed is genuine willingness to work with your body and learn in a group.</span></p>
+    </details>
+
+    <details style="border-top:1px solid rgba(193,127,58,0.3);border-bottom:1px solid rgba(193,127,58,0.3);padding:1.5rem 0;">
+      <summary style="font-size:0.95rem;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;"><span class="lang-es">¿En qué idiomas trabajan?</span><span class="lang-en">In what languages do you work?</span><span style="color:var(--ocre);">+</span></summary>
+      <p style="font-size:0.9rem;line-height:1.7;color:var(--tierra);margin-top:1rem;"><span class="lang-es">Español, francés, portugués e inglés. Para proyectos en otros idiomas, podemos coordinar traducción.</span><span class="lang-en">Spanish, French, Portuguese and English. For projects in other languages, we can arrange translation.</span></p>
+    </details>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img class="footer-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+          <div>
+            <div class="footer-logo">ARTE Y TIERRA</div>
+            <div class="footer-tagline"><span class="lang-es">Diseño Ecosistémico del Territorio</span><span class="lang-en">Ecosystemic Territory Design</span></div>
+          </div>
+        </div>
+        <p class="footer-addr">Tay Pichín · San Marcos Sierras<br>Córdoba, Argentina</p>
+      </div>
+      <div>
+        <div class="footer-col-title"><span class="lang-es">Secciones</span><span class="lang-en">Sections</span></div>
+        <a href="servicios.html" class="footer-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+        <a href="proyectos.html" class="footer-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+        <a href="cursos.html" class="footer-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+        <a href="taypichin.html" class="footer-link">Tay Pichín</a>
+        <a href="nosotros.html" class="footer-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+        <a href="contacto.html" class="footer-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      </div>
+      <div>
+        <div class="footer-col-title">Social</div>
+        <a href="https://instagram.com/arteytierrabioconstruccion" class="footer-link">Instagram</a>
+        <a href="https://youtube.com/@arteytierra24" class="footer-link">YouTube</a>
+        <a href="https://wa.me/5493549431594" class="footer-link">WhatsApp</a>
+        <a href="mailto:info.arteytierra@gmail.com" class="footer-link">Email</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Arte y Tierra.</p>
+      <p class="footer-copy">arteytierra.org</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5493549431594" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<div id="lightbox" class="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">✕</button>
+    <iframe allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
