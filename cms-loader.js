@@ -89,6 +89,135 @@
   }
 
   // ═══════════════════════════════════════════
+  // CURSOS
+  // ═══════════════════════════════════════════
+  function renderCurso(c, idx) {
+    const sectionBg = c.section_bg || 'bg-blanco';
+    const cardClass = c.card_style && c.card_style !== 'default' ? ' ' + c.card_style : '';
+
+    // Card style override (online courses use transparent card)
+    const cardStyle = c.card_style === 'online'
+      ? ' style="background:rgba(245,240,232,0.04);border:1px solid rgba(193,127,58,0.3);"'
+      : '';
+
+    // Section padding-top: first section keeps 3rem, rest 0
+    const sectionStyle = idx === 0 ? ' style="padding-top:3rem;"' : ' style="padding-top:0;"';
+
+    // Label color depends on card style
+    const labelColor = c.card_style === 'monte' ? 'var(--arena)' : 'var(--ocre)';
+
+    const metaHTML = (c.meta || []).map(m => `
+      <div class="course-meta-item">
+        <div class="course-meta-label"><span class="lang-es">${esc(m.label_es || '')}</span><span class="lang-en">${esc(m.label_en || m.label_es || '')}</span></div>
+        <div class="course-meta-val"><span class="lang-es">${esc(m.value_es || '')}</span><span class="lang-en">${esc(m.value_en || m.value_es || '')}</span></div>
+      </div>
+    `).join('');
+
+    const taglineHTML = c.tagline_es
+      ? `<p style="font-size:0.9rem;line-height:1.7;color:var(--arena);font-style:italic;margin:0;"><span class="lang-es">${esc(c.tagline_es)}</span><span class="lang-en">${esc(c.tagline_en || c.tagline_es)}</span></p>`
+      : '';
+
+    const warningHTML = c.warning_es
+      ? `<p style="font-size:0.78rem;color:rgba(232,213,163,0.7);font-style:italic;"><span class="lang-es">${esc(c.warning_es)}</span><span class="lang-en">${esc(c.warning_en || c.warning_es)}</span></p>`
+      : '';
+
+    const subtitleHTML = c.subtitle_es
+      ? `<p style="font-size:0.85rem;letter-spacing:0.1em;color:var(--ocre);text-transform:uppercase;font-weight:700;margin:0 0 1rem;"><span class="lang-es">${esc(c.subtitle_es)}</span><span class="lang-en">${esc(c.subtitle_en || c.subtitle_es)}</span></p>`
+      : '';
+
+    const contentsHTML = (c.contents && c.contents.length)
+      ? `<h4 style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:${labelColor};margin:0 0 1rem;font-weight:800;"><span class="lang-es">${esc(c.contents_label_es || 'Contenidos')}</span><span class="lang-en">${esc(c.contents_label_en || c.contents_label_es || 'Contents')}</span></h4>
+        <ul class="module-list"${c.id === 'mi-tierra-mi-casa' ? ' style="grid-template-columns:1fr;"' : ''}>
+          ${c.contents.map(it => `<li><span class="lang-es">${esc(it.es || '')}</span><span class="lang-en">${esc(it.en || it.es || '')}</span></li>`).join('')}
+        </ul>`
+      : '';
+
+    const scheduleHTML = (c.schedule && c.schedule.length)
+      ? `<h4 style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:${labelColor};margin:${contentsHTML ? '2rem' : '0'} 0 1rem;font-weight:800;"><span class="lang-es">${esc(c.schedule_label_es || 'Cronograma')}</span><span class="lang-en">${esc(c.schedule_label_en || c.schedule_label_es || 'Schedule')}</span></h4>
+        ${c.id === 'mi-tierra-mi-casa'
+          ? `<p style="font-size:0.8rem;color:var(--arena);line-height:1.6;margin:0;"><span class="lang-es">${esc(c.schedule[0].day_es || '')}</span><span class="lang-en">${esc(c.schedule[0].day_en || c.schedule[0].day_es || '')}</span></p>`
+          : `<div class="day-schedule">
+              ${c.schedule.map(s => `
+                <div class="day-block">
+                  <div class="day-name"><span class="lang-es">${esc(s.day_es || '')}</span><span class="lang-en">${esc(s.day_en || s.day_es || '')}</span></div>
+                  ${s.detail_es ? `<div class="day-detail"><span class="lang-es">${esc(s.detail_es)}</span><span class="lang-en">${esc(s.detail_en || s.detail_es)}</span></div>` : ''}
+                </div>
+              `).join('')}
+            </div>`}`
+      : '';
+
+    const pricesHTML = (c.prices && c.prices.length)
+      ? `<div class="price-table">
+          ${c.prices.map(p => `
+            <div class="price-card${p.featured ? ' featured' : ''}">
+              <div class="price-label"><span class="lang-es">${esc(p.label_es || '')}</span><span class="lang-en">${esc(p.label_en || p.label_es || '')}</span></div>
+              <div class="price-amount">${esc(p.amount || '')}</div>
+              <div class="price-currency">${esc(p.currency || '')}</div>
+            </div>
+          `).join('')}
+        </div>`
+      : '';
+
+    const pricesNoteHTML = c.prices_note_es
+      ? `<p style="font-size:0.78rem;color:rgba(232,213,163,0.6);font-style:italic;margin-top:1rem;">${c.prices_note_es.includes('<strong>') ? c.prices_note_es : '<span class="lang-es">' + esc(c.prices_note_es) + '</span><span class="lang-en">' + esc(c.prices_note_en || c.prices_note_es) + '</span>'}</p>`
+      : '';
+
+    const inscripcionBtn = c.show_inscripcion_btn
+      ? `<a href="#inscripcion" class="btn-primary"><span class="lang-es">Inscribirme →</span><span class="lang-en">Enroll →</span></a>`
+      : '';
+
+    const waMsg = encodeURIComponent(c.whatsapp_msg_es || '');
+    const waBtnClass = c.whatsapp_btn_style === 'primary' ? 'btn-primary' : 'btn-outline';
+    const waSvg = '<span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>';
+    const waBtn = `<a href="https://wa.me/5493549431594?text=${waMsg}" class="${waBtnClass}" target="_blank">${waSvg} <span class="lang-es">${esc(c.whatsapp_label_es || 'WhatsApp')}</span><span class="lang-en">${esc(c.whatsapp_label_en || c.whatsapp_label_es || 'WhatsApp')}</span></a>`;
+
+    return `
+      <section id="${esc(c.id)}" class="section ${esc(sectionBg)}"${sectionStyle}>
+        <div class="section-narrow">
+          <div class="course-block${cardClass}"${cardStyle}>
+            <div class="course-grid">
+              <div>
+                <div class="section-label" style="color:${labelColor};">— <span class="lang-es">${esc(c.label_es || '')}</span><span class="lang-en">${esc(c.label_en || c.label_es || '')}</span></div>
+                <h2 class="section-title" style="color:var(--blanco);"><span class="lang-es">${c.title_html_es || ''}</span><span class="lang-en">${c.title_html_en || c.title_html_es || ''}</span></h2>
+                ${subtitleHTML}
+                <div class="course-meta">${metaHTML}</div>
+                <p style="font-size:0.95rem;line-height:1.8;color:var(--arena);margin-bottom:${taglineHTML ? '1.2rem' : '1.5rem'};"><span class="lang-es">${esc(c.description_es || '')}</span><span class="lang-en">${esc(c.description_en || c.description_es || '')}</span></p>
+                ${taglineHTML}
+                ${warningHTML}
+              </div>
+              <div>
+                ${contentsHTML}
+                ${scheduleHTML}
+              </div>
+            </div>
+            <hr style="border:none;border-top:1px solid rgba(193,127,58,0.3);margin:2.5rem 0 2rem;">
+            <h4 style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:${labelColor};margin:0 0 1rem;font-weight:800;"><span class="lang-es">${esc(c.prices_label_es || 'Inversión')}</span><span class="lang-en">${esc(c.prices_label_en || c.prices_label_es || 'Tuition')}</span></h4>
+            ${pricesHTML}
+            ${pricesNoteHTML}
+            <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+              ${inscripcionBtn}
+              ${waBtn}
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  async function renderCursos() {
+    const container = document.querySelector('[data-cms="cursos"]');
+    if (!container) return;
+
+    const data = await loadJSON('/_data/cursos.json');
+    if (!data || !Array.isArray(data.items) || !data.items.length) return;
+
+    const visibles = data.items.filter(c => c.active !== false);
+    if (!visibles.length) return;
+
+    container.innerHTML = visibles.map((c, i) => renderCurso(c, i)).join('');
+  }
+
+  // ═══════════════════════════════════════════
   // TESTIMONIOS
   // ═══════════════════════════════════════════
   function renderTestimonio(t) {
@@ -190,9 +319,10 @@
   function init() {
     applySiteSettings();
     renderProyectos();
+    renderCursos();
     renderTestimonios();
     renderEquipo();
-    // Próxima fase: renderCursos(), renderNoticias()
+    // Próxima fase: renderNoticias()
   }
 
   if (document.readyState === 'loading') {

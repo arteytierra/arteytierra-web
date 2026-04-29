@@ -1,0 +1,238 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: img/uploads
+public_folder: /img/uploads
+
+site_url: https://arteytierra.org
+display_url: https://arteytierra.org
+logo_url: https://arteytierra.org/assets/logos/ayt-arbol-negro.png
+
+locale: es
+
+collections:
+  # ─────────────────────────────────────────────
+  # CONFIGURACIÓN GENERAL DEL SITIO
+  # ─────────────────────────────────────────────
+  - name: settings
+    label: "⚙️ Configuración general"
+    files:
+      - file: _data/site.json
+        label: "Datos generales y contacto"
+        name: contacto
+        fields:
+          - {label: "Email principal", name: email, widget: string}
+          - {label: "WhatsApp (con código país)", name: whatsapp, widget: string}
+          - {label: "Instagram (handle sin @)", name: instagram, widget: string}
+          - {label: "Dirección", name: direccion, widget: string}
+          - {label: "Frase principal del Hero (ES)", name: hero_es, widget: text}
+          - {label: "Frase principal del Hero (EN)", name: hero_en, widget: text}
+
+  # ─────────────────────────────────────────────
+  # PROYECTOS (single-file JSON)
+  # ─────────────────────────────────────────────
+  - name: proyectos
+    label: "🏠 Proyectos"
+    files:
+      - file: _data/proyectos.json
+        label: "Lista de proyectos"
+        name: proyectos
+        fields:
+          - label: "Proyectos"
+            name: items
+            widget: list
+            label_singular: "Proyecto"
+            summary: "{{fields.title}} — {{fields.ubicacion}}"
+            fields:
+              - {label: "ID (slug, sin espacios, ej: alihuen)", name: id, widget: string, hint: "Solo minúsculas y guiones. Se usa para anclas (#id) en la URL."}
+              - {label: "Nombre del proyecto", name: title, widget: string}
+              - label: "Tipo (categoría)"
+                name: tipo
+                widget: select
+                options:
+                  - {label: "Bioarquitectura", value: "bio"}
+                  - {label: "Hidrología", value: "hidro"}
+                  - {label: "Talleres", value: "taller"}
+                  - {label: "Permacultura", value: "perma"}
+                  - {label: "Otro", value: "otro"}
+              - {label: "Etiqueta tipo (ES)", name: tipo_label_es, widget: string, default: "Bioarquitectura"}
+              - {label: "Etiqueta tipo (EN)", name: tipo_label_en, widget: string, default: "Bioarchitecture"}
+              - {label: "Ubicación", name: ubicacion, widget: string}
+              - {label: "Año (texto libre — ej: 2024 o 2022–2026)", name: anio, widget: string}
+              - {label: "Descripción ES", name: descripcion_es, widget: text}
+              - {label: "Descripción EN", name: descripcion_en, widget: text, required: false}
+              - label: "Galería de fotos (carrusel)"
+                name: galeria
+                widget: list
+                field: {label: "URL de la imagen", name: url, widget: string, hint: "Pegá la URL completa. Para Drive: https://drive.google.com/thumbnail?id=ID&sz=w1400"}
+              - {label: "Mostrar en sitio", name: activo, widget: boolean, default: true}
+
+  # ─────────────────────────────────────────────
+  # CURSOS (single-file JSON)
+  # ─────────────────────────────────────────────
+  - name: cursos
+    label: "📚 Cursos"
+    files:
+      - file: _data/cursos.json
+        label: "Lista de cursos"
+        name: cursos
+        fields:
+          - label: "Cursos"
+            name: items
+            widget: list
+            label_singular: "Curso"
+            summary: "{{fields.label_es}} — {{fields.id}}"
+            fields:
+              - {label: "ID (slug, sin espacios — usado como ancla #id)", name: id, widget: string, hint: "Solo minúsculas y guiones. Ej: bioarq-jul"}
+              - label: "Estilo de fondo de la sección"
+                name: section_bg
+                widget: select
+                options:
+                  - {label: "Oscuro (negro)", value: "bg-dark"}
+                  - {label: "Blanco", value: "bg-blanco"}
+                  - {label: "Tierra (marrón)", value: "bg-tierra"}
+                default: "bg-blanco"
+              - label: "Estilo de la tarjeta del curso"
+                name: card_style
+                widget: select
+                options:
+                  - {label: "Default (oscura)", value: "default"}
+                  - {label: "Monte (verde)", value: "monte"}
+                  - {label: "Tierra (marrón)", value: "tierra"}
+                  - {label: "Online (transparente con borde)", value: "online"}
+                default: "default"
+              - {label: "Etiqueta superior ES", name: label_es, widget: string, hint: "Ej: Taller intensivo · Julio 2026"}
+              - {label: "Etiqueta superior EN", name: label_en, widget: string, required: false}
+              - {label: "Título HTML ES (admite <br> y <em>)", name: title_html_es, widget: text, hint: "Ej: Bioarquitectura,<br>construcción y <em>territorio.</em>"}
+              - {label: "Título HTML EN", name: title_html_en, widget: text, required: false}
+              - {label: "Subtítulo ES (opcional)", name: subtitle_es, widget: string, required: false}
+              - {label: "Subtítulo EN (opcional)", name: subtitle_en, widget: string, required: false}
+              - label: "Datos del curso (Fechas, Duración, etc.)"
+                name: meta
+                widget: list
+                summary: "{{fields.label_es}}: {{fields.value_es}}"
+                fields:
+                  - {label: "Etiqueta ES", name: label_es, widget: string}
+                  - {label: "Etiqueta EN", name: label_en, widget: string, required: false}
+                  - {label: "Valor ES", name: value_es, widget: string}
+                  - {label: "Valor EN", name: value_en, widget: string, required: false}
+              - {label: "Descripción ES", name: description_es, widget: text}
+              - {label: "Descripción EN", name: description_en, widget: text, required: false}
+              - {label: "Frase destacada ES (cursiva, opcional)", name: tagline_es, widget: string, required: false}
+              - {label: "Frase destacada EN", name: tagline_en, widget: string, required: false}
+              - {label: "Aviso ES (opcional, ej: ⚠ Fecha tentativa)", name: warning_es, widget: string, required: false}
+              - {label: "Aviso EN", name: warning_en, widget: string, required: false}
+              - {label: "Título de contenidos ES", name: contents_label_es, widget: string, default: "Contenidos"}
+              - {label: "Título de contenidos EN", name: contents_label_en, widget: string, default: "Contents", required: false}
+              - label: "Lista de contenidos"
+                name: contents
+                widget: list
+                required: false
+                summary: "{{fields.es}}"
+                fields:
+                  - {label: "ES", name: es, widget: string}
+                  - {label: "EN", name: en, widget: string, required: false}
+              - {label: "Título de cronograma ES (opcional)", name: schedule_label_es, widget: string, required: false}
+              - {label: "Título de cronograma EN", name: schedule_label_en, widget: string, required: false}
+              - label: "Cronograma día por día (opcional)"
+                name: schedule
+                widget: list
+                required: false
+                summary: "{{fields.day_es}}"
+                fields:
+                  - {label: "Día ES", name: day_es, widget: string}
+                  - {label: "Día EN", name: day_en, widget: string, required: false}
+                  - {label: "Detalle ES", name: detail_es, widget: text, required: false}
+                  - {label: "Detalle EN", name: detail_en, widget: text, required: false}
+              - {label: "Título de precios ES", name: prices_label_es, widget: string, default: "Inversión"}
+              - {label: "Título de precios EN", name: prices_label_en, widget: string, default: "Tuition", required: false}
+              - label: "Precios"
+                name: prices
+                widget: list
+                summary: "{{fields.label_es}}: {{fields.amount}}"
+                fields:
+                  - {label: "Etiqueta ES", name: label_es, widget: string}
+                  - {label: "Etiqueta EN", name: label_en, widget: string, required: false}
+                  - {label: "Monto", name: amount, widget: string, hint: "Ej: $130.000"}
+                  - {label: "Moneda / detalle", name: currency, widget: string, hint: "Ej: ARS · USD 100"}
+                  - {label: "Destacar (resalta esta opción)", name: featured, widget: boolean, default: false}
+              - {label: "Nota debajo de precios ES (opcional)", name: prices_note_es, widget: text, required: false}
+              - {label: "Nota debajo de precios EN", name: prices_note_en, widget: text, required: false}
+              - {label: "Mostrar botón 'Inscribirme →' (al formulario)", name: show_inscripcion_btn, widget: boolean, default: true}
+              - {label: "Mensaje de WhatsApp ES (sin codificar)", name: whatsapp_msg_es, widget: string, default: "Hola, quiero info de este curso"}
+              - {label: "Mensaje de WhatsApp EN", name: whatsapp_msg_en, widget: string, required: false}
+              - {label: "Texto del botón WhatsApp ES", name: whatsapp_label_es, widget: string, default: "WhatsApp"}
+              - {label: "Texto del botón WhatsApp EN", name: whatsapp_label_en, widget: string, default: "WhatsApp", required: false}
+              - label: "Estilo del botón WhatsApp"
+                name: whatsapp_btn_style
+                widget: select
+                options:
+                  - {label: "Outline (transparente)", value: "outline"}
+                  - {label: "Primary (rellenado)", value: "primary"}
+                default: "outline"
+              - {label: "Mostrar en sitio", name: active, widget: boolean, default: true}
+
+  # ─────────────────────────────────────────────
+  # TESTIMONIOS
+  # ─────────────────────────────────────────────
+  - name: testimonios
+    label: "💬 Testimonios"
+    files:
+      - file: _data/testimonios.json
+        label: "Lista de testimonios"
+        name: testimonios
+        fields:
+          - label: "Testimonios"
+            name: items
+            widget: list
+            label_singular: "Testimonio"
+            summary: "{{fields.title}} — {{fields.lugar}}"
+            fields:
+              - {label: "Nombre", name: title, widget: string}
+              - {label: "Lugar / contexto", name: lugar, widget: string}
+              - {label: "Foto (URL)", name: foto, widget: string, required: false}
+              - {label: "Testimonio ES", name: cita_es, widget: text}
+              - {label: "Testimonio EN", name: cita_en, widget: text, required: false}
+
+  # ─────────────────────────────────────────────
+  # EQUIPO
+  # ─────────────────────────────────────────────
+  - name: equipo
+    label: "👥 Equipo"
+    files:
+      - file: _data/equipo.json
+        label: "Miembros del equipo"
+        name: equipo
+        fields:
+          - label: "Miembros"
+            name: items
+            widget: list
+            label_singular: "Miembro"
+            summary: "{{fields.title}} — {{fields.rol}}"
+            fields:
+              - {label: "Nombre completo", name: title, widget: string}
+              - {label: "Rol", name: rol, widget: string}
+              - {label: "Foto (URL)", name: foto, widget: string}
+              - {label: "Bio ES", name: bio_es, widget: text}
+              - {label: "Bio EN", name: bio_en, widget: text, required: false}
+              - {label: "Orden", name: orden, widget: number, value_type: int, default: 1}
+
+  # ─────────────────────────────────────────────
+  # NOTICIAS / BLOG
+  # ─────────────────────────────────────────────
+  - name: noticias
+    label: "📰 Noticias / Blog"
+    label_singular: "Entrada"
+    folder: _data/noticias
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: "Título", name: title, widget: string}
+      - {label: "Fecha", name: fecha, widget: datetime}
+      - {label: "Imagen destacada", name: imagen, widget: image, required: false}
+      - {label: "Resumen corto", name: resumen, widget: text}
+      - {label: "Contenido", name: body, widget: markdown}
+      - {label: "Publicada", name: publicada, widget: boolean, default: true}
