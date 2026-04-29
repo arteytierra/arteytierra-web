@@ -89,6 +89,64 @@
   }
 
   // ═══════════════════════════════════════════
+  // TESTIMONIOS
+  // ═══════════════════════════════════════════
+  function renderTestimonio(t) {
+    const fotoHTML = t.foto
+      ? `<div class="testi-foto" style="width:60px;height:60px;border-radius:50%;overflow:hidden;margin-bottom:1rem;"><img src="${esc(t.foto)}" alt="${esc(t.title)}" style="width:100%;height:100%;object-fit:cover;"></div>`
+      : '';
+    const lugarEs = t.lugar || '';
+    const lugarEn = t.lugar_en || t.lugar || '';
+    return `
+      <div class="testi-card">
+        ${fotoHTML}
+        <p class="testi-quote"><span class="lang-es">"${esc(t.cita_es || '')}"</span><span class="lang-en">"${esc(t.cita_en || t.cita_es || '')}"</span></p>
+        <div class="testi-author">— ${esc(t.title)}${lugarEs ? ' · <span class="lang-es">' + esc(lugarEs) + '</span><span class="lang-en">' + esc(lugarEn) + '</span>' : ''}</div>
+      </div>
+    `;
+  }
+
+  async function renderTestimonios() {
+    const container = document.querySelector('[data-cms="testimonios"]');
+    if (!container) return;
+
+    const data = await loadJSON('/_data/testimonios.json');
+    if (!data || !Array.isArray(data.items) || !data.items.length) return;
+
+    container.innerHTML = data.items.map(renderTestimonio).join('');
+  }
+
+  // ═══════════════════════════════════════════
+  // EQUIPO
+  // ═══════════════════════════════════════════
+  function renderMiembro(m) {
+    const fotoHTML = m.foto
+      ? `<div style="width:100%;height:280px;overflow:hidden;margin-bottom:1.2rem;background:var(--tierra);"><img src="${esc(m.foto)}" alt="${esc(m.title)}" style="width:100%;height:100%;object-fit:cover;"></div>`
+      : '';
+    const rolEs = m.rol || '';
+    const rolEn = m.rol_en || m.rol || '';
+    return `
+      <div class="team-member">
+        ${fotoHTML}
+        <h3 class="team-name">${esc(m.title)}</h3>
+        <div class="team-role"><span class="lang-es">${esc(rolEs)}</span><span class="lang-en">${esc(rolEn)}</span></div>
+        <p class="team-bio"><span class="lang-es">${esc(m.bio_es || '')}</span><span class="lang-en">${esc(m.bio_en || m.bio_es || '')}</span></p>
+      </div>
+    `;
+  }
+
+  async function renderEquipo() {
+    const container = document.querySelector('[data-cms="equipo"]');
+    if (!container) return;
+
+    const data = await loadJSON('/_data/equipo.json');
+    if (!data || !Array.isArray(data.items) || !data.items.length) return;
+
+    const sorted = [...data.items].sort((a, b) => (a.orden || 0) - (b.orden || 0));
+    container.innerHTML = sorted.map(renderMiembro).join('');
+  }
+
+  // ═══════════════════════════════════════════
   // CONFIGURACIÓN GENERAL — actualiza valores que aparecen en todas las páginas
   // ═══════════════════════════════════════════
   async function applySiteSettings() {
@@ -132,7 +190,9 @@
   function init() {
     applySiteSettings();
     renderProyectos();
-    // Aquí más adelante: renderCursos(), renderTestimonios(), renderEquipo(), renderNoticias()
+    renderTestimonios();
+    renderEquipo();
+    // Próxima fase: renderCursos(), renderNoticias()
   }
 
   if (document.readyState === 'loading') {

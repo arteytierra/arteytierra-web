@@ -1,3 +1,28 @@
 {
-  "items": []
+  "items": [
+    {
+      "title": "Diego",
+      "lugar": "participante Formación Integral",
+      "lugar_en": "Integral Training participant",
+      "foto": "",
+      "cita_es": "La Formación Integral en Bioconstrucción me cambió la manera de mirar el habitar. No es solo técnica — es una forma de estar en el mundo.",
+      "cita_en": "The Integral Bioconstruction Training changed how I look at inhabiting. It's not just technique — it's a way of being in the world."
+    },
+    {
+      "title": "Franco Colavita",
+      "lugar": "comitente",
+      "lugar_en": "client",
+      "foto": "",
+      "cita_es": "Trabajar con Jonatan y el equipo fue encontrar gente que diseña desde el lugar — no desde un catálogo. Cada decisión nació del territorio.",
+      "cita_en": "Working with Jonatan and the team was finding people who design from the place itself — not from a catalogue. Every decision was born from the land."
+    },
+    {
+      "title": "Anónimo",
+      "lugar": "participante taller bioconstrucción",
+      "lugar_en": "bioconstruction workshop participant",
+      "foto": "",
+      "cita_es": "Llegué a Tay Pichín pensando que iba a aprender a construir. Me fui sabiendo escuchar el agua, la tierra, y a quienes la habitan.",
+      "cita_en": "I arrived at Tay Pichín thinking I would learn to build. I left knowing how to listen to water, earth, and those who inhabit them."
+    }
+  ]
 }

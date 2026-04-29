@@ -1,3 +1,40 @@
 {
-  "items": []
+  "items": [
+    {
+      "title": "Jonatan Palma",
+      "rol": "Director · Diseñador · Facilitador",
+      "rol_en": "Director · Designer · Facilitator",
+      "foto": "https://drive.google.com/thumbnail?id=1W2VBE1_x-vRLkg5s-OcbKq2FbSB4_Rue&sz=w800",
+      "bio_es": "Biólogo agroecólogo especializado en diseño hidrológico, agroforestería y hábitats regenerativos. Integra bioconstrucción, arquitectura bioclimática y agricultura orgánica en proyectos que buscan restaurar la relación entre las personas, el agua y el territorio.",
+      "bio_en": "Agroecology biologist specialized in hydrological design, agroforestry and regenerative habitats. Integrates bioconstruction, bioclimatic architecture and organic agriculture in projects seeking to restore the relationship between people, water and territory.",
+      "orden": 1
+    },
+    {
+      "title": "Julián Denaday",
+      "rol": "Conducción de obra · Facilitador",
+      "rol_en": "Construction lead · Facilitator",
+      "foto": "https://drive.google.com/thumbnail?id=1ixPqThmDFMhODU8ozTbLeiRylLMGa_rz&sz=w800",
+      "bio_es": "Constructor de oficio, egresado como analista de sistemas en la UBA, oriundo de Los Toldos (Buenos Aires). Integra técnica y experiencia práctica en procesos constructivos, compartiendo el hacer desde una mirada consciente y en vínculo con la vida cotidiana.",
+      "bio_en": "Builder by trade, systems analyst graduate (UBA), from Los Toldos (Buenos Aires). Integrates technique and practical experience in construction processes, sharing the doing through a conscious view connected to everyday life.",
+      "orden": 2
+    },
+    {
+      "title": "Ignacio Gómez Serjal",
+      "rol": "Director de voluntariado · Tay Pichín",
+      "rol_en": "Volunteering director · Tay Pichín",
+      "foto": "https://drive.google.com/thumbnail?id=1BgRX6c2SWhRL25wVk78URypKKVA74sj3&sz=w800",
+      "bio_es": "Permacultor, carpintero y agricultor, nacido en San Nicolás. Su camino se forjó en contacto directo con la tierra, especializándose en el trabajo de huerta y sistemas productivos a escala humana, acompañando procesos de aprendizaje desde la práctica.",
+      "bio_en": "Permaculturist, carpenter and farmer, born in San Nicolás. His path was forged in direct contact with the earth, specializing in vegetable gardens and human-scale productive systems, accompanying learning processes through practice.",
+      "orden": 3
+    },
+    {
+      "title": "Karen Ybarra",
+      "rol": "Equipo de Ecohostel · Tay Pichín",
+      "rol_en": "Ecohostel team · Tay Pichín",
+      "foto": "https://drive.google.com/thumbnail?id=17CGD5Mf4J8zKKAWYWtxNoFldhhTgTufD&sz=w800",
+      "bio_es": "Nacida en Tres de Febrero (Buenos Aires), su interés por la permacultura la llevó a investigar sistemas constructivos tanto convencionales como tradicionales. Aporta una mirada sensible en la gestión del espacio y la experiencia de quienes habitan el lugar.",
+      "bio_en": "Born in Tres de Febrero (Buenos Aires), her interest in permaculture led her to research both conventional and traditional building systems. Brings a sensitive view to space management and the experience of those who inhabit the place.",
+      "orden": 4
+    }
+  ]
 }
