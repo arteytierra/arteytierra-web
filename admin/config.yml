@@ -30,89 +30,117 @@ collections:
           - {label: "Frase principal del Hero (EN)", name: hero_en, widget: text}
 
   # ─────────────────────────────────────────────
-  # PROYECTOS
+  # PROYECTOS (single-file JSON)
   # ─────────────────────────────────────────────
   - name: proyectos
     label: "🏠 Proyectos"
-    label_singular: "Proyecto"
-    folder: _data/proyectos
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    format: yaml-frontmatter
-    fields:
-      - {label: "Nombre del proyecto", name: title, widget: string}
-      - {label: "Tipo", name: tipo, widget: select, options: ["Bioarquitectura","Hidrología","Permacultura","Comunidad","Otro"]}
-      - {label: "Ubicación", name: ubicacion, widget: string}
-      - {label: "Año", name: anio, widget: number, value_type: int, min: 2000, max: 2100}
-      - {label: "Foto principal (cover)", name: foto, widget: image}
-      - label: "Galería (carrusel de fotos)"
-        name: galeria
-        widget: list
-        required: false
-        field: {label: "Foto", name: foto, widget: image}
-      - {label: "Descripción ES", name: descripcion_es, widget: text}
-      - {label: "Descripción EN", name: descripcion_en, widget: text, required: false}
-      - {label: "Mostrar en sitio", name: activo, widget: boolean, default: true}
+    files:
+      - file: _data/proyectos.json
+        label: "Lista de proyectos"
+        name: proyectos
+        fields:
+          - label: "Proyectos"
+            name: items
+            widget: list
+            label_singular: "Proyecto"
+            summary: "{{fields.title}} — {{fields.ubicacion}}"
+            fields:
+              - {label: "ID (slug, sin espacios, ej: alihuen)", name: id, widget: string, hint: "Solo minúsculas y guiones. Se usa para anclas (#id) en la URL."}
+              - {label: "Nombre del proyecto", name: title, widget: string}
+              - label: "Tipo (categoría)"
+                name: tipo
+                widget: select
+                options:
+                  - {label: "Bioarquitectura", value: "bio"}
+                  - {label: "Hidrología", value: "hidro"}
+                  - {label: "Talleres", value: "taller"}
+                  - {label: "Permacultura", value: "perma"}
+                  - {label: "Otro", value: "otro"}
+              - {label: "Etiqueta tipo (ES)", name: tipo_label_es, widget: string, default: "Bioarquitectura"}
+              - {label: "Etiqueta tipo (EN)", name: tipo_label_en, widget: string, default: "Bioarchitecture"}
+              - {label: "Ubicación", name: ubicacion, widget: string}
+              - {label: "Año (texto libre — ej: 2024 o 2022–2026)", name: anio, widget: string}
+              - {label: "Descripción ES", name: descripcion_es, widget: text}
+              - {label: "Descripción EN", name: descripcion_en, widget: text, required: false}
+              - label: "Galería de fotos (carrusel)"
+                name: galeria
+                widget: list
+                field: {label: "URL de la imagen", name: url, widget: string, hint: "Pegá la URL completa. Para Drive: https://drive.google.com/thumbnail?id=ID&sz=w1400"}
+              - {label: "Mostrar en sitio", name: activo, widget: boolean, default: true}
 
   # ─────────────────────────────────────────────
-  # CURSOS
+  # CURSOS (single-file JSON)
   # ─────────────────────────────────────────────
   - name: cursos
     label: "📚 Cursos"
-    label_singular: "Curso"
-    folder: _data/cursos
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    format: yaml-frontmatter
-    fields:
-      - {label: "Nombre del curso", name: title, widget: string}
-      - {label: "Modalidad", name: modalidad, widget: select, options: ["Online","Presencial - Tay Pichín","Presencial - En tu predio"]}
-      - {label: "Duración", name: duracion, widget: string, hint: "Ej: 8 semanas, 5 días, etc."}
-      - {label: "Precio (texto libre)", name: precio, widget: string, hint: "Ej: $80 USD, ARS 120.000, Consultar..."}
-      - {label: "Próxima edición / fecha", name: fecha, widget: string, required: false}
-      - {label: "Imagen", name: imagen, widget: image, required: false}
-      - {label: "Descripción ES", name: descripcion_es, widget: text}
-      - {label: "Descripción EN", name: descripcion_en, widget: text, required: false}
-      - {label: "Mostrar en sitio", name: activo, widget: boolean, default: true}
+    files:
+      - file: _data/cursos.json
+        label: "Lista de cursos"
+        name: cursos
+        fields:
+          - label: "Cursos"
+            name: items
+            widget: list
+            label_singular: "Curso"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Nombre del curso", name: title, widget: string}
+              - label: "Modalidad"
+                name: modalidad
+                widget: select
+                options: ["Online","Presencial - Tay Pichín","Presencial - En tu predio"]
+              - {label: "Duración", name: duracion, widget: string, hint: "Ej: 8 semanas, 5 días"}
+              - {label: "Precio", name: precio, widget: string, hint: "Ej: $80 USD, ARS 120.000"}
+              - {label: "Próxima edición", name: fecha, widget: string, required: false}
+              - {label: "Imagen", name: imagen, widget: string, required: false, hint: "URL de la imagen"}
+              - {label: "Descripción ES", name: descripcion_es, widget: text}
+              - {label: "Descripción EN", name: descripcion_en, widget: text, required: false}
+              - {label: "Mostrar en sitio", name: activo, widget: boolean, default: true}
 
   # ─────────────────────────────────────────────
   # TESTIMONIOS
   # ─────────────────────────────────────────────
   - name: testimonios
     label: "💬 Testimonios"
-    label_singular: "Testimonio"
-    folder: _data/testimonios
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    format: yaml-frontmatter
-    fields:
-      - {label: "Nombre", name: title, widget: string}
-      - {label: "Lugar / contexto", name: lugar, widget: string, hint: "Ej: Córdoba, Argentina · Curso Tadelakt 2024"}
-      - {label: "Foto (opcional)", name: foto, widget: image, required: false}
-      - {label: "Testimonio ES", name: cita_es, widget: text}
-      - {label: "Testimonio EN", name: cita_en, widget: text, required: false}
+    files:
+      - file: _data/testimonios.json
+        label: "Lista de testimonios"
+        name: testimonios
+        fields:
+          - label: "Testimonios"
+            name: items
+            widget: list
+            label_singular: "Testimonio"
+            summary: "{{fields.title}} — {{fields.lugar}}"
+            fields:
+              - {label: "Nombre", name: title, widget: string}
+              - {label: "Lugar / contexto", name: lugar, widget: string}
+              - {label: "Foto (URL)", name: foto, widget: string, required: false}
+              - {label: "Testimonio ES", name: cita_es, widget: text}
+              - {label: "Testimonio EN", name: cita_en, widget: text, required: false}
 
   # ─────────────────────────────────────────────
   # EQUIPO
   # ─────────────────────────────────────────────
   - name: equipo
     label: "👥 Equipo"
-    label_singular: "Miembro"
-    folder: _data/equipo
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    format: yaml-frontmatter
-    fields:
-      - {label: "Nombre completo", name: title, widget: string}
-      - {label: "Rol", name: rol, widget: string}
-      - {label: "Foto", name: foto, widget: image}
-      - {label: "Bio ES", name: bio_es, widget: text}
-      - {label: "Bio EN", name: bio_en, widget: text, required: false}
-      - {label: "Orden de aparición", name: orden, widget: number, value_type: int, default: 1}
+    files:
+      - file: _data/equipo.json
+        label: "Miembros del equipo"
+        name: equipo
+        fields:
+          - label: "Miembros"
+            name: items
+            widget: list
+            label_singular: "Miembro"
+            summary: "{{fields.title}} — {{fields.rol}}"
+            fields:
+              - {label: "Nombre completo", name: title, widget: string}
+              - {label: "Rol", name: rol, widget: string}
+              - {label: "Foto (URL)", name: foto, widget: string}
+              - {label: "Bio ES", name: bio_es, widget: text}
+              - {label: "Bio EN", name: bio_en, widget: text, required: false}
+              - {label: "Orden", name: orden, widget: number, value_type: int, default: 1}
 
   # ─────────────────────────────────────────────
   # NOTICIAS / BLOG
@@ -127,8 +155,8 @@ collections:
     format: frontmatter
     fields:
       - {label: "Título", name: title, widget: string}
-      - {label: "Fecha", name: fecha, widget: datetime, default: ""}
+      - {label: "Fecha", name: fecha, widget: datetime}
       - {label: "Imagen destacada", name: imagen, widget: image, required: false}
-      - {label: "Resumen corto", name: resumen, widget: text, hint: "1-2 líneas que aparecen en el listado"}
+      - {label: "Resumen corto", name: resumen, widget: text}
       - {label: "Contenido", name: body, widget: markdown}
       - {label: "Publicada", name: publicada, widget: boolean, default: true}

@@ -72,7 +72,11 @@
       <button class="filter-btn" onclick="filterProjects('taller')"><span class="lang-es">Talleres</span><span class="lang-en">Workshops</span></button>
     </div>
 
-    <div class="cards-grid">
+    <div class="cards-grid" data-cms="proyectos">
+
+      <!-- Los proyectos se cargan dinámicamente desde _data/proyectos.json vía cms-loader.js -->
+      <!-- Editás todo desde arteytierra.org/admin → Proyectos -->
+      <!-- Fallback estático (se reemplaza si JS está activo) -->
 
       <!-- 1. Casa Alihuen -->
       <div id="alihuen" class="project-card" data-type="bio">
@@ -294,5 +298,6 @@
   </div>
 </div>
 <script src="script.js"></script>
+<script src="cms-loader.js"></script>
 </body>
 </html>

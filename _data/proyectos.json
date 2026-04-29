@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "id": "alihuen",
+      "title": "Casa Alihuen",
+      "tipo": "bio",
+      "tipo_label_es": "Bioarquitectura",
+      "tipo_label_en": "Bioarchitecture",
+      "ubicacion": "Santa Isabel, Córdoba, Argentina",
+      "anio": "2024",
+      "descripcion_es": "Vivienda familiar en bioconstrucción con técnicas de tierra cruda. Diseño bioclimático adaptado al clima serrano de Córdoba.",
+      "descripcion_en": "Family home built with bioconstruction and raw-earth techniques. Bioclimatic design adapted to Córdoba's mountain climate.",
+      "galeria": [
+        "https://drive.google.com/thumbnail?id=1tbss9WKhyvZE4zSl2UE_rpclHbtClFvB&sz=w1400"
+      ],
+      "activo": true
+    },
+    {
+      "id": "armonia",
+      "title": "Proyecto Armonía",
+      "tipo": "hidro",
+      "tipo_label_es": "Hidrología",
+      "tipo_label_en": "Hydrology",
+      "ubicacion": "Capilla del Monte, Córdoba, Argentina",
+      "anio": "2025",
+      "descripcion_es": "Diseño hidrológico Keyline para captación e infiltración del agua de lluvia. Recuperación del cañadón y regeneración del suelo.",
+      "descripcion_en": "Keyline hydrological design for rainwater capture and infiltration. Gully recovery and soil regeneration.",
+      "galeria": [
+        "https://drive.google.com/thumbnail?id=1Sv2laF9BdDBkJkuHO2vXpwYtXsjCBj6u&sz=w1400"
+      ],
+      "activo": true
+    },
+    {
+      "id": "sol",
+      "title": "Casa del Sol",
+      "tipo": "bio",
+      "tipo_label_es": "Bioarquitectura",
+      "tipo_label_en": "Bioarchitecture",
+      "ubicacion": "Santa Isabel, Córdoba, Argentina",
+      "anio": "2023",
+      "descripcion_es": "Vivienda con orientación solar pasiva, muros de adobe y techos verdes. Energéticamente autónoma.",
+      "descripcion_en": "Home with passive solar orientation, adobe walls and green roofs. Energy-autonomous.",
+      "galeria": [
+        "https://drive.google.com/thumbnail?id=1CHXf-tI5xGNjM2B2hCO4Sat19KZOn_Kr&sz=w1400"
+      ],
+      "activo": true
+    },
+    {
+      "id": "chelo",
+      "title": "La Casa del Chelo",
+      "tipo": "bio",
+      "tipo_label_es": "Bioarquitectura",
+      "tipo_label_en": "Bioarchitecture",
+      "ubicacion": "María Juana, Santa Fé, Argentina",
+      "anio": "2019",
+      "descripcion_es": "Una de las primeras obras del colectivo. Adobe, fardos de paja y madera local en armonía con el paisaje pampeano.",
+      "descripcion_en": "One of the collective's first works. Adobe, straw bales and local wood in harmony with the pampean landscape.",
+      "galeria": [
+        "https://drive.google.com/thumbnail?id=1YSkjWsUtvDqXgfkpnUo3ty-s557scAuC&sz=w1400"
+      ],
+      "activo": true
+    },
+    {
+      "id": "taypichin",
+      "title": "Ecoescuela Tay Pichín",
+      "tipo": "taller",
+      "tipo_label_es": "Talleres",
+      "tipo_label_en": "Workshops",
+      "ubicacion": "San Marcos Sierras, Córdoba, Argentina",
+      "anio": "2019–presente",
+      "descripcion_es": "Sede física de Arte y Tierra. Espacio vivo de aprendizaje en bioconstrucción, hidrología y agroecología — construido con las mismas técnicas que se enseñan.",
+      "descripcion_en": "Arte y Tierra's physical home. Living learning space for bioconstruction, hydrology and agroecology — built with the same techniques we teach.",
+      "galeria": [
+        "https://drive.google.com/thumbnail?id=1Kw99EG9ZjS_PL9NRGJ-cH1aKxct28Aow&sz=w1400"
+      ],
+      "activo": true
+    },
+    {
+      "id": "aurea",
+      "title": "Casa Aurea",
+      "tipo": "bio",
+      "tipo_label_es": "Bioarquitectura",
+      "tipo_label_en": "Bioarchitecture",
+      "ubicacion": "Córdoba, Argentina",
+      "anio": "2022–2026",
+      "descripcion_es": "Vivienda en bioconstrucción de proceso largo. Bioarquitectura, arquitectura bioclimática y técnicas con tierra cruda integradas al paisaje serrano cordobés. Diseño desde cero — del análisis del sitio a las terminaciones.",
+      "descripcion_en": "Long-process bioconstruction dwelling. Bioarchitecture, bioclimatic design and raw-earth techniques integrated into Córdoba's mountain landscape. Designed from scratch — site analysis to finishes.",
+      "galeria": [
+        "https://drive.google.com/thumbnail?id=1855C_f-OVCsgm9auiYweCrzkJ5gbI4mC&sz=w1400",
+        "https://drive.google.com/thumbnail?id=1ggo7Fug1-4YUSN2v_M2bwoS7esTHPRZw&sz=w1400",
+        "https://drive.google.com/thumbnail?id=15QTM2c9sdypOnlBdCYG7H36XCDOl93Xm&sz=w1400",
+        "https://drive.google.com/thumbnail?id=12uNwzc_H9rFEZx2DLsD9lZpUfvcv4JpU&sz=w1400",
+        "https://drive.google.com/thumbnail?id=1QHjA5l7sFE9L9YAYKuGi1qbbuJN05_o2&sz=w1400",
+        "https://drive.google.com/thumbnail?id=1kAmCep3FQpi77D21wayJTxagRU8vkFVE&sz=w1400",
+        "https://drive.google.com/thumbnail?id=1dX111ayir4kzc7fEISjIZoTLBagACT5W&sz=w1400",
+        "https://drive.google.com/thumbnail?id=130xznlzmq66VN_4cZRwnnQTe3fZYJkvm&sz=w1400",
+        "https://drive.google.com/thumbnail?id=1OLfgsgAFqgznDNYd8UyrWbx524FzT8ji&sz=w1400",
+        "https://drive.google.com/thumbnail?id=1pquvB0B0OTqx8s6ESiCZqL7U1ZcxNBZM&sz=w1600"
+      ],
+      "activo": true
+    }
+  ]
+}

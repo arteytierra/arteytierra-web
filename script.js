@@ -95,7 +95,7 @@ function closeLightbox() {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
 // ── Carrusel de proyectos ──
-function initProjCarousel(el) {
+window.initProjCarousel = function (el) {
   const slides = el.querySelector('.slides');
   const dots = el.querySelectorAll('.dot');
   const total = el.querySelectorAll('.slide').length;
@@ -117,8 +117,8 @@ function initProjCarousel(el) {
   if (next) next.addEventListener('click', e => { e.stopPropagation(); go(i + 1); });
   dots.forEach((d, k) => d.addEventListener('click', e => { e.stopPropagation(); go(k); }));
   if (counter) counter.textContent = `1 / ${total}`;
-}
-document.querySelectorAll('.proj-carousel').forEach(initProjCarousel);
+};
+document.querySelectorAll('.proj-carousel').forEach(window.initProjCarousel);
 
 // Toggle descripción expandida en proyectos
 function toggleDesc(btn) {
