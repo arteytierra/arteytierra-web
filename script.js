@@ -133,3 +133,17 @@ function toggleDesc(btn) {
 // ── Form submit ──
 // El formulario se envía directamente a FormSubmit (action en el HTML).
 // No interceptamos el submit para que funcione el envío real.
+
+// ── Auto-carousel para .auto-carousel (page-hero, ecohostel, etc.) ──
+window.initAutoCarousel = function (el) {
+  const imgs = el.querySelectorAll('img');
+  if (imgs.length <= 1) return;
+  const interval = parseInt(el.dataset.interval || '5000', 10);
+  let i = 0;
+  setInterval(() => {
+    imgs[i].classList.remove('active');
+    i = (i + 1) % imgs.length;
+    imgs[i].classList.add('active');
+  }, interval);
+};
+document.querySelectorAll('.auto-carousel').forEach(window.initAutoCarousel);

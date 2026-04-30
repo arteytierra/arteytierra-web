@@ -1,0 +1,5 @@
+# Netlify redirects
+# Migrar voluntariado → inmersionviva (URL canónica nueva)
+/voluntariado            /inmersionviva.html      301!
+/voluntariado.html       /inmersionviva.html      301!
+/voluntariado/*          /inmersionviva.html      301!

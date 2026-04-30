@@ -54,7 +54,11 @@
 
 <!-- ═══════ PAGE HERO ═══════ -->
 <section class="page-hero">
-  <div class="page-hero-bg"><img src="https://drive.google.com/thumbnail?id=1tbss9WKhyvZE4zSl2UE_rpclHbtClFvB&sz=w2000" alt=""></div>
+  <div class="page-hero-bg auto-carousel" data-interval="5500">
+    <img src="img/cms/proyectos/portada/1.png" alt="" class="active">
+    <img src="img/cms/proyectos/portada/2.jpg" alt="">
+    <img src="img/cms/proyectos/portada/3.jpg" alt="">
+  </div>
   <div class="page-hero-content">
     <div class="page-hero-tag"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></div>
     <h1><span class="lang-es">Cada proyecto,<br>un <em>territorio distinto.</em></span><span class="lang-en">Every project,<br>a <em>different territory.</em></span></h1>
@@ -65,13 +69,6 @@
 <!-- ═══════ FILTROS + GALERÍA ═══════ -->
 <section class="section bg-dark">
   <div class="section-narrow">
-    <div class="filters">
-      <button class="filter-btn active" onclick="filterProjects('all')"><span class="lang-es">Todos</span><span class="lang-en">All</span></button>
-      <button class="filter-btn" onclick="filterProjects('bio')"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></button>
-      <button class="filter-btn" onclick="filterProjects('hidro')"><span class="lang-es">Hidrología</span><span class="lang-en">Hydrology</span></button>
-      <button class="filter-btn" onclick="filterProjects('taller')"><span class="lang-es">Talleres</span><span class="lang-en">Workshops</span></button>
-    </div>
-
     <div class="cards-grid" data-cms="proyectos">
 
       <!-- Los proyectos se cargan dinámicamente desde _data/proyectos.json vía cms-loader.js -->
@@ -232,13 +229,50 @@
   <div class="section-narrow" style="text-align:center;">
     <div class="section-label" style="color:var(--monte);"><span class="lang-es">Donde hemos trabajado</span><span class="lang-en">Where we've worked</span></div>
     <h2 class="section-title"><span class="lang-es">7 países,<br>un mismo <em>lenguaje.</em></span><span class="lang-en">7 countries,<br>one same <em>language.</em></span></h2>
-    <div class="countries-flags" style="justify-content:center;">
-      <div class="country-chip">🇦🇷 Argentina</div>
-      <div class="country-chip">🇨🇴 Colombia</div>
-      <div class="country-chip">🇵🇪 <span class="lang-es">Perú</span><span class="lang-en">Peru</span></div>
-      <div class="country-chip">🇧🇴 Bolivia</div>
-      <div class="country-chip">🇮🇹 <span class="lang-es">Italia</span><span class="lang-en">Italy</span></div>
-      <div class="country-chip">🇫🇷 <span class="lang-es">Francia</span><span class="lang-en">France</span></div>
+    <div class="alcance-carousel-grid" style="text-align:left;">
+      <div class="alcance-country">
+        <div class="country-img-stack auto-carousel" data-interval="4500">
+          <img src="img/cms/servicios/alcance/argentina/1.jpg" alt="Argentina" class="active">
+          <img src="img/cms/servicios/alcance/argentina/2.jpg" alt="Argentina">
+          <img src="img/cms/servicios/alcance/argentina/3.jpg" alt="Argentina">
+        </div>
+        <div class="country-label">🇦🇷 Argentina</div>
+      </div>
+      <div class="alcance-country">
+        <div class="country-img-stack auto-carousel" data-interval="4500">
+          <img src="img/cms/servicios/alcance/colombia/1.jpg" alt="Colombia" class="active">
+          <img src="img/cms/servicios/alcance/colombia/2.jpg" alt="Colombia">
+        </div>
+        <div class="country-label">🇨🇴 Colombia</div>
+      </div>
+      <div class="alcance-country">
+        <div class="country-img-stack auto-carousel" data-interval="4500">
+          <img src="img/cms/servicios/alcance/ecuador/1.jpg" alt="Ecuador" class="active">
+          <img src="img/cms/servicios/alcance/ecuador/2.jpg" alt="Ecuador">
+        </div>
+        <div class="country-label">🇪🇨 Ecuador</div>
+      </div>
+      <div class="alcance-country">
+        <div class="country-img-stack"><img src="img/cms/servicios/alcance/peru/1.jpg" alt="Perú" class="active"></div>
+        <div class="country-label">🇵🇪 <span class="lang-es">Perú</span><span class="lang-en">Peru</span></div>
+      </div>
+      <div class="alcance-country">
+        <div class="country-img-stack"><img src="img/cms/servicios/alcance/bolivia/1.jpg" alt="Bolivia" class="active"></div>
+        <div class="country-label">🇧🇴 Bolivia</div>
+      </div>
+      <div class="alcance-country">
+        <div class="country-img-stack auto-carousel" data-interval="4500">
+          <img src="img/cms/servicios/alcance/italia/1.jpg" alt="Italia" class="active">
+          <img src="img/cms/servicios/alcance/italia/2.jpg" alt="Italia">
+          <img src="img/cms/servicios/alcance/italia/3.jpg" alt="Italia">
+          <img src="img/cms/servicios/alcance/italia/4.jpg" alt="Italia">
+        </div>
+        <div class="country-label">🇮🇹 <span class="lang-es">Italia</span><span class="lang-en">Italy</span></div>
+      </div>
+      <div class="alcance-country">
+        <div class="country-img-stack"><img src="img/cms/servicios/alcance/francia/1.jpg" alt="Francia" class="active"></div>
+        <div class="country-label">🇫🇷 <span class="lang-es">Francia</span><span class="lang-en">France</span></div>
+      </div>
     </div>
   </div>
 </section>
