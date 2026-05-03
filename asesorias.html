@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asesoría Online — Diseño Regenerativo | Arte y Tierra</title>
+  <meta name="description" content="Asesoría personalizada online en bioconstrucción, hidrología regenerativa, bioarquitectura, fitodepuración y permacultura. Videollamada 1h + memoria escrita. USD 60.">
+  <link rel="icon" type="image/png" href="assets/logos/ayt-arbol-negro.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arte y Tierra">
+  <meta property="og:title" content="Asesoría Online — Arte y Tierra">
+  <meta property="og:description" content="Asesoría personalizada en diseño regenerativo. Videollamada 1h + memoria escrita. USD 60 por tema.">
+  <meta property="og:url" content="https://arteytierra.org/asesorias">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Topic selector (radio cards) — pattern: dark bg + ocre accent ── */
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    .topic-card input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+    .topic-card label {
+      display: flex; align-items: center; gap: 0.8rem;
+      padding: 1.1rem 1.1rem;
+      background: rgba(245,240,232,0.06);
+      border: 1px solid rgba(193,127,58,0.3);
+      cursor: pointer;
+      transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.2s;
+      font-size: 0.82rem; font-weight: 600; color: var(--arena);
+      line-height: 1.35;
+    }
+    .topic-card label:hover { border-color: var(--ocre); background: rgba(193,127,58,0.1); transform: translateY(-2px); }
+    .topic-card input[type="radio"]:checked + label {
+      background: var(--ocre); color: var(--negro); border-color: var(--ocre);
+      box-shadow: 0 6px 20px rgba(193,127,58,0.35);
+    }
+    .topic-card input[type="radio"]:focus-visible + label { outline: 2px solid var(--ocre); outline-offset: 2px; }
+    .topic-card .topic-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1; }
+
+    /* ── Payment cards (matches mtmc-pay-card pattern) ── */
+    .asesoria-pay-card {
+      display: block; padding: 1.8rem 2rem;
+      text-decoration: none; transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .asesoria-pay-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+
+    /* ── Cal.com embed wrapper ── */
+    .cal-wrapper { background: var(--blanco); min-height: 600px; overflow: hidden; }
+    #my-cal-inline { min-height: 700px; }
+
+    /* ── Form note below submit ── */
+    .form-note { font-size: 0.78rem; color: rgba(232,213,163,0.6); line-height: 1.7; font-style: italic; }
+
+    /* ── Mobile responsive ── */
+    @media (max-width: 600px) {
+      .topic-grid { grid-template-columns: 1fr; gap: 0.6rem; }
+    }
+  </style>
+</head>
+<body class="solid-nav">
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">ARTE Y TIERRA</div>
+        <div class="nav-logo-sub"><span class="lang-es">Diseño Ecosistémico</span><span class="lang-en">Ecosystemic Design</span></div>
+      </div>
+    </a>
+    <div class="desktop-nav">
+      <a href="servicios.html" class="nav-link active"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="proyectos.html" class="nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+      <a href="cursos.html" class="nav-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+      <a href="taypichin.html" class="nav-link">Tay Pichín</a>
+      <a href="nosotros.html" class="nav-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+      <a href="contacto.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      <button class="lang-btn" onclick="toggleLang()"><span class="lang-es">EN</span><span class="lang-en">ES</span></button>
+    </div>
+    <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="servicios.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="proyectos.html" onclick="toggleMenu()"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+  <a href="cursos.html" onclick="toggleMenu()"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+  <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
+  <a href="nosotros.html" onclick="toggleMenu()"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+  <a href="contacto.html" onclick="toggleMenu()"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="page-hero" style="padding-bottom:4rem;">
+  <div class="page-hero-bg auto-carousel" data-interval="6000">
+    <img src="img/cms/asesorias/1.jpg" alt="" class="active">
+    <img src="img/cms/asesorias/2.jpg" alt="">
+  </div>
+  <div class="page-hero-content">
+    <div class="page-hero-tag"><span class="lang-es">Asesoría Online · Diseño Regenerativo</span><span class="lang-en">Online Advisory · Regenerative Design</span></div>
+    <h1><span class="lang-es">Tu proyecto<br>empieza con<br>las <em>preguntas correctas.</em></span><span class="lang-en">Your project<br>starts with<br>the <em>right questions.</em></span></h1>
+    <p><span class="lang-es">Asesoría personalizada de 1 hora por videollamada, más una memoria escrita con todo lo trabajado. Sin importar dónde estés en el mundo.</span><span class="lang-en">1-hour personalised video-call advisory plus a written report covering everything discussed. No matter where in the world you are.</span></p>
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#agendar" class="btn-primary"><span class="lang-es">Agendá tu asesoría →</span><span class="lang-en">Book your session →</span></a>
+      <a href="#como-funciona" class="btn-outline"><span class="lang-es">Cómo funciona →</span><span class="lang-en">How it works →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ QUÉ INCLUYE ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Qué incluye</span><span class="lang-en">What's included</span></div>
+      <h2 class="section-title"><span class="lang-es">Orientación experta,<br><em>acción concreta.</em></span><span class="lang-en">Expert guidance,<br><em>concrete action.</em></span></h2>
+      <p class="section-sub" style="margin:0 auto;"><span class="lang-es">Cada asesoría está focalizada en un único tema para que puedas obtener el máximo valor de la sesión.</span><span class="lang-en">Each advisory session focuses on a single topic to give you maximum value.</span></p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;">
+      <div style="background:var(--arena);padding:2rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.8rem;margin-bottom:0.8rem;">📹</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Videollamada 1 hora</span><span class="lang-en">1-hour video call</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Sesión en vivo por Google Meet. Trabajamos tu situación específica en profundidad.</span><span class="lang-en">Live session via Google Meet. We work through your specific situation in depth.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:2rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.8rem;margin-bottom:0.8rem;">📄</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Memoria escrita</span><span class="lang-en">Written report</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Documento con todo lo trabajado en la sesión: recomendaciones, pasos a seguir y recursos específicos para tu proyecto. Entrega en 3 días hábiles.</span><span class="lang-en">Document covering everything from the session: recommendations, next steps and resources tailored to your project. Delivered within 3 business days.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:2rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.8rem;margin-bottom:0.8rem;">🌍</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">100% remota</span><span class="lang-en">100% remote</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Desde cualquier parte del mundo. Coordinamos zona horaria, idioma y formato.</span><span class="lang-en">From anywhere in the world. We coordinate time zone, language and format.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:2rem;border-top:3px solid var(--monte);">
+        <div style="font-size:1.8rem;margin-bottom:0.8rem;">🗣</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Español, francés o portugués</span><span class="lang-en">Spanish, French or Portuguese</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">La asesoría se realiza en el idioma que te resulte más cómodo.</span><span class="lang-en">The session is conducted in whichever language is most comfortable for you.</span></p>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;background:rgba(193,127,58,0.08);border-left:4px solid var(--ocre);padding:1.5rem 2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.3rem;"><span class="lang-es">Inversión por tema</span><span class="lang-en">Investment per topic</span></div>
+        <div style="font-size:2.8rem;font-weight:900;color:var(--tierra);line-height:1;">USD 60</div>
+      </div>
+      <div style="font-size:0.85rem;color:var(--tierra);line-height:1.7;max-width:460px;">
+        <span class="lang-es">Cada asesoría cubre <strong>un tema</strong> en profundidad. Si necesitás trabajar más de un tema, podés agendar sesiones separadas.</span>
+        <span class="lang-en">Each session covers <strong>one topic</strong> in depth. If you need to cover more than one topic, you can book separate sessions.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ TEMAS ═══════ -->
+<section class="section bg-dark">
+  <div class="section-narrow">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Temas disponibles</span><span class="lang-en">Available topics</span></div>
+      <h2 class="section-title"><span class="lang-es">¿Sobre qué<br>querés <em>asesorarte?</em></span><span class="lang-en">What do you<br>want <em>guidance on?</em></span></h2>
+      <p class="section-sub" style="margin:0 auto;color:var(--arena);"><span class="lang-es">Cada área tiene su propia complejidad. Focalizamos la sesión para que salgas con claridad y pasos concretos.</span><span class="lang-en">Each area has its own complexity. We focus the session so you leave with clarity and concrete steps.</span></p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+      <div style="background:rgba(245,240,232,0.05);border-left:4px solid var(--ocre);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🏗</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Bioconstrucción</span><span class="lang-en">Bioconstruction</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Adobe, cob, quincha, fardos de paja, tapia pisada, tadelakt. Elección de técnicas según el clima, los materiales locales y el presupuesto.</span><span class="lang-en">Adobe, cob, quincha, straw bales, rammed earth, tadelakt. Choosing techniques based on climate, local materials and budget.</span></p>
+      </div>
+      <div style="background:rgba(46,107,138,0.08);border-left:4px solid var(--agua);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">💧</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Hidrología regenerativa</span><span class="lang-en">Regenerative hydrology</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Lectura del agua en el terreno, sistemas de captación, infiltración, curvas keyline, almacenamiento. Cómo diseñar desde el agua.</span><span class="lang-en">Reading water on land, capture systems, infiltration, keyline design, storage. How to design from water.</span></p>
+      </div>
+      <div style="background:rgba(193,127,58,0.08);border-left:4px solid var(--ocre);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🏛</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Diseño bioclimático, implantación en el terreno, orientación solar, ventilación cruzada, geometría áurea aplicada. Arquitectura que dialoga con el lugar.</span><span class="lang-en">Bioclimatic design, site placement, solar orientation, cross ventilation, applied golden geometry. Architecture in dialogue with place.</span></p>
+      </div>
+      <div style="background:rgba(74,103,65,0.1);border-left:4px solid var(--monte);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🌿</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Fitodepuración</span><span class="lang-en">Phytoremediation</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Diseño de sistemas de depuración con plantas. Tratamiento de aguas grises y negras, humedales construidos, integración al paisaje productivo.</span><span class="lang-en">Plant-based treatment system design. Grey and black water treatment, constructed wetlands, integration into productive landscape.</span></p>
+      </div>
+      <div style="background:rgba(74,103,65,0.1);border-left:4px solid var(--monte);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🌱</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Diseño de Permacultura</span><span class="lang-en">Permaculture design</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Zonificación, organización del sistema productivo, integración de agua-producción-vivienda. Diseño del hábitat desde los principios de la permacultura.</span><span class="lang-en">Zoning, productive system organization, water-production-dwelling integration. Habitat design from permaculture principles.</span></p>
+      </div>
+      <div style="background:rgba(46,107,138,0.08);border-left:4px solid var(--agua);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">📐</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Diseño Hidrológico Keyline</span><span class="lang-en">Keyline Hydrological Design</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Captura y distribución de agua de lluvia con curvas keyline. Lectura del contorno topográfico, planificación de canales, presas y redes de infiltración.</span><span class="lang-en">Rainfall capture and distribution using keyline contours. Topographic reading, channel planning, dams and infiltration networks.</span></p>
+      </div>
+      <div style="background:rgba(74,103,65,0.1);border-left:4px solid var(--monte);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🌳</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Sistemas Agroforestales</span><span class="lang-en">Agroforestry Systems</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Diseño e integración de árboles, arbustos, cultivos y animales en un mismo sistema. Producción diversificada, resiliente y regenerativa.</span><span class="lang-en">Design and integration of trees, shrubs, crops and animals in one system. Diversified, resilient and regenerative production.</span></p>
+      </div>
+      <div style="background:rgba(46,107,138,0.08);border-left:4px solid var(--agua);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🌊</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Biopiscinas y Humedales</span><span class="lang-en">Biopools and Wetlands</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Diseño y construcción de biopiscinas, estanques y humedales. Purificación biológica, biodiversidad y almacenamiento hídrico integrados al paisaje.</span><span class="lang-en">Design and construction of biopools, ponds and wetlands. Biological purification, biodiversity and water storage integrated into the landscape.</span></p>
+      </div>
+      <div style="background:rgba(193,127,58,0.08);border-left:4px solid var(--ocre);padding:1.8rem 1.6rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🏡</div>
+        <h3 style="font-size:1rem;font-weight:800;color:var(--blanco);margin:0 0 0.5rem;"><span class="lang-es">Diseño integral de hábitat</span><span class="lang-en">Integral habitat design</span></h3>
+        <p style="font-size:0.82rem;line-height:1.6;color:var(--arena);margin:0;"><span class="lang-es">Planificación completa de un predio: agua, vivienda y producción como un sistema. Masterplan inicial, orientación estratégica para el desarrollo de tu tierra.</span><span class="lang-en">Complete land planning: water, dwelling and production as one system. Initial masterplan, strategic guidance for your land development.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CÓMO FUNCIONA ═══════ -->
+<section id="como-funciona" class="section bg-blanco">
+  <div class="section-narrow" style="max-width:900px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">El proceso</span><span class="lang-en">The process</span></div>
+      <h2 class="section-title"><span class="lang-es">Tres pasos.<br><em>Simple.</em></span><span class="lang-en">Three steps.<br><em>Simple.</em></span></h2>
+    </div>
+
+    <div class="process-list">
+      <div class="process-step">
+        <div>
+          <h4 style="font-size:1.15rem;"><span class="lang-es">Completá el formulario</span><span class="lang-en">Fill in the form</span></h4>
+          <p style="font-size:0.95rem;"><span class="lang-es">Elegí el tema de tu asesoría y contanos brevemente sobre tu proyecto o situación. Eso nos permite llegar preparados a la sesión.</span><span class="lang-en">Choose your advisory topic and briefly describe your project or situation. This lets us arrive at the session prepared.</span></p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div>
+          <h4 style="font-size:1.15rem;"><span class="lang-es">Agendá tu cita y pagá</span><span class="lang-en">Book your slot and pay</span></h4>
+          <p style="font-size:0.95rem;"><span class="lang-es">Elegí el día y horario disponible en el calendario. Realizá el pago de USD 60 por el medio que prefieras y envianos el comprobante por WhatsApp.</span><span class="lang-en">Choose an available day and time in the calendar. Pay USD 60 via your preferred method and send us the receipt on WhatsApp.</span></p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div>
+          <h4 style="font-size:1.15rem;"><span class="lang-es">Recibí tu asesoría y la memoria</span><span class="lang-en">Get your session and written report</span></h4>
+          <p style="font-size:0.95rem;"><span class="lang-es">Nos encontramos por Google Meet en la fecha acordada. Dentro de los 3 días hábiles siguientes recibís por email una memoria escrita con recomendaciones y pasos concretos para tu proyecto.</span><span class="lang-en">We meet on Google Meet at the agreed date. Within 3 business days you'll receive an email with a written report covering recommendations and concrete next steps for your project.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FORMULARIO ═══════ -->
+<section id="agendar" class="section bg-dark">
+  <div class="section-narrow" style="max-width:860px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Paso 1 · Contanos sobre tu proyecto</span><span class="lang-en">Step 1 · Tell us about your project</span></div>
+      <h2 class="section-title"><span class="lang-es">Elegí tu tema<br>y <em>completá el formulario.</em></span><span class="lang-en">Choose your topic<br>and <em>fill in the form.</em></span></h2>
+    </div>
+
+    <form id="asesoria-form" name="asesoria-online" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+      <input type="hidden" name="form-name" value="asesoria-online">
+      <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+
+      <!-- Topic selector -->
+      <div style="margin-bottom:2rem;">
+        <label style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ocre);font-weight:700;display:block;margin-bottom:1rem;"><span class="lang-es">Elegí UN tema de asesoría · selección única</span><span class="lang-en">Choose ONE advisory topic · single selection</span></label>
+        <div class="topic-grid">
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t1" value="Bioconstrucción" required>
+            <label for="t1"><span class="topic-icon">🏗</span><span><span class="lang-es">Bioconstrucción</span><span class="lang-en">Bioconstruction</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t2" value="Hidrología regenerativa">
+            <label for="t2"><span class="topic-icon">💧</span><span><span class="lang-es">Hidrología regenerativa</span><span class="lang-en">Regenerative hydrology</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t3" value="Bioarquitectura">
+            <label for="t3"><span class="topic-icon">🏛</span><span><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t4" value="Fitodepuración">
+            <label for="t4"><span class="topic-icon">🌿</span><span><span class="lang-es">Fitodepuración</span><span class="lang-en">Phytoremediation</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t5" value="Diseño de Permacultura">
+            <label for="t5"><span class="topic-icon">🌱</span><span><span class="lang-es">Diseño de Permacultura</span><span class="lang-en">Permaculture design</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t6" value="Diseño Hidrológico Keyline">
+            <label for="t6"><span class="topic-icon">📐</span><span><span class="lang-es">Diseño Keyline</span><span class="lang-en">Keyline Design</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t7" value="Sistemas Agroforestales">
+            <label for="t7"><span class="topic-icon">🌳</span><span><span class="lang-es">Sistemas Agroforestales</span><span class="lang-en">Agroforestry</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t8" value="Biopiscinas y Humedales">
+            <label for="t8"><span class="topic-icon">🌊</span><span><span class="lang-es">Biopiscinas / Humedales</span><span class="lang-en">Biopools / Wetlands</span></span></label>
+          </div>
+          <div class="topic-card">
+            <input type="radio" name="tema" id="t9" value="Diseño integral de hábitat">
+            <label for="t9"><span class="topic-icon">🏡</span><span><span class="lang-es">Diseño integral de hábitat</span><span class="lang-en">Integral habitat design</span></span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal info -->
+      <div class="form-row-2" style="margin-bottom:1rem;">
+        <input type="text" required name="nombre" class="form-input" placeholder="Nombre completo / Full name">
+        <input type="email" required name="email" class="form-input" placeholder="Email">
+      </div>
+      <div class="form-row-2" style="margin-bottom:1rem;">
+        <input type="tel" name="whatsapp" class="form-input" placeholder="WhatsApp (con código de país / with country code)">
+        <input type="text" name="pais" class="form-input" placeholder="País y región / Country and region">
+      </div>
+      <div style="margin-bottom:0.5rem;">
+        <label style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ocre);font-weight:700;display:block;margin-bottom:0.6rem;"><span class="lang-es">Idioma preferido para la asesoría</span><span class="lang-en">Preferred language</span></label>
+        <div class="form-checks">
+          <label class="form-check"><input type="radio" name="idioma" value="Español" checked> <span class="lang-es">Español</span><span class="lang-en">Spanish</span></label>
+          <label class="form-check"><input type="radio" name="idioma" value="Francés"> <span class="lang-es">Français</span><span class="lang-en">French</span></label>
+          <label class="form-check"><input type="radio" name="idioma" value="Portugués"> <span class="lang-es">Português</span><span class="lang-en">Portuguese</span></label>
+        </div>
+      </div>
+      <textarea name="descripcion" class="form-textarea" style="margin-top:1rem;" rows="5" placeholder="Contanos sobre tu proyecto o situación concreta: dónde está ubicado, qué estás queriendo hacer, en qué etapa estás... / Tell us about your project or specific situation: where it is, what you want to do, what stage you're at..."></textarea>
+      <button type="submit" class="btn-primary" style="margin-top:1.5rem;"><span class="lang-es">Enviar solicitud →</span><span class="lang-en">Send request →</span></button>
+      <p class="form-note" style="margin-top:1rem;"><span class="lang-es">Luego de enviar el formulario, completá los pasos 2 y 3 para confirmar tu cita.</span><span class="lang-en">After submitting the form, complete steps 2 and 3 to confirm your appointment.</span></p>
+    </form>
+  </div>
+</section>
+
+<!-- ═══════ PAGO ═══════ -->
+<section class="section bg-tierra">
+  <div class="section-narrow" style="max-width:980px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Paso 2 · Realizá el pago</span><span class="lang-en">Step 2 · Complete the payment</span></div>
+      <h2 class="section-title"><span class="lang-es">Elegí tu<br>medio de <em>pago.</em></span><span class="lang-en">Choose your<br><em>payment</em> method.</span></h2>
+      <div style="display:inline-block;background:var(--ocre);color:var(--negro);padding:1.5rem 3rem;margin-top:1rem;">
+        <div style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;font-weight:800;"><span class="lang-es">Asesoría online · 1 tema</span><span class="lang-en">Online advisory · 1 topic</span></div>
+        <div style="font-size:3rem;font-weight:900;line-height:1;margin:0.4rem 0;">USD 60</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
+      <a href="https://www.paypal.com/donate/?business=info.arteytierra%40gmail.com&item_name=Asesoria+Online+Arte+y+Tierra&currency_code=USD&amount=60" target="_blank" rel="noopener" class="asesoria-pay-card" style="background:#003087;color:#fff;text-decoration:none;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;opacity:0.7;font-weight:700;margin-bottom:0.5rem;">PayPal</div>
+        <div style="font-size:1.3rem;font-weight:900;margin-bottom:0.6rem;">PayPal · USD 60</div>
+        <div style="font-size:0.85rem;opacity:0.85;line-height:1.5;"><span class="lang-es">Pago directo desde cualquier país. Tarjeta o saldo PayPal.</span><span class="lang-en">Direct payment from any country. Card or PayPal balance.</span></div>
+        <div style="margin-top:1rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;border-top:1px solid rgba(255,255,255,0.2);padding-top:1rem;"><span class="lang-es">Pagar ahora →</span><span class="lang-en">Pay now →</span></div>
+      </a>
+
+      <a href="https://link.mercadopago.com.ar/arteytierra" target="_blank" rel="noopener" class="asesoria-pay-card" style="background:#00B1EA;color:#fff;text-decoration:none;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;opacity:0.85;font-weight:700;margin-bottom:0.5rem;">Mercado Pago</div>
+        <div style="font-size:1.3rem;font-weight:900;margin-bottom:0.6rem;">Mercado Pago</div>
+        <div style="font-size:0.85rem;opacity:0.95;line-height:1.5;"><span class="lang-es">Pago en pesos argentinos · tarjeta, débito o saldo MP.</span><span class="lang-en">Payment in Argentine pesos · card, debit or MP balance.</span></div>
+        <div style="margin-top:1rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;border-top:1px solid rgba(255,255,255,0.3);padding-top:1rem;"><span class="lang-es">Pagar ahora →</span><span class="lang-en">Pay now →</span></div>
+      </a>
+
+      <div class="asesoria-pay-card" style="background:rgba(245,240,232,0.06);border:1px solid rgba(193,127,58,0.4);color:var(--arena);">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:700;margin-bottom:0.5rem;"><span class="lang-es">Otros medios</span><span class="lang-en">Other methods</span></div>
+        <div style="font-size:1.1rem;font-weight:800;margin-bottom:0.6rem;color:var(--blanco);"><span class="lang-es">Bancolombia · Transferencia</span><span class="lang-en">Bancolombia · Transfer</span></div>
+        <div style="font-size:0.85rem;line-height:1.6;margin-bottom:0.5rem;"><strong style="color:var(--blanco);">Bancolombia</strong> — <span class="lang-es">Cuenta de Ahorros</span><span class="lang-en">Savings Account</span><br><span style="font-family:monospace;">54193548566</span></div>
+        <div style="font-size:0.78rem;line-height:1.5;opacity:0.85;"><span class="lang-es">Otros bancos / países: consultanos por WhatsApp.</span><span class="lang-en">Other banks/countries: ask us via WhatsApp.</span></div>
+      </div>
+    </div>
+
+    <div style="background:rgba(193,127,58,0.12);border-left:3px solid var(--ocre);padding:1.6rem 2rem;">
+      <h4 style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);margin:0 0 0.8rem;font-weight:800;"><span class="lang-es">📥 Tras el pago</span><span class="lang-en">📥 After payment</span></h4>
+      <p style="font-size:0.9rem;line-height:1.8;color:var(--arena);margin:0;">
+        <span class="lang-es">Enviá el comprobante de pago por <strong style="color:var(--ocre);">WhatsApp al +54 9 3549 431594</strong> indicando tu nombre completo y el tema de asesoría elegido. Confirmamos la cita en menos de 24 horas.</span>
+        <span class="lang-en">Send your payment receipt via <strong style="color:var(--ocre);">WhatsApp to +54 9 3549 431594</strong> with your full name and the advisory topic you chose. We'll confirm the appointment within 24 hours.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CALENDARIO ═══════ -->
+<section class="section bg-blanco" style="padding-top:5rem;padding-bottom:5rem;">
+  <div class="section-narrow" style="max-width:960px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Paso 3 · Elegí tu fecha</span><span class="lang-en">Step 3 · Pick your date</span></div>
+      <h2 class="section-title"><span class="lang-es">Agendá tu<br><em>cita.</em></span><span class="lang-en">Book your<br><em>appointment.</em></span></h2>
+      <p class="section-sub" style="margin:0 auto;color:var(--tierra);"><span class="lang-es">Disponibilidad de lunes a sábado · 12:00 a 21:00 (hora Argentina). Las zonas horarias se ajustan automáticamente.</span><span class="lang-en">Available Monday to Saturday · 12:00 to 21:00 (Argentina time). Time zones adjust automatically.</span></p>
+    </div>
+
+    <!-- Cal.com inline embed → cal.com/arteytierra/asesoriaonline -->
+    <div class="cal-wrapper" style="border:1px solid rgba(193,127,58,0.2);">
+      <div id="my-cal-inline" style="width:100%;height:700px;overflow:scroll;"></div>
+    </div>
+    <script>(function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://cal.com" });
+    Cal("inline", {
+      elementOrSelector: "#my-cal-inline",
+      config: { layout: "month_view" },
+      calLink: "arteytierra/asesoriaonline",
+    });
+    Cal("ui", {
+      styles: { branding: { brandColor: "#C17F3A" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+    </script>
+    <div style="text-align:center;margin-top:2rem;">
+      <p style="font-size:0.85rem;color:var(--tierra);margin-bottom:1rem;"><span class="lang-es">¿Preferís coordinar directamente?</span><span class="lang-en">Prefer to coordinate directly?</span></p>
+      <a href="https://wa.me/5493549431594?text=Hola%2C%20quiero%20agendar%20una%20asesor%C3%ADa%20online" class="btn-outline dark" target="_blank">
+        <span class="lang-es">Coordinar por WhatsApp →</span><span class="lang-en">Coordinate via WhatsApp →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA CIERRE ═══════ -->
+<section class="cta-block">
+  <h2 class="cta-title"><span class="lang-es">Tu próximo paso<br>vale <em>USD 60.</em></span><span class="lang-en">Your next step<br>is worth <em>USD 60.</em></span></h2>
+  <p class="cta-sub"><span class="lang-es">Una hora de conversación correcta puede ahorrarte meses de trabajo en la dirección equivocada.</span><span class="lang-en">One hour of the right conversation can save you months of work in the wrong direction.</span></p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+    <a href="#agendar" class="btn-primary" style="font-size:0.75rem;padding:1rem 2.5rem;"><span class="lang-es">Agendá tu asesoría →</span><span class="lang-en">Book your session →</span></a>
+    <a href="servicios.html" class="btn-outline" style="font-size:0.75rem;padding:1rem 2.5rem;"><span class="lang-es">Ver todos los servicios →</span><span class="lang-en">See all services →</span></a>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img class="footer-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+          <div>
+            <div class="footer-logo">ARTE Y TIERRA</div>
+            <div class="footer-tagline"><span class="lang-es">Diseño Ecosistémico del Territorio</span><span class="lang-en">Ecosystemic Territory Design</span></div>
+          </div>
+        </div>
+        <p class="footer-addr">Tay Pichín · San Marcos Sierras<br>Córdoba, Argentina</p>
+      </div>
+      <div>
+        <div class="footer-col-title"><span class="lang-es">Secciones</span><span class="lang-en">Sections</span></div>
+        <a href="servicios.html" class="footer-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+        <a href="asesorias.html" class="footer-link"><span class="lang-es">Asesorías Online</span><span class="lang-en">Online Advisory</span></a>
+        <a href="proyectos.html" class="footer-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+        <a href="cursos.html" class="footer-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+        <a href="taypichin.html" class="footer-link">Tay Pichín</a>
+        <a href="nosotros.html" class="footer-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+        <a href="contacto.html" class="footer-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      </div>
+      <div>
+        <div class="footer-col-title">Social</div>
+        <a href="https://instagram.com/arteytierrabioconstruccion" class="footer-link">Instagram</a>
+        <a href="https://youtube.com/@arteytierra24" class="footer-link">YouTube</a>
+        <a href="https://wa.me/5493549431594" class="footer-link">WhatsApp</a>
+        <a href="mailto:info.arteytierra@gmail.com" class="footer-link">Email</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Arte y Tierra.</p>
+      <p class="footer-copy">arteytierra.org</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5493549431594" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script src="script.js"></script>
+<script src="cms-loader.js"></script>
+</body>
+</html>
