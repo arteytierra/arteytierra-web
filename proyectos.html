@@ -31,6 +31,7 @@
     </a>
     <div class="desktop-nav">
       <a href="servicios.html" class="nav-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="asesorias.html" class="nav-link"><span class="lang-es">Asesorías</span><span class="lang-en">Advisory</span></a>
       <a href="proyectos.html" class="nav-link active"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
       <a href="cursos.html" class="nav-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
       <a href="taypichin.html" class="nav-link">Tay Pichín</a>
@@ -45,6 +46,7 @@
 <div id="mobile-menu">
   <button class="close-btn" onclick="toggleMenu()">✕</button>
   <a href="servicios.html" onclick="toggleMenu()"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="asesorias.html" onclick="toggleMenu()"><span class="lang-es">Asesorías</span><span class="lang-en">Advisory</span></a>
   <a href="proyectos.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
   <a href="cursos.html" onclick="toggleMenu()"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
   <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
@@ -90,7 +92,8 @@
           <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
           <div class="proj-name">Casa Alihuen</div>
           <div class="proj-meta">Santa Isabel, Córdoba, Argentina · 2024</div>
-          <p class="proj-desc"><span class="lang-es">Vivienda familiar en bioconstrucción con técnicas de tierra cruda. Diseño bioclimático adaptado al clima serrano de Córdoba.</span><span class="lang-en">Family home built with bioconstruction and raw-earth techniques. Bioclimatic design adapted to Córdoba's mountain climate.</span></p>
+          <div class="proj-scope" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:0.8rem 0 1rem;"><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">Diseño + Obra</span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">9 <span class="lang-es">meses</span><span class="lang-en">months</span></span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;"><span class="lang-es">Comitentes:</span><span class="lang-en">Clients:</span> Silvia y Alejandro</span></div>
+          <p class="proj-desc"><span class="lang-es">Hogar de Silvia y Alejandro en una reserva de bosque nativo del valle de Punilla. Geometría hexagonal con espiral de Fibonacci, paneles solares, biofiltros para aguas grises y negras, techos vivos con autoriego e infiltración de aguas pluviales. Muros de adobe, revoques de barro y cal, interiores con estucos tipo tadelakt.</span><span class="lang-en">Home of Silvia and Alejandro in a native forest reserve of the Punilla valley. Hexagonal geometry with Fibonacci spiral, solar panels, greywater and blackwater biofilters, self-watering green roofs and rainwater infiltration. Adobe walls, earth-and-lime renders, tadelakt-type interior finishes.</span></p>
           <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
         </div>
       </div>
@@ -107,10 +110,11 @@
           <div class="dots"><button class="dot active" aria-label="1"></button></div>
         </div>
         <div class="proj-info">
-          <div class="proj-type"><span class="lang-es">Hidrología</span><span class="lang-en">Hydrology</span></div>
+          <div class="proj-type"><span class="lang-es">Bioarquitectura + Hidrología</span><span class="lang-en">Bioarchitecture + Hydrology</span></div>
           <div class="proj-name">Proyecto Armonía</div>
           <div class="proj-meta">Capilla del Monte, Córdoba, Argentina · 2025</div>
-          <p class="proj-desc"><span class="lang-es">Diseño hidrológico Keyline para captación e infiltración del agua de lluvia. Recuperación del cañadón y regeneración del suelo.</span><span class="lang-en">Keyline hydrological design for rainwater capture and infiltration. Gully recovery and soil regeneration.</span></p>
+          <div class="proj-scope" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:0.8rem 0 1rem;"><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">Diseño + Obra</span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">104 m² + 37 m²</span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;"><span class="lang-es">Comitente:</span><span class="lang-en">Client:</span> Liliana Gaiarín</span></div>
+          <p class="proj-desc"><span class="lang-es">Hogar de Liliana Gaiarín, diseñado con arquitectura bioclimática y geometría sagrada (dos rectángulos áureos y curva Fibonacci). Vista al Cerro Uritorco. Invernadero como sistema pasivo de calefacción/refrigeración, ambientes tapón al sur, muros de adobe al norte y 3 cubiertas vegetalizadas. Diseño hidrológico integrado: terrazas, reservorios, bosque comestible y biojardineras.</span><span class="lang-en">Home of Liliana Gaiarín, designed with bioclimatic architecture and sacred geometry (two golden rectangles and a Fibonacci curve). View of Cerro Uritorco. Greenhouse as passive heating/cooling system, buffer rooms to the south, adobe walls to the north and 3 green roofs. Integrated hydrological design: terraces, water reservoirs, food forest and biofilter gardens.</span></p>
           <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
         </div>
       </div>
@@ -130,7 +134,8 @@
           <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
           <div class="proj-name">Casa del Sol</div>
           <div class="proj-meta">Santa Isabel, Córdoba, Argentina · 2023</div>
-          <p class="proj-desc"><span class="lang-es">Vivienda con orientación solar pasiva, muros de adobe y techos verdes. Energéticamente autónoma.</span><span class="lang-en">Home with passive solar orientation, adobe walls and green roofs. Energy-autonomous.</span></p>
+          <div class="proj-scope" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:0.8rem 0 1rem;"><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">Diseño + Obra</span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;"><span class="lang-es">Comitente:</span><span class="lang-en">Client:</span> Susana e hijos</span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;"><span class="lang-es">Construcción participativa</span><span class="lang-en">Participatory build</span></span></div>
+          <p class="proj-desc"><span class="lang-es">Hogar de Susana e hijos diseñado a partir del espiral de Fibonacci. Dos plantas: PB con sala-cocina-comedor y baño en muros de adobe; PA con habitación en quincha reforzada (resistencia sísmica). Techos vivos en paraboloides hiperbólicos, ventilación cruzada y orientación estratégica. Construida con voluntariado y talleres abiertos.</span><span class="lang-en">Home of Susana and her children based on the Fibonacci spiral. Two floors: ground floor with open kitchen-living-dining and bathroom in adobe; upper floor with bedroom in reinforced quincha (seismic resistance). Hyperbolic-paraboloid green roofs, cross-ventilation and strategic orientation. Built with volunteers and open workshops.</span></p>
           <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
         </div>
       </div>
@@ -150,7 +155,8 @@
           <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
           <div class="proj-name">La Casa del Chelo</div>
           <div class="proj-meta">María Juana, Santa Fé, Argentina · 2019</div>
-          <p class="proj-desc"><span class="lang-es">Una de las primeras obras del colectivo. Adobe, fardos de paja y madera local en armonía con el paisaje pampeano.</span><span class="lang-en">One of the collective's first works. Adobe, straw bales and local wood in harmony with the pampean landscape.</span></p>
+          <div class="proj-scope" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:0.8rem 0 1rem;"><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">Diseño + Obra</span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">9 <span class="lang-es">meses</span><span class="lang-en">months</span></span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;"><span class="lang-es">Comitente:</span><span class="lang-en">Client:</span> Marcelo Notta</span></div>
+          <p class="proj-desc"><span class="lang-es">El sueño del Chelo: un hogar nuevo para él y su familia. Diseñada bajo conceptos de arquitectura bioclimática, geometría sagrada (flor de la vida) y radiestesia. Solo 2 ángulos rectos pese a sus líneas rectas; orientación solar (no paralela a la trama urbana). 3 techos vivos, fitotratamiento de aguas grises y negras, termotanque solar. Construida con voluntarios y talleres.</span><span class="lang-en">El Chelo's dream: a new home for him and his family. Designed with bioclimatic architecture, sacred geometry (flower of life) and dowsing. Only 2 right angles despite its straight lines; solar-oriented (not parallel to the urban grid). 3 green roofs, greywater and blackwater phyto-treatment, solar water heater. Built with volunteers and workshops.</span></p>
           <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
         </div>
       </div>
@@ -167,10 +173,11 @@
           <div class="dots"><button class="dot active" aria-label="1"></button></div>
         </div>
         <div class="proj-info">
-          <div class="proj-type"><span class="lang-es">Talleres</span><span class="lang-en">Workshops</span></div>
+          <div class="proj-type"><span class="lang-es">Sede propia · Ecoescuela</span><span class="lang-en">Home base · Eco-school</span></div>
           <div class="proj-name">Ecoescuela Tay Pichín</div>
-          <div class="proj-meta">San Marcos Sierras, Córdoba, Argentina · 2019–presente</div>
-          <p class="proj-desc"><span class="lang-es">Sede física de Arte y Tierra. Espacio vivo de aprendizaje en bioconstrucción, hidrología y agroecología — construido con las mismas técnicas que se enseñan.</span><span class="lang-en">Arte y Tierra's physical home. Living learning space for bioconstruction, hydrology and agroecology — built with the same techniques we teach.</span></p>
+          <div class="proj-meta">San Marcos Sierras, Córdoba, Argentina · 2019–<span class="lang-es">presente</span><span class="lang-en">present</span></div>
+          <div class="proj-scope" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:0.8rem 0 1rem;"><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;"><span class="lang-es">Proyecto propio</span><span class="lang-en">Own project</span></span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">Bioconstrucción + Agroecología + Hidrología</span></div>
+          <p class="proj-desc"><span class="lang-es">Sede física de Arte y Tierra. Ecoescuela y ecohostel donde se aprende en la práctica: huertas biointensivas, módulos de hongos, gallinera móvil, banco de semillas nativas, biopiscina regenerativa, baños secos, fitotratamiento, recolección de lluvia. Construido con las mismas técnicas que se enseñan.</span><span class="lang-en">Arte y Tierra's physical home. Eco-school and eco-hostel for hands-on learning: biointensive gardens, mushroom modules, mobile chicken coop, native seed bank, regenerative biopool, dry toilets, phyto-treatment, rainwater harvesting. Built with the same techniques we teach.</span></p>
           <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
         </div>
       </div>
@@ -209,8 +216,9 @@
         <div class="proj-info">
           <div class="proj-type"><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></div>
           <div class="proj-name">Casa Aurea</div>
-          <div class="proj-meta">Córdoba, Argentina · 2022–2026</div>
-          <p class="proj-desc"><span class="lang-es">Vivienda en bioconstrucción de proceso largo. Bioarquitectura, arquitectura bioclimática y técnicas con tierra cruda integradas al paisaje serrano cordobés. Diseño desde cero — del análisis del sitio a las terminaciones.</span><span class="lang-en">Long-process bioconstruction dwelling. Bioarchitecture, bioclimatic design and raw-earth techniques integrated into Córdoba's mountain landscape. Designed from scratch — site analysis to finishes.</span></p>
+          <div class="proj-meta">San Marcos Sierras, Córdoba, Argentina · 2022–2026</div>
+          <div class="proj-scope" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:0.8rem 0 1rem;"><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">Diseño + Obra</span><span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocre);background:rgba(193,127,58,0.14);padding:0.3rem 0.7rem;border-radius:3px;font-weight:700;">Pircas · Quincha · Cob · Paja apisonada</span></div>
+          <p class="proj-desc"><span class="lang-es">Vivienda en bioconstrucción de proceso largo en San Marcos Sierras. Combina pircas de piedra, quincha, cob y paja apisonada — un compendio de técnicas con tierra cruda integradas al paisaje serrano cordobés. Diseño desde cero: del análisis del sitio a las terminaciones.</span><span class="lang-en">Long-process bioconstruction dwelling in San Marcos Sierras. Combines stone <em>pircas</em>, quincha, cob and rammed straw — a compendium of raw-earth techniques integrated into Córdoba's mountain landscape. Designed from scratch: from site analysis to finishes.</span></p>
           <button class="proj-toggle" onclick="toggleDesc(this)"><span class="lang-es">Ver más ↓</span><span class="lang-en">Read more ↓</span></button>
         </div>
       </div>
@@ -221,6 +229,14 @@
       <span class="lang-es">Más proyectos serán incorporados próximamente</span>
       <span class="lang-en">More projects will be added soon</span>
     </p>
+
+    <!-- ═══════ CTA CIERRE GALERÍA ═══════ -->
+    <div style="margin-top:5rem;padding:3rem 2rem;background:linear-gradient(135deg,var(--ocre),var(--tierra));border-radius:8px;text-align:center;max-width:880px;margin-left:auto;margin-right:auto;">
+      <div style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--negro);font-weight:700;margin-bottom:1rem;opacity:0.7;"><span class="lang-es">¿Te imaginás algo así en tu tierra?</span><span class="lang-en">Can you picture something like this on your land?</span></div>
+      <h3 style="font-size:clamp(1.4rem,3vw,2rem);color:var(--negro);line-height:1.2;margin-bottom:1.2rem;font-weight:300;"><span class="lang-es">Empezá con una <em style="font-weight:600;">asesoría online</em>.<br>Si después contratás el diseño, <em style="font-weight:600;">los USD 60 se descuentan.</em></span><span class="lang-en">Start with an <em style="font-weight:600;">online advisory</em>.<br>If you hire the full design, <em style="font-weight:600;">the USD 60 is credited.</em></span></h3>
+      <p style="color:var(--negro);opacity:0.85;font-size:0.95rem;line-height:1.6;margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto;"><span class="lang-es">1 hora con nuestro equipo · ES/EN · revisamos tu terreno, agua, ideas y posibilidades. Sin compromiso de avanzar.</span><span class="lang-en">1 hour with our team · ES/EN · we review your land, water, ideas and possibilities. No commitment to move forward.</span></p>
+      <a href="asesorias.html" style="display:inline-block;background:var(--negro);color:var(--ocre);padding:1.1rem 2.4rem;border-radius:4px;font-weight:700;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;"><span class="lang-es">Agendar asesoría — USD 60 →</span><span class="lang-en">Book advisory — USD 60 →</span></a>
+    </div>
   </div>
 </section>
 

@@ -31,6 +31,7 @@
     </a>
     <div class="desktop-nav">
       <a href="servicios.html" class="nav-link active"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="asesorias.html" class="nav-link"><span class="lang-es">Asesorías</span><span class="lang-en">Advisory</span></a>
       <a href="proyectos.html" class="nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
       <a href="cursos.html" class="nav-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
       <a href="taypichin.html" class="nav-link">Tay Pichín</a>
@@ -45,6 +46,7 @@
 <div id="mobile-menu">
   <button class="close-btn" onclick="toggleMenu()">✕</button>
   <a href="servicios.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="asesorias.html" onclick="toggleMenu()"><span class="lang-es">Asesorías</span><span class="lang-en">Advisory</span></a>
   <a href="proyectos.html" onclick="toggleMenu()"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
   <a href="cursos.html" onclick="toggleMenu()"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
   <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
@@ -66,6 +68,17 @@
       <a href="https://wa.me/5493549431594?text=Hola%2C%20quiero%20consultar%20por%20un%20proyecto" class="btn-primary" target="_blank"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> <span class="lang-es">Escribir por WhatsApp</span><span class="lang-en">Write on WhatsApp</span></a>
       <a href="#contratacion" class="btn-outline"><span class="lang-es">Cómo se contrata →</span><span class="lang-en">How to hire →</span></a>
     </div>
+  </div>
+</section>
+
+<!-- ═══════ BANDA ASESORÍA ═══════ -->
+<section style="background:var(--ocre);padding:1.6rem 2rem;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;text-align:center;">
+    <div style="color:var(--negro);font-size:1rem;line-height:1.5;">
+      <strong><span class="lang-es">¿Tu proyecto necesita una mirada experta primero?</span><span class="lang-en">Need an expert look at your project first?</span></strong><br>
+      <span style="font-size:0.9rem;opacity:0.85;"><span class="lang-es">Empezá con una asesoría online · USD 60 · 1 hora · ES/EN</span><span class="lang-en">Start with an online advisory · USD 60 · 1 hour · ES/EN</span></span>
+    </div>
+    <a href="asesorias.html" style="background:var(--negro);color:var(--ocre);padding:0.85rem 1.6rem;border-radius:4px;font-weight:700;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;white-space:nowrap;"><span class="lang-es">Agendar asesoría →</span><span class="lang-en">Book advisory →</span></a>
   </div>
 </section>
 
@@ -365,7 +378,7 @@
 <!-- ═══════ ASESORÍA ONLINE ═══════ -->
 <section id="asesoria-online" class="section bg-blanco">
   <div class="section-narrow" style="max-width:1100px;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:4rem;align-items:center;">
       <div style="position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--negro);">
         <img src="img/cms/asesorias/1.jpg" alt="Asesoría online Arte y Tierra" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
