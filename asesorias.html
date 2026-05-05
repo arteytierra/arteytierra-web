@@ -258,9 +258,11 @@
       <h2 class="section-title"><span class="lang-es">Elegí tu tema<br>y <em>completá el formulario.</em></span><span class="lang-en">Choose your topic<br>and <em>fill in the form.</em></span></h2>
     </div>
 
-    <form id="asesoria-form" name="asesoria-online" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+    <form id="asesoria-form" name="asesoria-online" method="POST" action="https://formspree.io/f/mvzlarvb">
+      <input type="hidden" name="_subject" value="Nueva asesoría online · arteytierra.org">
+      <input type="hidden" name="_next" value="https://arteytierra.org/gracias.html">
       <input type="hidden" name="form-name" value="asesoria-online">
-      <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+      <p style="display:none;"><label>No llenar: <input name="_gotcha"></label></p>
 
       <!-- Topic selector -->
       <div style="margin-bottom:2rem;">

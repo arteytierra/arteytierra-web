@@ -64,9 +64,11 @@
 
 <!-- ═══════ FORM ═══════ -->
 <section class="section bg-tierra">
-  <form id="contact-form" class="form-grid" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+  <form id="contact-form" class="form-grid" name="contacto" method="POST" action="https://formspree.io/f/mvzlarvb">
+    <input type="hidden" name="_subject" value="Nuevo mensaje de contacto · arteytierra.org">
+    <input type="hidden" name="_next" value="https://arteytierra.org/gracias.html">
     <input type="hidden" name="form-name" value="contacto">
-    <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+    <p style="display:none;"><label>No llenar: <input name="_gotcha"></label></p>
     <div class="form-row-2">
       <input type="text" required name="nombre" class="form-input" placeholder="Nombre completo / Full name">
       <input type="email" required name="email" class="form-input" placeholder="Email">

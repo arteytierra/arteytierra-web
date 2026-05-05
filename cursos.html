@@ -488,9 +488,11 @@
       <p class="section-sub" style="margin:0 auto;"><span class="lang-es">Completá el formulario y te respondemos con instrucciones de pago en 24–48 hs. Cupos limitados por curso.</span><span class="lang-en">Fill the form — we reply with payment instructions in 24–48h. Limited spots per course.</span></p>
     </div>
 
-    <form name="inscripcion-curso" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html" class="form-grid vol-form-grid" style="background:var(--arena);padding:2.5rem;">
+    <form name="inscripcion-curso" method="POST" action="https://formspree.io/f/mvzlarvb" class="form-grid vol-form-grid" style="background:var(--arena);padding:2.5rem;">
+      <input type="hidden" name="_subject" value="Nueva inscripción a curso · arteytierra.org">
+      <input type="hidden" name="_next" value="https://arteytierra.org/gracias.html">
       <input type="hidden" name="form-name" value="inscripcion-curso">
-      <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+      <p style="display:none;"><label>No llenar: <input name="_gotcha"></label></p>
 
       <div class="form-row-2">
         <input type="text" required name="nombre" class="form-input" placeholder="Nombre completo / Full name" style="background:rgba(26,18,16,0.05);color:var(--negro);border-color:rgba(26,18,16,0.2);">
