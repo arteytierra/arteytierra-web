@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tierra Mi Casa — Curso Online de Construcción Natural | Arte y Tierra</title>
+  <meta name="description" content="Curso virtual de construcción natural — 4 módulos, 18 clases, asesoría por videollamada. Aprendé bioconstrucción a tu propio ritmo, desde cualquier parte del mundo.">
+  <link rel="icon" type="image/png" href="assets/logos/ayt-arbol-negro.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arte y Tierra">
+  <meta property="og:title" content="Mi Tierra Mi Casa — Curso Online de Construcción Natural">
+  <meta property="og:description" content="Curso virtual de bioconstrucción — 4 módulos, 18 clases, asesoría por videollamada. Acceso ilimitado desde cualquier parte del mundo.">
+  <meta property="og:image" content="https://arteytierra.org/img/cms/taypichin/carousel/1.jpg">
+  <meta property="og:url" content="https://arteytierra.org/mitierramicasa">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="solid-nav">
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">ARTE Y TIERRA</div>
+        <div class="nav-logo-sub"><span class="lang-es">Diseño Ecosistémico</span><span class="lang-en">Ecosystemic Design</span></div>
+      </div>
+    </a>
+    <div class="desktop-nav">
+      <a href="servicios.html" class="nav-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="asesorias.html" class="nav-link"><span class="lang-es">Asesorías</span><span class="lang-en">Advisory</span></a>
+      <a href="proyectos.html" class="nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+      <a href="cursos.html" class="nav-link active"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+      <a href="taypichin.html" class="nav-link">Tay Pichín</a>
+      <a href="nosotros.html" class="nav-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+      <a href="contacto.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      <button class="lang-btn" onclick="toggleLang()"><span class="lang-es">EN</span><span class="lang-en">ES</span></button>
+    </div>
+    <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="servicios.html" onclick="toggleMenu()"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="asesorias.html" onclick="toggleMenu()"><span class="lang-es">Asesorías</span><span class="lang-en">Advisory</span></a>
+  <a href="proyectos.html" onclick="toggleMenu()"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+  <a href="cursos.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+  <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
+  <a href="nosotros.html" onclick="toggleMenu()"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+  <a href="contacto.html" onclick="toggleMenu()"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+</div>
+
+<!-- ═══════ HERO con CAROUSEL ═══════ -->
+<section class="page-hero" data-cms="mtmc-hero" style="padding-bottom:5rem;">
+  <div class="page-hero-bg auto-carousel" data-interval="4500">
+    <img src="img/cms/mitierramicasa/1.jpg" alt="" class="active">
+    <img src="img/cms/mitierramicasa/2.jpg" alt="">
+    <img src="img/cms/mitierramicasa/3.jpg" alt="">
+    <img src="img/cms/mitierramicasa/4.jpg" alt="">
+  </div>
+  <div class="page-hero-content">
+    <div class="page-hero-tag"><span class="lang-es">Curso Online · Construcción Natural</span><span class="lang-en">Online Course · Natural Construction</span></div>
+    <h1>
+      <span class="lang-es">Mi Tierra,<br><em>Mi Casa.</em></span>
+      <span class="lang-en">My Earth,<br><em>My Home.</em></span>
+    </h1>
+    <p style="font-size:clamp(1rem,2vw,1.2rem);max-width:680px;">
+      <span class="lang-es">Una formación que te invita a recordar y vivir la experiencia de bioconstrucción — y a recuperar el antiguo hábito de construir una vivienda de forma comunitaria.</span>
+      <span class="lang-en">A training that invites you to remember and live the experience of bioconstruction — and to recover the ancient habit of building a home together.</span>
+    </p>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#inscribirme" class="btn-primary"><span class="lang-es">Inscribirme — USD 80</span><span class="lang-en">Enroll — USD 80</span></a>
+      <a href="#contenido" class="btn-outline"><span class="lang-es">Ver contenido →</span><span class="lang-en">See content →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BIENVENIDA ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:780px;text-align:center;">
+    <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Bienvenida</span><span class="lang-en">Welcome</span></div>
+    <h2 class="section-title"><span class="lang-es">Construir tu casa<br>como un <em>acto vivo.</em></span><span class="lang-en">Building your home<br>as a <em>living act.</em></span></h2>
+    <p style="font-size:1.05rem;line-height:1.9;color:var(--tierra);margin-bottom:1.5rem;">
+      <span class="lang-es">Así como cualquier especie en este planeta construye su casa o refugio, esta formación te conecta con ese saber ancestral. Te invita a crear tu propio proceso de aprendizaje a través del estudio de archivos multimedia que fomentan el uso de materiales naturales, herramientas y — principalmente — el desarrollo de tu criterio a la hora de poner manos a la obra.</span>
+      <span class="lang-en">Just as every species on this planet builds its own home or shelter, this training reconnects you with that ancestral knowledge. It invites you to create your own learning process through multimedia archives that promote the use of natural materials, tools and — above all — developing your own judgment when it's time to put your hands to work.</span>
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2.5rem;">
+      <div style="padding:1.5rem;background:var(--arena);border-left:3px solid var(--ocre);text-align:left;">
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.4rem;"><span class="lang-es">¿Cuándo?</span><span class="lang-en">When?</span></div>
+        <div style="font-size:1rem;font-weight:700;color:var(--tierra);"><span class="lang-es">Cuando vos quieras.</span><span class="lang-en">Whenever you want.</span></div>
+      </div>
+      <div style="padding:1.5rem;background:var(--arena);border-left:3px solid var(--ocre);text-align:left;">
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.4rem;"><span class="lang-es">¿Dónde?</span><span class="lang-en">Where?</span></div>
+        <div style="font-size:1rem;font-weight:700;color:var(--tierra);"><span class="lang-es">Desde donde estés.</span><span class="lang-en">Wherever you are.</span></div>
+      </div>
+      <div style="padding:1.5rem;background:var(--arena);border-left:3px solid var(--ocre);text-align:left;">
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.4rem;"><span class="lang-es">¿Cómo?</span><span class="lang-en">How?</span></div>
+        <div style="font-size:1rem;font-weight:700;color:var(--tierra);"><span class="lang-es">100% virtual · acceso ilimitado.</span><span class="lang-en">100% virtual · unlimited access.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CONTENIDO · 4 MÓDULOS ═══════ -->
+<section id="contenido" class="section bg-dark">
+  <div class="section-narrow">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Contenido del curso</span><span class="lang-en">Course content</span></div>
+      <h2 class="section-title"><span class="lang-es">4 módulos · <em>18 clases.</em></span><span class="lang-en">4 modules · <em>18 classes.</em></span></h2>
+      <p class="section-sub" style="margin:0 auto;color:var(--arena);"><span class="lang-es">Una progresión que recorre todas las etapas de una obra natural — de los cimientos al criterio.</span><span class="lang-en">A progression that walks through every stage of a natural build — from foundations to design judgment.</span></p>
+    </div>
+
+    <div class="mtmc-modules">
+      <div class="mtmc-module">
+        <div class="mtmc-module-num">01</div>
+        <h3><span class="lang-es">Introducción</span><span class="lang-en">Introduction</span></h3>
+        <p class="mtmc-module-intro"><span class="lang-es">Las bases para entender qué es la construcción natural, leer materiales y empezar con criterio.</span><span class="lang-en">The basics to understand natural construction, read materials and start with judgment.</span></p>
+        <ul>
+          <li><span class="lang-es">Introducción a la construcción natural</span><span class="lang-en">Intro to natural construction</span></li>
+          <li><span class="lang-es">Cimientos y estructuras</span><span class="lang-en">Foundations & structures</span></li>
+          <li><span class="lang-es">Materiales de construcción</span><span class="lang-en">Building materials</span></li>
+          <li><span class="lang-es">Laboratorio de pruebas</span><span class="lang-en">Test lab</span></li>
+        </ul>
+      </div>
+
+      <div class="mtmc-module">
+        <div class="mtmc-module-num">02</div>
+        <h3><span class="lang-es">Muros</span><span class="lang-en">Walls</span></h3>
+        <p class="mtmc-module-intro"><span class="lang-es">Las técnicas vivas de levantamiento. Acá aprendés a pararte frente a un muro y resolverlo.</span><span class="lang-en">Living wall techniques. Here you learn how to face a wall and resolve it.</span></p>
+        <ul>
+          <li><span class="lang-es">Estructuras y quincha</span><span class="lang-en">Quincha & structures</span></li>
+          <li><span class="lang-es">Paja alivianada</span><span class="lang-en">Light straw</span></li>
+          <li>COB</li>
+          <li><span class="lang-es">Rollos de paja</span><span class="lang-en">Straw rolls</span></li>
+          <li><span class="lang-es">Paja encofrada</span><span class="lang-en">Formed straw</span></li>
+          <li><span class="lang-es">Paja seca</span><span class="lang-en">Dry straw</span></li>
+        </ul>
+      </div>
+
+      <div class="mtmc-module">
+        <div class="mtmc-module-num">03</div>
+        <h3><span class="lang-es">Terminaciones</span><span class="lang-en">Finishes</span></h3>
+        <p class="mtmc-module-intro"><span class="lang-es">El acabado que protege y embellece la obra para que dure décadas.</span><span class="lang-en">The finish that protects and beautifies the work — making it last for decades.</span></p>
+        <ul>
+          <li><span class="lang-es">Revoque grueso</span><span class="lang-en">Thick plaster</span></li>
+          <li><span class="lang-es">Revoque fino</span><span class="lang-en">Fine plaster</span></li>
+          <li><span class="lang-es">Pinturas hidrófugas</span><span class="lang-en">Water-repellent paints</span></li>
+          <li><span class="lang-es">Relieves</span><span class="lang-en">Reliefs</span></li>
+        </ul>
+      </div>
+
+      <div class="mtmc-module">
+        <div class="mtmc-module-num">04</div>
+        <h3><span class="lang-es">Bioarquitectura</span><span class="lang-en">Bioarchitecture</span></h3>
+        <p class="mtmc-module-intro"><span class="lang-es">La mirada integral: cómo el diseño dialoga con el sol, los flujos y la energía del lugar.</span><span class="lang-en">The integral view: how design dialogues with the sun, the flows and the energy of the place.</span></p>
+        <ul>
+          <li><span class="lang-es">Arquitectura bioclimática</span><span class="lang-en">Bioclimatic architecture</span></li>
+          <li><span class="lang-es">Geometría sagrada</span><span class="lang-en">Sacred geometry</span></li>
+          <li><span class="lang-es">Radiestesia</span><span class="lang-en">Dowsing</span></li>
+          <li><span class="lang-es">Techo vivo o techo verde</span><span class="lang-en">Living/green roof</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ LO QUE RECIBÍS ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:880px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Lo que recibís</span><span class="lang-en">What you get</span></div>
+      <h2 class="section-title"><span class="lang-es">Una formación <em>completa.</em></span><span class="lang-en">A <em>complete</em> training.</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">🎬</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">18 clases en video</span><span class="lang-en">18 video classes</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">5 conferencias teóricas + 13 clases prácticas, en alta calidad.</span><span class="lang-en">5 theory lectures + 13 practical classes, in high quality.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">📞</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Asesoría por videollamada</span><span class="lang-en">Video-call mentoring</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Consultas con el facilitador para resolver dudas durante tu proceso.</span><span class="lang-en">Consultations with the facilitator to resolve doubts during your process.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">⏳</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Acceso ilimitado</span><span class="lang-en">Unlimited access</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Sin fechas, sin cupos. Mirá las clases tantas veces como necesites.</span><span class="lang-en">No dates, no spots. Watch the classes as many times as you need.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">🌍</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Desde cualquier lugar</span><span class="lang-en">From anywhere</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Solo necesitás conexión a internet y una cuenta de Gmail.</span><span class="lang-en">You only need internet and a Gmail account.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ TE SUGERIMOS ═══════ -->
+<section class="section bg-tierra">
+  <div class="section-narrow" style="max-width:780px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Te sugerimos tener a mano</span><span class="lang-en">We suggest having ready</span></div>
+      <h2 class="section-title"><span class="lang-es">Para acompañar la <em>práctica.</em></span><span class="lang-en">To accompany the <em>practice.</em></span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.6rem;">
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Cuaderno para escribir y/o dibujar</span><span class="lang-en">Notebook for writing/drawing</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Lapicera, lápiz, regla, compás, goma</span><span class="lang-en">Pen, pencil, ruler, compass, eraser</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Baldes o recipientes grandes</span><span class="lang-en">Buckets or large containers</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Alambre de fardo recocido y pinza</span><span class="lang-en">Bale wire and pliers</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Tierra de tu zona (cernida)</span><span class="lang-en">Local earth (sifted)</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Arena de tu zona (cernida)</span><span class="lang-en">Local sand (sifted)</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);grid-column:span 2;"><span class="lang-es">Paja, pasto o cualquier tipo de fibra seca</span><span class="lang-en">Straw, grass or any dry fiber</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FACILITADOR ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:center;">
+    <div>
+      <img src="https://drive.google.com/thumbnail?id=1W2VBE1_x-vRLkg5s-OcbKq2FbSB4_Rue&sz=w800" alt="Jonatan Palma" style="width:100%;aspect-ratio:1/1;object-fit:cover;">
+    </div>
+    <div>
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Tu facilitador</span><span class="lang-en">Your facilitator</span></div>
+      <h2 class="section-title" style="font-size:clamp(1.5rem,4vw,2.5rem);">Jonatan Gabriel <em>Palma.</em></h2>
+      <p style="font-size:0.95rem;line-height:1.8;color:var(--tierra);margin-bottom:1rem;">
+        <span class="lang-es">Bioconstructor desde 2010, especializado en técnicas de construcción en tierra ancestrales y modernas, bioclimática, bioarquitectura y radiestesia. Su formación incluye el aporte de docentes referentes como <strong>Jorge Belanko, Gernot Minke, Marco Arestra y Daniel Smite</strong>, entre otrxs maestrxs.</span>
+        <span class="lang-en">Bioconstructor since 2010, specialized in ancestral and modern earth-building techniques, bioclimatics, bioarchitecture and dowsing. His training includes the contribution of leading teachers such as <strong>Jorge Belanko, Gernot Minke, Marco Arestra and Daniel Smite</strong>, among other masters.</span>
+      </p>
+      <p style="font-size:0.95rem;line-height:1.8;color:var(--tierra);">
+        <span class="lang-es">Hijo de un carpintero, desde niño aprendió a trabajar con la madera y el arte de la mueblería — un oficio que sigue siendo la base de su mirada constructiva.</span>
+        <span class="lang-en">Son of a carpenter, he learned to work with wood and furniture craft from a young age — a trade that remains the foundation of his constructive view.</span>
+      </p>
+      <a href="nosotros.html" class="btn-outline dark" style="margin-top:1.5rem;"><span class="lang-es">Conocer más →</span><span class="lang-en">Learn more →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ INVERSIÓN + INSCRIPCIÓN ═══════ -->
+<section id="inscribirme" class="section bg-dark">
+  <div class="section-narrow" style="max-width:980px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Inversión</span><span class="lang-en">Tuition</span></div>
+      <h2 class="section-title"><span class="lang-es">Una sola <em>inversión.</em></span><span class="lang-en">One single <em>investment.</em></span></h2>
+      <div style="display:inline-block;background:var(--ocre);color:var(--negro);padding:2.5rem 3.5rem;margin-top:2rem;">
+        <div style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;font-weight:800;"><span class="lang-es">Curso completo</span><span class="lang-en">Full course</span></div>
+        <div style="font-size:3.5rem;font-weight:900;line-height:1;margin:0.5rem 0;">USD 80</div>
+        <div style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;"><span class="lang-es">4 módulos · 18 clases · acceso ilimitado</span><span class="lang-en">4 modules · 18 classes · unlimited access</span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-bottom:2rem;">
+      <h3 style="font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:1.5rem;"><span class="lang-es">Pagar directo</span><span class="lang-en">Pay directly</span></h3>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
+      <a href="https://www.paypal.com/donate/?business=info.arteytierra@gmail.com&item_name=Curso+Mi+Tierra+Mi+Casa&currency_code=USD&amount=80" target="_blank" rel="noopener" class="mtmc-pay-card" style="background:#003087;color:#fff;text-decoration:none;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;opacity:0.7;font-weight:700;margin-bottom:0.5rem;">PayPal</div>
+        <div style="font-size:1.4rem;font-weight:900;margin-bottom:0.6rem;letter-spacing:-0.02em;">PayPal · USD 80</div>
+        <div style="font-size:0.85rem;opacity:0.85;line-height:1.5;"><span class="lang-es">Pago directo desde cualquier país. Tarjeta o saldo PayPal.</span><span class="lang-en">Direct payment from any country. Card or PayPal balance.</span></div>
+        <div style="margin-top:1rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;border-top:1px solid rgba(255,255,255,0.2);padding-top:1rem;"><span class="lang-es">Pagar ahora →</span><span class="lang-en">Pay now →</span></div>
+      </a>
+
+      <a href="https://link.mercadopago.com.ar/arteytierra" target="_blank" rel="noopener" class="mtmc-pay-card" style="background:#00B1EA;color:#fff;text-decoration:none;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;opacity:0.85;font-weight:700;margin-bottom:0.5rem;">Mercado Pago</div>
+        <div style="font-size:1.4rem;font-weight:900;margin-bottom:0.6rem;letter-spacing:-0.02em;">Mercado Pago</div>
+        <div style="font-size:0.85rem;opacity:0.95;line-height:1.5;"><span class="lang-es">Pago en pesos argentinos · tarjeta, débito o saldo MP.</span><span class="lang-en">Payment in Argentine pesos · card, debit or MP balance.</span></div>
+        <div style="margin-top:1rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;border-top:1px solid rgba(255,255,255,0.3);padding-top:1rem;"><span class="lang-es">Pagar ahora →</span><span class="lang-en">Pay now →</span></div>
+      </a>
+
+      <div class="mtmc-pay-card" style="background:rgba(245,240,232,0.06);border:1px solid rgba(193,127,58,0.4);color:var(--arena);">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:700;margin-bottom:0.5rem;"><span class="lang-es">Otros medios</span><span class="lang-en">Other methods</span></div>
+        <div style="font-size:1.1rem;font-weight:800;margin-bottom:0.6rem;color:var(--blanco);"><span class="lang-es">Bancolombia · Transferencia</span><span class="lang-en">Bancolombia · Transfer</span></div>
+        <div style="font-size:0.85rem;line-height:1.6;margin-bottom:0.5rem;"><strong style="color:var(--blanco);">Bancolombia</strong> — Cuenta de Ahorros<br><span style="font-family:monospace;">54193548566</span></div>
+        <div style="font-size:0.78rem;line-height:1.5;opacity:0.85;"><span class="lang-es">Otros bancos / países: consultanos por WhatsApp.</span><span class="lang-en">Other banks/countries: ask us via WhatsApp.</span></div>
+      </div>
+    </div>
+
+    <div style="background:rgba(193,127,58,0.1);border-left:3px solid var(--ocre);padding:1.8rem 2rem;">
+      <h4 style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);margin:0 0 1rem;font-weight:800;"><span class="lang-es">📥 Cómo activar tu acceso</span><span class="lang-en">📥 How to activate your access</span></h4>
+      <ol style="font-size:0.92rem;line-height:1.9;color:var(--arena);margin:0;padding-left:1.3rem;">
+        <li><span class="lang-es">Hacé el pago por el medio que elijas.</span><span class="lang-en">Pay through the method you prefer.</span></li>
+        <li><span class="lang-es">Enviá el comprobante por <strong style="color:var(--ocre);">WhatsApp +54 9 11 2759-0652</strong> indicando tu nombre completo y tu cuenta de Gmail.</span><span class="lang-en">Send the receipt via <strong style="color:var(--ocre);">WhatsApp +54 9 11 2759-0652</strong> with your full name and your Gmail account.</span></li>
+        <li><span class="lang-es">Habilitamos el acceso a tu correo Gmail <em>(es indispensable que la cuenta esté vinculada a Google).</em></span><span class="lang-en">We grant access to your Gmail account <em>(must be linked to Google).</em></span></li>
+        <li><span class="lang-es">¡Empezás a aprender cuando quieras!</span><span class="lang-en">Start learning whenever you want!</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CLASE LIBRE ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:780px;text-align:center;">
+    <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Clase libre</span><span class="lang-en">Free class</span></div>
+    <h2 class="section-title"><span class="lang-es">Mirá una <em>clase entera</em><br>antes de inscribirte.</span><span class="lang-en">Watch a <em>full class</em><br>before enrolling.</span></h2>
+    <p style="font-size:1rem;line-height:1.7;color:var(--tierra);margin-bottom:2rem;"><span class="lang-es">Te dejamos libre la clase de <strong>Techo Vivo o Techo Verde</strong> para que veas el formato y la calidad del curso.</span><span class="lang-en">We've made the <strong>Living/Green Roof</strong> class free so you can see the format and quality of the course.</span></p>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--negro);">
+      <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/qvUdrTlg2Bs" title="Clase libre Techo Vivo" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA + CONTACTO ═══════ -->
+<section class="cta-block">
+  <h2 class="cta-title"><span class="lang-es">¿Listx para empezar?</span><span class="lang-en">Ready to start?</span></h2>
+  <p class="cta-sub"><span class="lang-es">Pagás, mandás el comprobante por WhatsApp y empezás cuando quieras.</span><span class="lang-en">Pay, send the receipt on WhatsApp, start whenever you want.</span></p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+    <a href="https://wa.me/5491127590652?text=Hola%2C%20quiero%20inscribirme%20a%20Mi%20Tierra%20Mi%20Casa" class="btn-primary" target="_blank" style="font-size:0.75rem;padding:1rem 2rem;"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> WhatsApp +54 9 11 2759-0652</a>
+    <a href="mailto:info.arteytierra@gmail.com?subject=Inscripci%C3%B3n%20Mi%20Tierra%20Mi%20Casa" class="btn-outline" style="font-size:0.75rem;padding:1rem 2rem;"><span class="lang-es">Escribir por mail</span><span class="lang-en">Send email</span></a>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img class="footer-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+          <div>
+            <div class="footer-logo">ARTE Y TIERRA</div>
+            <div class="footer-tagline"><span class="lang-es">Diseño Ecosistémico del Territorio</span><span class="lang-en">Ecosystemic Territory Design</span></div>
+          </div>
+        </div>
+        <p class="footer-addr">Tay Pichín · San Marcos Sierras<br>Córdoba, Argentina</p>
+      </div>
+      <div>
+        <div class="footer-col-title"><span class="lang-es">Secciones</span><span class="lang-en">Sections</span></div>
+        <a href="servicios.html" class="footer-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+        <a href="proyectos.html" class="footer-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+        <a href="cursos.html" class="footer-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+        <a href="taypichin.html" class="footer-link">Tay Pichín</a>
+        <a href="nosotros.html" class="footer-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+        <a href="contacto.html" class="footer-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      </div>
+      <div>
+        <div class="footer-col-title">Social</div>
+        <a href="https://instagram.com/arteytierrabioconstruccion" class="footer-link">Instagram</a>
+        <a href="https://youtube.com/@arteytierra24" class="footer-link">YouTube</a>
+        <a href="https://wa.me/5491127590652" class="footer-link">WhatsApp</a>
+        <a href="mailto:info.arteytierra@gmail.com" class="footer-link">Email</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Arte y Tierra. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span></p>
+      <p class="footer-copy">arteytierra.org</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5491127590652" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script src="script.js"></script>
+<script src="cms-loader.js"></script>
+</body>
+</html>
