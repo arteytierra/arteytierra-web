@@ -4,6 +4,4 @@
 /voluntariado.html       /inmersionviva.html      301!
 /voluntariado/*          /inmersionviva.html      301!
 
-# URL bonita Mi Tierra Mi Casa
-/mitierramicasa          /mitierramicasa.html     200
 /mi-tierra-mi-casa       /mitierramicasa.html     301!
