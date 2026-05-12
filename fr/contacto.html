@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Arte y Tierra</title>
+  <meta name="description" content="Contactez-nous pour des projets de bioarchitecture, d'hydrologie régénérative, des ateliers, écohostel ou volontariat.">
+  <link rel="icon" type="image/png" href="../assets/logos/ayt-arbol-negro.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arte y Tierra">
+  <meta property="og:title" content="Contact — Arte y Tierra">
+  <meta property="og:description" content="Contactez-nous pour des projets de bioarchitecture, d'hydrologie régénérative, des ateliers, écohostel ou volontariat.">
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1FIiu87VZeJx9D2QH7Xnmk0rZXT-3e6so&sz=w1200">
+  <meta property="og:url" content="https://arteytierra.org/fr/contacto.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="solid-nav">
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">ARTE Y TIERRA</div>
+        <div class="nav-logo-sub">Design Écosystémique</div>
+      </div>
+    </a>
+    <div class="desktop-nav">
+      <a href="servicios.html" class="nav-link">Services</a>
+      <a href="cursos.html" class="nav-link">Formations</a>
+      <a href="proyectos.html" class="nav-link">Projets</a>
+      <a href="taypichin.html" class="nav-link">Tay Pichín</a>
+      <a href="nosotros.html" class="nav-link">À propos</a>
+      <a href="contacto.html" class="nav-link active">Contact</a>
+      <a href="asesorias.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;">Consultation · USD 60</a>
+      <div class="lang-switch"><button data-setlang="es" onclick="setLang('es')">ES</button><button data-setlang="en" onclick="setLang('en')">EN</button><button data-setlang="fr" onclick="setLang('fr')">FR</button></div>
+    </div>
+    <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="servicios.html" onclick="toggleMenu()">Services</a>
+  <a href="cursos.html" onclick="toggleMenu()">Formations</a>
+  <a href="proyectos.html" onclick="toggleMenu()">Projets</a>
+  <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
+  <a href="nosotros.html" onclick="toggleMenu()">À propos</a>
+  <a href="contacto.html" onclick="toggleMenu()" style="color:var(--ocre);">Contact</a>
+  <a href="asesorias.html" onclick="toggleMenu()" style="color:var(--ocre);font-weight:700;">Réserver une consultation · USD 60</a>
+</div>
+
+<!-- ═══════ PAGE HERO ═══════ -->
+<section class="page-hero" style="padding-bottom:4rem;">
+  <div class="page-hero-bg" style="opacity:0.3;"><img src="https://drive.google.com/thumbnail?id=1FIiu87VZeJx9D2QH7Xnmk0rZXT-3e6so&sz=w2000" alt=""></div>
+  <div class="page-hero-content" style="text-align:center;">
+    <div class="page-hero-tag">Contact</div>
+    <h1 style="margin-left:auto;margin-right:auto;">Commençons<br>la <em>conversation.</em></h1>
+    <p style="margin:0 auto;">Parlez-nous de votre terrain, de votre idée, de votre rêve. Nous travaillons partout dans le monde.</p>
+  </div>
+</section>
+
+<!-- ═══════ FORM ═══════ -->
+<section class="section bg-tierra">
+  <form id="contact-form" class="form-grid" name="contacto" method="POST" action="https://formspree.io/f/mvzlarvb">
+    <input type="hidden" name="_subject" value="Nouveau message de contact (FR) · arteytierra.org">
+    <input type="hidden" name="_next" value="https://arteytierra.org/fr/gracias.html">
+    <input type="hidden" name="form-name" value="contacto-fr">
+    <input type="hidden" name="idioma" value="fr">
+    <p style="display:none;"><label>Ne pas remplir : <input name="_gotcha"></label></p>
+    <div class="form-row-2">
+      <input type="text" required name="nombre" class="form-input" placeholder="Nom complet">
+      <input type="email" required name="email" class="form-input" placeholder="Email">
+    </div>
+    <div class="form-row-2">
+      <input type="text" name="pais" class="form-input" placeholder="Pays et région">
+      <input type="tel" name="whatsapp" class="form-input" placeholder="WhatsApp (optionnel)">
+    </div>
+
+    <div>
+      <label style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ocre);font-weight:700;display:block;margin-bottom:0.8rem;">Que cherchez-vous ? · plusieurs choix possibles</label>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" name="interes_bioarq" value="si"> Projet de bioarchitecture</label>
+        <label class="form-check"><input type="checkbox" name="interes_hidro" value="si"> Projet d'hydrologie</label>
+        <label class="form-check"><input type="checkbox" name="interes_taller_predio" value="si"> Atelier sur mon terrain</label>
+        <label class="form-check"><input type="checkbox" name="interes_taller_tp" value="si"> Atelier à Tay Pichín</label>
+        <label class="form-check"><input type="checkbox" name="interes_hostel" value="si"> Écohostel · séjour</label>
+        <label class="form-check"><input type="checkbox" name="interes_inmersion" value="si"> Volontariat</label>
+        <label class="form-check"><input type="checkbox" name="interes_otro" value="si"> Autre</label>
+      </div>
+    </div>
+
+    <textarea name="mensaje" class="form-textarea" placeholder="Parlez-nous davantage de votre projet..."></textarea>
+
+    <button type="submit" class="btn-primary form-submit">Envoyer le message →</button>
+  </form>
+</section>
+
+<!-- ═══════ DATOS DIRECTOS ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:980px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--monte);">— Contact direct</div>
+      <h2 class="section-title">Ou écrivez-nous <em>directement.</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+      <a href="https://wa.me/5493549431594?text=Hola%2C%20escribo%20desde%20arteytierra.org" target="_blank" rel="noopener" style="padding:2rem;background:var(--arena);border-left:3px solid var(--ocre);text-decoration:none;color:var(--tierra);transition:transform 0.2s;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.5rem;">WhatsApp</div>
+        <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.3rem;">+54 9 3549 43-1594</div>
+        <div style="font-size:0.85rem;opacity:0.7;">Inscriptions aux formations</div>
+      </a>
+      <a href="https://wa.me/5491127506022?text=Hola%2C%20escribo%20desde%20arteytierra.org" target="_blank" rel="noopener" style="padding:2rem;background:var(--arena);border-left:3px solid var(--ocre);text-decoration:none;color:var(--tierra);transition:transform 0.2s;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.5rem;">WhatsApp</div>
+        <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.3rem;">+54 9 11 2750-6022</div>
+        <div style="font-size:0.85rem;opacity:0.7;">Demandes générales · projets</div>
+      </a>
+      <a href="mailto:info.arteytierra@gmail.com" style="padding:2rem;background:var(--arena);border-left:3px solid var(--ocre);text-decoration:none;color:var(--tierra);transition:transform 0.2s;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.5rem;">Email</div>
+        <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.3rem;">info.arteytierra@gmail.com</div>
+        <div style="font-size:0.85rem;opacity:0.7;">Pour tout type de demande</div>
+      </a>
+    </div>
+    <div style="margin-top:3rem;padding:2rem;background:var(--arena);text-align:center;">
+      <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.5rem;">Lieu</div>
+      <div style="font-size:1rem;font-weight:700;color:var(--tierra);margin-bottom:0.3rem;">Tay Pichín · San Marcos Sierras</div>
+      <div style="font-size:0.9rem;color:var(--tierra);opacity:0.75;">Córdoba, Argentine</div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img class="footer-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+          <div>
+            <div class="footer-logo">ARTE Y TIERRA</div>
+            <div class="footer-tagline">Design Écosystémique du Territoire</div>
+          </div>
+        </div>
+        <p class="footer-addr">Tay Pichín · San Marcos Sierras<br>Córdoba, Argentine</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <a href="servicios.html" class="footer-link">Services</a>
+        <a href="cursos.html" class="footer-link">Formations</a>
+        <a href="proyectos.html" class="footer-link">Projets</a>
+        <a href="taypichin.html" class="footer-link">Tay Pichín</a>
+        <a href="nosotros.html" class="footer-link">À propos</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="https://wa.me/5493549431594" target="_blank" class="footer-link">WhatsApp formations</a>
+        <a href="https://wa.me/5491127506022" target="_blank" class="footer-link">WhatsApp général</a>
+        <a href="mailto:info.arteytierra@gmail.com" class="footer-link">info.arteytierra@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© Arte y Tierra · Tous droits réservés</div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

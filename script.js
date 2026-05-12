@@ -10,22 +10,61 @@ if (nav) {
   });
 }
 
-// ── Language toggle (persist via localStorage) ──
+// ── Language toggle (ES / EN / FR — persist via localStorage) ──
 const STORAGE_KEY = 'ayt-lang';
+const IN_FR = window.location.pathname.includes('/fr/');
+
 function applyLang(lang) {
   document.body.classList.toggle('en', lang === 'en');
   document.documentElement.lang = lang;
   try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  // Update active state on lang buttons
+  document.querySelectorAll('[data-setlang]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.setlang === lang);
+  });
 }
+
+// Legacy toggle (kept for backward compat — cycles ES ↔ EN on non-FR pages)
 function toggleLang() {
+  if (IN_FR) { setLang('es'); return; }
   const current = document.body.classList.contains('en') ? 'en' : 'es';
   applyLang(current === 'es' ? 'en' : 'es');
 }
-// On load, restore preference
-try {
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved === 'en') applyLang('en');
-} catch (e) {}
+
+// New: explicit setLang — navigates if needed
+function setLang(lang) {
+  const path = window.location.pathname;
+  const filename = path.split('/').pop() || 'index.html';
+
+  if (IN_FR) {
+    if (lang === 'fr') return;
+    // Going to root (ES or EN)
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    window.location.href = `../${filename}`;
+    return;
+  }
+  // On root pages
+  if (lang === 'fr') {
+    window.location.href = `fr/${filename}`;
+    return;
+  }
+  applyLang(lang);
+}
+
+// On load: restore preference (root only — /fr/ always shows FR)
+if (!IN_FR) {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'en') applyLang('en');
+    else applyLang('es');
+  } catch (e) { applyLang('es'); }
+} else {
+  document.documentElement.lang = 'fr';
+  // Mark FR button active
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-setlang="fr"]').forEach(b => b.classList.add('active'));
+  });
+}
 
 // ── Mobile menu ──
 function toggleMenu() {

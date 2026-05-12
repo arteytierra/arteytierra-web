@@ -75,6 +75,17 @@ body.en .lang-en.flex { display: flex; }
   cursor: pointer; transition: border-color 0.2s, color 0.2s; font-family: Montserrat;
 }
 .lang-btn:hover { border-color: var(--ocre); color: var(--ocre); }
+/* 3-button language switcher ES · EN · FR */
+.lang-switch { display: inline-flex; border: 1px solid rgba(245,240,232,0.3); overflow: hidden; }
+.lang-switch button {
+  background: none; border: none; color: var(--blanco); padding: 0.4rem 0.6rem;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; cursor: pointer;
+  font-family: Montserrat; transition: background 0.2s, color 0.2s;
+  border-right: 1px solid rgba(245,240,232,0.18);
+}
+.lang-switch button:last-child { border-right: none; }
+.lang-switch button:hover { color: var(--ocre); }
+.lang-switch button.active { background: var(--ocre); color: var(--negro); }
 #hamburger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
