@@ -37,7 +37,7 @@
       <a href="taypichin.html" class="nav-link">Tay Pichín</a>
       <a href="nosotros.html" class="nav-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
       <a href="contacto.html" class="nav-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
-      <a href="asesorias.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Asesoría · USD 60</span><span class="lang-en">Advisory · USD 60</span></a>
+      <a href="asesorias.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Asesoría</span><span class="lang-en">Advisory</span></a>
       <div class="lang-switch"><button data-setlang="es" onclick="setLang('es')">ES</button><button data-setlang="en" onclick="setLang('en')">EN</button><button data-setlang="fr" onclick="setLang('fr')">FR</button></div>
     </div>
     <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
@@ -52,7 +52,7 @@
   <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
   <a href="nosotros.html" onclick="toggleMenu()"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
   <a href="contacto.html" onclick="toggleMenu()"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
-  <a href="asesorias.html" onclick="toggleMenu()" style="color:var(--ocre);font-weight:700;"><span class="lang-es">Agendar asesoría · USD 60</span><span class="lang-en">Book advisory · USD 60</span></a>
+  <a href="asesorias.html" onclick="toggleMenu()" style="color:var(--ocre);font-weight:700;"><span class="lang-es">Agendar asesoría</span><span class="lang-en">Book advisory</span></a>
 </div>
 
 <!-- ═══════ HERO ═══════ -->
@@ -192,19 +192,44 @@
 
 <!-- ═══════ INSCRIPCIÓN / CONTACTO ═══════ -->
 <section id="inscribirme" class="section bg-dark">
-  <div class="section-narrow" style="max-width:780px;text-align:center;">
-    <div class="section-label" style="color:var(--ocre);">— Info e inscripciones</div>
-    <h2 class="section-title">¿Listx para <em>sumarte?</em></h2>
-    <p style="font-size:1rem;line-height:1.8;color:var(--arena);margin:1.5rem 0 2.5rem;">
-      Cupos limitados. Escribinos por WhatsApp y te pasamos el programa completo con fechas, temáticas y valores.
-    </p>
+  <div class="section-narrow" style="max-width:780px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="section-label" style="color:var(--ocre);">— Inscripción</div>
+      <h2 class="section-title">Reservá tu <em>cupo.</em></h2>
+      <p style="font-size:1rem;line-height:1.8;color:var(--arena);margin:1.5rem auto 0;max-width:560px;">
+        Completá el formulario y te respondemos con instrucciones de pago en 24–48 hs. Cupos limitados.
+      </p>
+    </div>
 
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="https://wa.me/5493416940743?text=Hola%20Bianca%2C%20quiero%20inscribirme%20al%20ciclo%20de%20Alquimia%20Natural" class="btn-primary" target="_blank" rel="noopener">
-        <span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
-        WhatsApp Bianca · +54 9 341 694 0743
-      </a>
-      <a href="mailto:info.arteytierra@gmail.com?subject=Inscripci%C3%B3n%20Alquimia%20Natural%20y%20Limpieza%20Consciente" class="btn-outline">Escribir por mail</a>
+    <form name="inscripcion-alquimia" method="POST" action="https://formspree.io/f/mvzlarvb" class="form-grid vol-form-grid" style="background:var(--arena);padding:2.5rem;">
+      <input type="hidden" name="_subject" value="Nueva inscripción · Alquimia Natural y Limpieza Consciente">
+      <input type="hidden" name="_next" value="https://arteytierra.org/gracias.html">
+      <input type="hidden" name="form-name" value="inscripcion-alquimia">
+      <input type="hidden" name="curso" value="Alquimia Natural y Limpieza Consciente · ciclo 2026">
+      <p style="display:none;"><label>No llenar: <input name="_gotcha"></label></p>
+
+      <div class="form-row-2">
+        <input type="text" required name="nombre" class="form-input" placeholder="Nombre completo" style="background:rgba(26,18,16,0.05);color:var(--negro);border-color:rgba(26,18,16,0.2);">
+        <input type="email" required name="email" class="form-input" placeholder="Email" style="background:rgba(26,18,16,0.05);color:var(--negro);border-color:rgba(26,18,16,0.2);">
+      </div>
+      <div class="form-row-2">
+        <input type="tel" name="whatsapp" class="form-input" placeholder="WhatsApp" style="background:rgba(26,18,16,0.05);color:var(--negro);border-color:rgba(26,18,16,0.2);">
+        <input type="text" name="ciudad" class="form-input" placeholder="Ciudad y país" style="background:rgba(26,18,16,0.05);color:var(--negro);border-color:rgba(26,18,16,0.2);">
+      </div>
+      <textarea name="mensaje" class="form-textarea" placeholder="¿Algo más que quieras contarnos? Experiencia previa, dudas... (opcional)" style="background:rgba(26,18,16,0.05);color:var(--negro);border-color:rgba(26,18,16,0.2);"></textarea>
+
+      <button type="submit" class="btn-primary" style="align-self:flex-start;">Reservar cupo →</button>
+    </form>
+
+    <!-- Pagos directos -->
+    <div style="margin-top:3rem;text-align:center;">
+      <p style="font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:700;margin-bottom:1.2rem;">— O pagá directamente —</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://link.mercadopago.com.ar/arteytierra" target="_blank" rel="noopener" class="btn-primary" style="background:#00B1EA;color:#fff;">Pagar con Mercado Pago →</a>
+        <a href="https://wa.me/5493416940743?text=Hola%20Bianca%2C%20quiero%20inscribirme%20al%20ciclo%20de%20Alquimia%20Natural" class="btn-outline" target="_blank" rel="noopener">
+          <span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> WhatsApp Bianca</a>
+      </div>
+      <p style="font-size:0.78rem;color:rgba(232,213,163,0.7);margin-top:1rem;font-style:italic;max-width:520px;margin-left:auto;margin-right:auto;">En el pago de Mercado Pago aclará "Alquimia Natural" y envianos el comprobante por WhatsApp para confirmar el cupo.</p>
     </div>
   </div>
 </section>

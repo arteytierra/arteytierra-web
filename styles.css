@@ -52,12 +52,12 @@ body.en .lang-en.flex { display: flex; }
 }
 .nav-logo { text-decoration: none; display: flex; align-items: center; gap: 0.7rem; }
 .nav-logo-img { width: 50px; height: 50px; object-fit: contain; filter: brightness(0) invert(0.94); }
-.nav-logo-text { display: flex; flex-direction: column; }
-.nav-logo-name { font-size: 1.2rem; font-weight: 900; color: var(--blanco); letter-spacing: 0.08em; line-height: 1.1; }
-.nav-logo-sub  { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.3em; color: var(--ocre); text-transform: uppercase; }
+.nav-logo-text { display: flex; flex-direction: column; flex-shrink: 0; }
+.nav-logo-name { font-size: 1.05rem; font-weight: 900; color: var(--blanco); letter-spacing: 0.06em; line-height: 1.15; white-space: nowrap; }
+.nav-logo-sub  { font-size: 0.55rem; font-weight: 600; letter-spacing: 0.22em; color: var(--ocre); text-transform: uppercase; white-space: nowrap; margin-top: 3px; }
 .footer-logo-row { display: flex; align-items: center; gap: 0.7rem; }
 .footer-logo-img { width: 36px; height: 36px; object-fit: contain; filter: brightness(0) invert(0.94); }
-.desktop-nav { display: flex; align-items: center; gap: 2.5rem; }
+.desktop-nav { display: flex; align-items: center; gap: 1.5rem; flex-wrap: nowrap; }
 .nav-link {
   color: var(--blanco); font-size: 0.7rem; font-weight: 600;
   letter-spacing: 0.18em; text-transform: uppercase;
@@ -76,15 +76,19 @@ body.en .lang-en.flex { display: flex; }
 }
 .lang-btn:hover { border-color: var(--ocre); color: var(--ocre); }
 /* 3-button language switcher ES · EN · FR */
-.lang-switch { display: inline-flex; border: 1px solid rgba(245,240,232,0.3); overflow: hidden; }
+.lang-switch {
+  display: inline-flex; border: 1px solid rgba(245,240,232,0.35);
+  overflow: hidden; flex-shrink: 0; border-radius: 2px;
+}
 .lang-switch button {
-  background: none; border: none; color: var(--blanco); padding: 0.4rem 0.6rem;
-  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; cursor: pointer;
+  background: none; border: none; color: var(--blanco);
+  padding: 0.35rem 0.55rem; min-width: 30px;
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; cursor: pointer;
   font-family: Montserrat; transition: background 0.2s, color 0.2s;
-  border-right: 1px solid rgba(245,240,232,0.18);
+  border-right: 1px solid rgba(245,240,232,0.22);
 }
 .lang-switch button:last-child { border-right: none; }
-.lang-switch button:hover { color: var(--ocre); }
+.lang-switch button:hover { color: var(--ocre); background: rgba(193,127,58,0.08); }
 .lang-switch button.active { background: var(--ocre); color: var(--negro); }
 #hamburger {
   display: none; flex-direction: column; gap: 5px;
@@ -665,8 +669,8 @@ body.en .lang-en.flex { display: flex; }
   .page-hero { padding: 7.5rem 1rem 3rem; }
   .nav-inner { padding: 0 1rem; }
   .nav-logo-img { width: 38px; height: 38px; }
-  .nav-logo-name { font-size: 0.78rem; }
-  .nav-logo-sub { font-size: 0.55rem; }
+  .nav-logo-name { font-size: 0.85rem; letter-spacing: 0.05em; }
+  .nav-logo-sub { font-size: 0.5rem; letter-spacing: 0.18em; }
   .footer-inner { padding: 3rem 1rem 2rem; }
   .countries-flags { gap: 0.5rem; }
   .country-chip { font-size: 0.75rem; padding: 0.5rem 0.9rem; }
