@@ -11,12 +11,12 @@
       "subtitle_es": "Curso virtual de Construcción Natural",
       "subtitle_en": "Virtual Natural Construction Course",
       "meta": [
-        {"label_es": "Modalidad", "label_en": "Format", "value_es": "100% virtual · sin límite", "value_en": "100% virtual · no limit"},
+        {"label_es": "Modalidad", "label_en": "Format", "value_es": "100% virtual · acceso ilimitado", "value_en": "100% virtual · unlimited"},
         {"label_es": "Estructura", "label_en": "Structure", "value_es": "4 módulos · 18 clases", "value_en": "4 modules · 18 classes"},
-        {"label_es": "Instructor", "label_en": "Instructor", "value_es": "Jonatan Palma", "value_en": "Jonatan Palma"}
+        {"label_es": "Asesoría", "label_en": "Mentoring", "value_es": "Por videollamada", "value_en": "Via video-call"}
       ],
-      "description_es": "Formación que invita a recuperar y vivir la experiencia de bioconstrucción mediante materiales naturales sostenibles. Cuatro módulos que agrupan conocimientos según las distintas etapas constructivas.",
-      "description_en": "Training that invites you to recover and live the bioconstruction experience through sustainable natural materials. Four modules grouping knowledge by construction stage.",
+      "description_es": "Formación que invita a recuperar y vivir la experiencia de bioconstrucción mediante materiales naturales sostenibles. Cuatro módulos — Introducción, Muros, Terminaciones y Bioarquitectura — que recorren todas las etapas de una obra natural.",
+      "description_en": "Training that invites you to recover and live the bioconstruction experience through natural sustainable materials. Four modules — Introduction, Walls, Finishes and Bioarchitecture — covering every stage of a natural build.",
       "tagline_es": "",
       "tagline_en": "",
       "warning_es": "",
@@ -38,10 +38,10 @@
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Curso completo", "label_en": "Full course", "amount": "USD 80", "currency": "Cualquier país · incluye Argentina", "featured": true}
+        {"label_es": "Curso completo", "label_en": "Full course", "amount": "$120.000", "currency": "ARS · acceso ilimitado", "featured": true}
       ],
-      "prices_note_es": "Métodos de pago — PayPal: info.arteytierra@gmail.com · Argentina: Mercado Pago (consultar) · Colombia: Bancolombia, Cuenta de Ahorros 54193548566. Incluye asesoría telefónica del facilitador.",
-      "prices_note_en": "Payment methods — PayPal: info.arteytierra@gmail.com · Argentina: Mercado Pago (ask us) · Colombia: Bancolombia, Savings Account 54193548566. Includes phone consultation with the facilitator.",
+      "prices_note_es": "Incluye asesoría telefónica del facilitador. Pago por Mercado Pago o transferencia bancaria.",
+      "prices_note_en": "Includes phone consultation with the facilitator. Payment via Mercado Pago or bank transfer.",
       "show_inscripcion_btn": false,
       "whatsapp_msg_es": "Hola, quiero inscribirme a Mi Tierra Mi Casa online",
       "whatsapp_msg_en": "Hi, I want to enroll in Mi Tierra Mi Casa online",
@@ -84,10 +84,10 @@
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Curso completo", "label_en": "Full course", "amount": "USD 60", "currency": "Cualquier país · incluye Argentina", "featured": true}
+        {"label_es": "Curso completo", "label_en": "Full course", "amount": "$90.000", "currency": "ARS · 3 módulos", "featured": true}
       ],
-      "prices_note_es": "Métodos de pago — PayPal: info.arteytierra@gmail.com · Argentina: Mercado Pago (consultar) · Colombia: Bancolombia, Cuenta de Ahorros 54193548566. Materiales requeridos: soportes, cal, arena, jabón, herramientas, piedras, cera de abeja y aceite de lino — lista detallada al inscribirse.",
-      "prices_note_en": "Payment methods — PayPal: info.arteytierra@gmail.com · Argentina: Mercado Pago (ask us) · Colombia: Bancolombia, Savings Account 54193548566. Required materials: supports, lime, sand, soap, tools, stones, beeswax and linseed oil — detailed list on registration.",
+      "prices_note_es": "Materiales requeridos: soportes, cal, arena, jabón, herramientas, piedras, cera de abeja y aceite de lino — lista detallada al inscribirse. Pago por Mercado Pago o transferencia bancaria.",
+      "prices_note_en": "Required materials: supports, lime, sand, soap, tools, stones, beeswax and linseed oil — detailed list on registration. Payment via Mercado Pago or bank transfer.",
       "show_inscripcion_btn": false,
       "whatsapp_msg_es": "Hola, quiero inscribirme a Tadelakt online",
       "whatsapp_msg_en": "Hi, I want to enroll in Tadelakt online",
@@ -136,9 +136,9 @@
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$130.000", "currency": "ARS · USD 100", "featured": false},
-        {"label_es": "Camping", "label_en": "Camping", "amount": "$145.000", "currency": "ARS · USD 112", "featured": false},
-        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$160.000", "currency": "ARS · USD 123", "featured": true}
+        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$130.000", "currency": "ARS", "featured": false},
+        {"label_es": "Camping", "label_en": "Camping", "amount": "$145.000", "currency": "ARS", "featured": false},
+        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$160.000", "currency": "ARS", "featured": true}
       ],
       "prices_note_es": "",
       "prices_note_en": "",
@@ -154,14 +154,14 @@
       "id": "agua",
       "section_bg": "bg-blanco",
       "card_style": "tierra",
-      "label_es": "Curso intensivo · Octubre 2026",
-      "label_en": "Intensive course · October 2026",
+      "label_es": "Curso intensivo · Próximamente",
+      "label_en": "Intensive course · Coming soon",
       "title_html_es": "Diseño Ecosistémico<br>del <em>Agua.</em>",
       "title_html_en": "Ecosystemic <em>Water</em><br>Design.",
       "subtitle_es": "",
       "subtitle_en": "",
       "meta": [
-        {"label_es": "Fechas", "label_en": "Dates", "value_es": "10, 11 y 12 octubre 2026", "value_en": "October 10-12 2026"},
+        {"label_es": "Fecha", "label_en": "Date", "value_es": "Próximamente", "value_en": "Coming soon"},
         {"label_es": "Modalidad", "label_en": "Format", "value_es": "Presencial · Tay Pichín", "value_en": "In-person · Tay Pichín"},
         {"label_es": "Facilitan", "label_en": "Facilitators", "value_es": "Jonatan Palma · Clement Badaut", "value_en": "Jonatan Palma · Clement Badaut"}
       ],
@@ -183,28 +183,24 @@
         {"es": "Construcción de swales", "en": "Swale construction"},
         {"es": "Masterplan integrado", "en": "Integrated masterplan"}
       ],
-      "schedule_label_es": "Cronograma",
-      "schedule_label_en": "Schedule",
-      "schedule": [
-        {"day_es": "Sábado 10", "day_en": "Saturday 10", "detail_es": "Permacultura · visita guiada · hidrología básica · reservorios vivos", "detail_en": "Permaculture · guided visit · basic hydrology · living reservoirs"},
-        {"day_es": "Domingo 11", "day_en": "Sunday 11", "detail_es": "Diseño hidrológico · construcción de swales · masterplan", "detail_en": "Hydrological design · swale construction · masterplan"},
-        {"day_es": "Lunes 12", "day_en": "Monday 12", "detail_es": "Reservorios vivos · plantas fitosaneadoras · ejercicio integrador · cierre", "detail_en": "Living reservoirs · phytoremediation · integrative exercise · closing"}
-      ],
+      "schedule_label_es": "",
+      "schedule_label_en": "",
+      "schedule": [],
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS · USD 138", "featured": false},
-        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS · USD 154", "featured": false},
-        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS · USD 169", "featured": true}
+        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS", "featured": false},
+        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS", "featured": false},
+        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS", "featured": true}
       ],
       "prices_note_es": "",
       "prices_note_en": "",
-      "show_inscripcion_btn": true,
-      "whatsapp_msg_es": "Hola, quiero inscribirme al Curso de Diseño del Agua",
-      "whatsapp_msg_en": "Hi, I want to enroll in the Water Design course",
-      "whatsapp_label_es": "WhatsApp",
-      "whatsapp_label_en": "WhatsApp",
-      "whatsapp_btn_style": "outline",
+      "show_inscripcion_btn": false,
+      "whatsapp_msg_es": "Hola, quiero info del Curso de Diseño del Agua",
+      "whatsapp_msg_en": "Hi, I want info on the Water Design course",
+      "whatsapp_label_es": "Anotarme en lista de espera",
+      "whatsapp_label_en": "Join waiting list",
+      "whatsapp_btn_style": "primary",
       "active": true
     },
     {
@@ -248,9 +244,9 @@
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS · USD 138", "featured": false},
-        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS · USD 154", "featured": false},
-        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS · USD 169", "featured": true}
+        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS", "featured": false},
+        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS", "featured": false},
+        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS", "featured": true}
       ],
       "prices_note_es": "",
       "prices_note_en": "",
@@ -299,9 +295,9 @@
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS · USD 138", "featured": false},
-        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS · USD 154", "featured": false},
-        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS · USD 169", "featured": true}
+        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS", "featured": false},
+        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS", "featured": false},
+        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS", "featured": true}
       ],
       "prices_note_es": "",
       "prices_note_en": "",
@@ -350,9 +346,9 @@
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$160.000", "currency": "ARS · USD 123", "featured": false},
-        {"label_es": "Camping", "label_en": "Camping", "amount": "$170.000", "currency": "ARS · USD 131", "featured": false},
-        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$190.000", "currency": "ARS · USD 146", "featured": true}
+        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$160.000", "currency": "ARS", "featured": false},
+        {"label_es": "Camping", "label_en": "Camping", "amount": "$170.000", "currency": "ARS", "featured": false},
+        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$190.000", "currency": "ARS", "featured": true}
       ],
       "prices_note_es": "",
       "prices_note_en": "",
@@ -402,9 +398,9 @@
       "prices_label_es": "Inversión",
       "prices_label_en": "Tuition",
       "prices": [
-        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS · USD 138", "featured": false},
-        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS · USD 154", "featured": false},
-        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS · USD 169", "featured": true}
+        {"label_es": "Sin hospedaje", "label_en": "No lodging", "amount": "$180.000", "currency": "ARS", "featured": false},
+        {"label_es": "Camping", "label_en": "Camping", "amount": "$200.000", "currency": "ARS", "featured": false},
+        {"label_es": "Habitación compartida", "label_en": "Shared room", "amount": "$220.000", "currency": "ARS", "featured": true}
       ],
       "prices_note_es": "",
       "prices_note_en": "",
