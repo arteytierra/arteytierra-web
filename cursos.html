@@ -129,10 +129,8 @@
 <!-- ═══════ CURSOS DINÁMICOS ═══════ -->
 <!-- Las secciones de cursos se cargan desde _data/cursos.json vía cms-loader.js -->
 <!-- Editás todos desde arteytierra.org/admin → 📚 Cursos -->
-<div data-cms="cursos">
-<!-- FALLBACK ESTÁTICO (se reemplaza si JS está activo) -->
-
-<!-- ═══════ 0 · LA VUELTA A LA TIERRA (DESTACADO) ═══════ -->
+<!-- ═══════ 0 · LA VUELTA A LA TIERRA (DESTACADO · ESTÁTICO, fuera del CMS) ═══════ -->
+<!-- Esta sección NO se carga desde cursos.json — vive en el HTML para destacarla -->
 <section id="vuelta-tierra" class="section bg-blanco" style="padding-top:3rem;">
   <div class="section-narrow">
     <div class="course-block" style="background:var(--agua);color:var(--blanco);position:relative;">
@@ -181,6 +179,10 @@
     </div>
   </div>
 </section>
+
+<!-- ═══════ CURSOS DINÁMICOS (cargan desde _data/cursos.json) ═══════ -->
+<div data-cms="cursos">
+<!-- FALLBACK ESTÁTICO (se reemplaza si JS está activo) -->
 
 <!-- ═══════ 1 · BIOARQUITECTURA JULIO ═══════ -->
 <section id="bioarq-jul" class="section bg-dark" style="padding-top:3rem;">
@@ -455,7 +457,10 @@
   </div>
 </section>
 
-<!-- ═══════ 6.5 · INMERSIÓN VIVA ═══════ -->
+</div>
+<!-- FIN CURSOS DINÁMICOS -->
+
+<!-- ═══════ 6.5 · INMERSIÓN VIVA (ESTÁTICO, fuera del CMS) ═══════ -->
 <section id="inmersion-viva" class="section bg-blanco" style="padding-top:0;">
   <div class="section-narrow">
     <div class="course-block" style="background:var(--monte);">
@@ -583,9 +588,6 @@
     </div>
   </div>
 </section>
-
-</div>
-<!-- FIN CURSOS DINÁMICOS -->
 
 <!-- ═══════ INSCRIPCIÓN — FORMULARIO ═══════ -->
 <section id="inscripcion" class="section bg-blanco">

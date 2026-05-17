@@ -1,14 +1,16 @@
-# Netlify redirects
+# Cloudflare Pages redirects
+# NOTA: CF Pages ya sirve /pagina cuando existe /pagina.html.
+# Solo declaramos AQUÍ redirects 301 reales (cambios de URL canónica o alias).
+# Las reglas con 200 (rewrite) entran en loop con la auto-strip de .html de CF Pages.
+
 # Migrar voluntariado → inmersionviva (URL canónica nueva)
 /voluntariado            /inmersionviva.html      301!
 /voluntariado.html       /inmersionviva.html      301!
 /voluntariado/*          /inmersionviva.html      301!
 
-# URL bonita Mi Tierra Mi Casa
-/mitierramicasa          /mitierramicasa.html     200
+# Alias Mi Tierra Mi Casa
 /mi-tierra-mi-casa       /mitierramicasa.html     301!
 
-# URL bonita La Vuelta a la Tierra
-/vueltatierra            /vueltatierra.html       200
+# Alias La Vuelta a la Tierra
 /vuelta-a-la-tierra      /vueltatierra.html       301!
 /la-vuelta-a-la-tierra   /vueltatierra.html       301!
