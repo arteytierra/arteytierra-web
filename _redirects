@@ -14,3 +14,6 @@
 # Alias La Vuelta a la Tierra
 /vuelta-a-la-tierra      /vueltatierra.html       301!
 /la-vuelta-a-la-tierra   /vueltatierra.html       301!
+
+# Alias Tadelakt
+/tadelakt-online         /tadelakt.html           301!

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tadelakt Online — Curso Marroquí de Enlucido en Cal | Arte y Tierra</title>
+  <meta name="description" content="Curso online en vivo de Tadelakt — la técnica ancestral marroquí de enlucido en cal. 3 sesiones Zoom · acabado impermeable para baños y cocinas. Inscripción abierta.">
+  <link rel="icon" type="image/png" href="assets/logos/ayt-arbol-negro.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arte y Tierra">
+  <meta property="og:title" content="Tadelakt Online — Curso Marroquí de Enlucido en Cal">
+  <meta property="og:description" content="3 sesiones en vivo Zoom · técnica ancestral marroquí · acabado impermeable y bello para baños y cocinas.">
+  <meta property="og:image" content="https://arteytierra.org/img/cms/tadelakt/1.jpg">
+  <meta property="og:url" content="https://arteytierra.org/tadelakt.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="solid-nav">
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">ARTE Y TIERRA</div>
+        <div class="nav-logo-sub"><span class="lang-es">Diseño Ecosistémico</span><span class="lang-en">Ecosystemic Design</span></div>
+      </div>
+    </a>
+    <div class="desktop-nav">
+      <a href="servicios.html" class="nav-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+      <a href="cursos.html" class="nav-link active"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+      <a href="proyectos.html" class="nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+      <a href="taypichin.html" class="nav-link">Tay Pichín</a>
+      <a href="nosotros.html" class="nav-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+      <a href="contacto.html" class="nav-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      <a href="asesorias.html" class="btn-primary" style="font-size:0.65rem;padding:0.6rem 1.3rem;"><span class="lang-es">Asesoría</span><span class="lang-en">Advisory</span></a>
+      <div class="lang-switch"><button data-setlang="es" onclick="setLang('es')">ES</button><button data-setlang="en" onclick="setLang('en')">EN</button><button data-setlang="fr" onclick="setLang('fr')">FR</button></div>
+    </div>
+    <button id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="servicios.html" onclick="toggleMenu()"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+  <a href="cursos.html" onclick="toggleMenu()" style="color:var(--ocre);"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+  <a href="proyectos.html" onclick="toggleMenu()"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+  <a href="taypichin.html" onclick="toggleMenu()">Tay Pichín</a>
+  <a href="nosotros.html" onclick="toggleMenu()"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+  <a href="contacto.html" onclick="toggleMenu()"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+  <a href="asesorias.html" onclick="toggleMenu()" style="color:var(--ocre);font-weight:700;"><span class="lang-es">Agendar asesoría</span><span class="lang-en">Book advisory</span></a>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="page-hero" style="padding-bottom:5rem;">
+  <div class="page-hero-bg auto-carousel" data-interval="4500">
+    <img src="img/cms/tadelakt/0.jpg" alt="Tadelakt — acabado terminado" class="active">
+    <img src="img/cms/tadelakt/4.jpg" alt="Detalle de Tadelakt">
+    <img src="img/cms/tadelakt/5.jpg" alt="Tadelakt aplicado">
+  </div>
+  <div class="page-hero-content">
+    <div class="page-hero-tag"><span class="lang-es">Curso Online en Vivo · Técnica Ancestral Marroquí</span><span class="lang-en">Live Online Course · Moroccan Ancestral Technique</span></div>
+    <h1>
+      Tadelakt<br><em>Online.</em>
+    </h1>
+    <p style="font-size:clamp(1rem,2vw,1.2rem);max-width:720px;line-height:1.6;">
+      <span class="lang-es">Aprendé el arte marroquí del enlucido en cal — el acabado <em>impermeable, brillante y vivo</em> que transforma baños, cocinas y cualquier superficie en una pieza única.</span>
+      <span class="lang-en">Learn the Moroccan art of lime plastering — the <em>waterproof, lustrous and living</em> finish that turns bathrooms, kitchens and any surface into a unique piece.</span>
+    </p>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#inscribirme" class="btn-primary"><span class="lang-es">Inscribirme — $90.000 ARS</span><span class="lang-en">Enroll — $90.000 ARS</span></a>
+      <a href="#contenido" class="btn-outline"><span class="lang-es">Ver contenido →</span><span class="lang-en">See content →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BIENVENIDA ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:820px;text-align:center;">
+    <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Bienvenida</span><span class="lang-en">Welcome</span></div>
+    <h2 class="section-title"><span class="lang-es">El <em>agua</em><br>se vuelve piedra.</span><span class="lang-en"><em>Water</em><br>turns to stone.</span></h2>
+    <p style="font-size:1.05rem;line-height:1.9;color:var(--tierra);margin-bottom:1.5rem;">
+      <span class="lang-es">El <strong>Tadelakt</strong> es una técnica ancestral marroquí de enlucido que utiliza cal como material base y se trabaja por capas hasta lograr un acabado impermeable, brillante y bello — apto para zonas húmedas como baños, duchas y cocinas.</span>
+      <span class="lang-en"><strong>Tadelakt</strong> is an ancestral Moroccan plastering technique that uses lime as its base material and is worked in layers to achieve a waterproof, lustrous and beautiful finish — suitable for wet areas like bathrooms, showers and kitchens.</span>
+    </p>
+    <p style="font-size:1rem;line-height:1.9;color:var(--tierra);">
+      <span class="lang-es">A diferencia de las cerámicas y revestimientos sintéticos, el Tadelakt <em>respira</em>, regula la humedad y envejece con dignidad. Cada terminación es única — un objeto vivo más que un revestimiento.</span>
+      <span class="lang-en">Unlike ceramic tiles and synthetic coverings, Tadelakt <em>breathes</em>, regulates humidity and ages with dignity. Every finish is unique — a living object rather than a coating.</span>
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2.5rem;">
+      <div style="padding:1.5rem;background:var(--arena);border-left:3px solid var(--ocre);text-align:left;">
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.4rem;"><span class="lang-es">Formato</span><span class="lang-en">Format</span></div>
+        <div style="font-size:1rem;font-weight:700;color:var(--tierra);"><span class="lang-es">3 sesiones Zoom en vivo</span><span class="lang-en">3 live Zoom sessions</span></div>
+      </div>
+      <div style="padding:1.5rem;background:var(--arena);border-left:3px solid var(--ocre);text-align:left;">
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.4rem;"><span class="lang-es">Duración</span><span class="lang-en">Duration</span></div>
+        <div style="font-size:1rem;font-weight:700;color:var(--tierra);"><span class="lang-es">3 a 4 hs por sesión</span><span class="lang-en">3 to 4 h per session</span></div>
+      </div>
+      <div style="padding:1.5rem;background:var(--arena);border-left:3px solid var(--ocre);text-align:left;">
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:0.4rem;"><span class="lang-es">Quedan grabadas</span><span class="lang-en">Recorded</span></div>
+        <div style="font-size:1rem;font-weight:700;color:var(--tierra);"><span class="lang-es">Para revisar cuando quieras</span><span class="lang-en">Watch back anytime</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CONTENIDO · 3 MÓDULOS ═══════ -->
+<section id="contenido" class="section bg-dark">
+  <div class="section-narrow">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Contenido del curso</span><span class="lang-en">Course content</span></div>
+      <h2 class="section-title"><span class="lang-es">3 módulos · <em>3 sesiones.</em></span><span class="lang-en">3 modules · <em>3 sessions.</em></span></h2>
+      <p class="section-sub" style="margin:0 auto;color:var(--arena);"><span class="lang-es">Un recorrido completo, del primer apoyo del soporte al brillo final con piedra.</span><span class="lang-en">A complete journey, from the first support preparation to the final stone-burnished shine.</span></p>
+    </div>
+
+    <div class="mtmc-modules">
+      <div class="mtmc-module">
+        <div class="mtmc-module-num">01</div>
+        <h3><span class="lang-es">Introducción al Tadelakt</span><span class="lang-en">Introduction to Tadelakt</span></h3>
+        <p class="mtmc-module-intro"><span class="lang-es">Historia, química de la cal y preparación de superficies — las bases para que el resto funcione.</span><span class="lang-en">History, lime chemistry and surface prep — the foundations that make the rest work.</span></p>
+        <ul>
+          <li><span class="lang-es">Origen y tradición marroquí</span><span class="lang-en">Moroccan origin and tradition</span></li>
+          <li><span class="lang-es">Tipos de cal y su comportamiento</span><span class="lang-en">Types of lime and behavior</span></li>
+          <li><span class="lang-es">Lectura del soporte</span><span class="lang-en">Reading the support</span></li>
+          <li><span class="lang-es">Preparación e imprimación</span><span class="lang-en">Prep and primer</span></li>
+        </ul>
+      </div>
+
+      <div class="mtmc-module">
+        <div class="mtmc-module-num">02</div>
+        <h3><span class="lang-es">Mortero base y aplicación</span><span class="lang-en">Base mortar & application</span></h3>
+        <p class="mtmc-module-intro"><span class="lang-es">Acá aprendés a mezclar el mortero, aplicar las primeras capas y manejar tiempos de fragüe.</span><span class="lang-en">Here you learn to mix the mortar, lay the first coats and manage cure times.</span></p>
+        <ul>
+          <li><span class="lang-es">Receta del mortero — dosajes</span><span class="lang-en">Mortar recipe — proportions</span></li>
+          <li><span class="lang-es">Pigmentación natural</span><span class="lang-en">Natural pigmentation</span></li>
+          <li><span class="lang-es">Aplicación capa por capa</span><span class="lang-en">Layer-by-layer application</span></li>
+          <li><span class="lang-es">Tiempos y secado</span><span class="lang-en">Timing and drying</span></li>
+        </ul>
+      </div>
+
+      <div class="mtmc-module">
+        <div class="mtmc-module-num">03</div>
+        <h3><span class="lang-es">Pulido, jabón y mantenimiento</span><span class="lang-en">Polishing, soap & maintenance</span></h3>
+        <p class="mtmc-module-intro"><span class="lang-es">El secreto del Tadelakt está en el bruñido con piedra y el sellado con jabón — acá se vuelve impermeable.</span><span class="lang-en">The Tadelakt secret is in stone-burnishing and soap sealing — this is where it becomes waterproof.</span></p>
+        <ul>
+          <li><span class="lang-es">Bruñido con piedra</span><span class="lang-en">Stone burnishing</span></li>
+          <li><span class="lang-es">Aplicación de jabón natural</span><span class="lang-en">Natural soap application</span></li>
+          <li><span class="lang-es">Encerado con cera de abeja</span><span class="lang-en">Beeswax finish</span></li>
+          <li><span class="lang-es">Mantenimiento a largo plazo</span><span class="lang-en">Long-term maintenance</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ GALERÍA — LA TÉCNICA EN IMÁGENES ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:1100px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">El oficio en imágenes</span><span class="lang-en">The craft in pictures</span></div>
+      <h2 class="section-title"><span class="lang-es">La técnica, <em>paso a paso.</em></span><span class="lang-en">The technique, <em>step by step.</em></span></h2>
+      <p class="section-sub" style="margin:0 auto;"><span class="lang-es">Aplicación, bruñido y acabado del Tadelakt en obras reales.</span><span class="lang-en">Application, burnishing and finishing of Tadelakt in real projects.</span></p>
+    </div>
+
+    <div style="position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:var(--negro);">
+      <div class="auto-carousel" data-interval="4500" style="position:absolute;inset:0;">
+        <img src="img/cms/tadelakt/1.jpg" alt="Tadelakt — proceso" class="active" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;">
+        <img src="img/cms/tadelakt/2.jpg" alt="Tadelakt — aplicación" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;">
+        <img src="img/cms/tadelakt/3.jpg" alt="Tadelakt — bruñido" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;">
+        <img src="img/cms/tadelakt/6.jpg" alt="Tadelakt — acabado final" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ LO QUE RECIBÍS ═══════ -->
+<section class="section bg-blanco" style="padding-top:0;">
+  <div class="section-narrow" style="max-width:880px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Lo que recibís</span><span class="lang-en">What you get</span></div>
+      <h2 class="section-title"><span class="lang-es">Una formación <em>aplicada.</em></span><span class="lang-en">An <em>applied</em> training.</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">🎥</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">3 sesiones en vivo</span><span class="lang-en">3 live sessions</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Por Zoom, con espacio para tus preguntas en tiempo real.</span><span class="lang-en">On Zoom, with space for your questions in real time.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">⏯</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Grabaciones</span><span class="lang-en">Recordings</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Cada sesión queda grabada para que la veas y repases cuando quieras.</span><span class="lang-en">Each session is recorded so you can review whenever you want.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">📋</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Lista de materiales</span><span class="lang-en">Materials list</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Te enviamos la lista detallada al inscribirte para que prepares todo.</span><span class="lang-en">We send the detailed list on enrollment so you can prepare everything.</span></p>
+      </div>
+      <div style="background:var(--arena);padding:1.8rem;border-top:3px solid var(--ocre);">
+        <div style="font-size:1.6rem;margin-bottom:0.6rem;">💬</div>
+        <h4 style="font-size:0.95rem;font-weight:800;color:var(--tierra);margin:0 0 0.5rem;"><span class="lang-es">Acompañamiento</span><span class="lang-en">Mentoring</span></h4>
+        <p style="font-size:0.85rem;color:var(--tierra);line-height:1.6;margin:0;"><span class="lang-es">Espacio de consultas durante y después del curso por WhatsApp.</span><span class="lang-en">Space for questions during and after the course via WhatsApp.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ MATERIALES NECESARIOS ═══════ -->
+<section class="section bg-tierra">
+  <div class="section-narrow" style="max-width:780px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Materiales necesarios</span><span class="lang-en">Required materials</span></div>
+      <h2 class="section-title"><span class="lang-es">Lo que vas a <em>necesitar.</em></span><span class="lang-en">What you'll <em>need.</em></span></h2>
+      <p class="section-sub" style="margin:0 auto;color:var(--arena);"><span class="lang-es">Una vez inscripto recibís la lista detallada con cantidades y dónde conseguirlo.</span><span class="lang-en">Once enrolled you receive the detailed list with quantities and where to source.</span></p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.6rem;">
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Soporte de práctica (placa o muro)</span><span class="lang-en">Practice support (board or wall)</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Cal en pasta o cal aérea hidratada</span><span class="lang-en">Lime paste or hydrated air lime</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Arena fina cernida</span><span class="lang-en">Fine sifted sand</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Jabón natural (Marsella o equivalente)</span><span class="lang-en">Natural soap (Marseille or similar)</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Cera de abeja y aceite de lino</span><span class="lang-en">Beeswax and linseed oil</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Piedra para bruñir (ágata o similar)</span><span class="lang-en">Burnishing stone (agate or similar)</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Llanas, espátulas y baldes</span><span class="lang-en">Trowels, spatulas and buckets</span></div>
+      <div style="padding:1rem 1.3rem;background:rgba(245,240,232,0.08);font-size:0.9rem;color:var(--arena);"><span class="lang-es">Pigmentos naturales (opcional)</span><span class="lang-en">Natural pigments (optional)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FACILITADOR ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:center;">
+    <div>
+      <img src="https://drive.google.com/thumbnail?id=1W2VBE1_x-vRLkg5s-OcbKq2FbSB4_Rue&sz=w800" alt="Jonatan Palma" style="width:100%;aspect-ratio:1/1;object-fit:cover;">
+    </div>
+    <div>
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Tu facilitador</span><span class="lang-en">Your facilitator</span></div>
+      <h2 class="section-title" style="font-size:clamp(1.5rem,4vw,2.5rem);">Jonatan Gabriel <em>Palma.</em></h2>
+      <p style="font-size:0.95rem;line-height:1.8;color:var(--tierra);margin-bottom:1rem;">
+        <span class="lang-es">Bioconstructor desde 2010, especializado en técnicas de construcción en tierra ancestrales y modernas, bioclimática, bioarquitectura y radiestesia. Su formación incluye el aporte de docentes referentes como <strong>Jorge Belanko, Gernot Minke, Marco Arestra y Daniel Smite</strong>, entre otrxs maestrxs.</span>
+        <span class="lang-en">Bioconstructor since 2010, specialized in ancestral and modern earth-building techniques, bioclimatics, bioarchitecture and dowsing. His training includes the contribution of leading teachers such as <strong>Jorge Belanko, Gernot Minke, Marco Arestra and Daniel Smite</strong>, among other masters.</span>
+      </p>
+      <p style="font-size:0.95rem;line-height:1.8;color:var(--tierra);">
+        <span class="lang-es">Ha aplicado Tadelakt en obras propias y de terceros — entre ellas Casa Alihuen, donde los interiores se trabajaron con estucos de cal tipo Tadelakt para combinar estética, respirabilidad y resistencia.</span>
+        <span class="lang-en">Has applied Tadelakt in his own and third-party projects — including Casa Alihuen, where the interiors were finished with Tadelakt-type lime stucco to combine aesthetics, breathability and durability.</span>
+      </p>
+      <a href="nosotros.html" class="btn-outline dark" style="margin-top:1.5rem;"><span class="lang-es">Conocer más →</span><span class="lang-en">Learn more →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ INVERSIÓN + INSCRIPCIÓN ═══════ -->
+<section id="inscribirme" class="section bg-dark">
+  <div class="section-narrow" style="max-width:980px;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Inversión</span><span class="lang-en">Tuition</span></div>
+      <h2 class="section-title"><span class="lang-es">Una sola <em>inversión.</em></span><span class="lang-en">One single <em>investment.</em></span></h2>
+      <div style="display:inline-block;background:var(--ocre);color:var(--negro);padding:2.5rem 3.5rem;margin-top:2rem;">
+        <div style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;font-weight:800;"><span class="lang-es">Curso completo</span><span class="lang-en">Full course</span></div>
+        <div style="font-size:3.5rem;font-weight:900;line-height:1;margin:0.5rem 0;">$90.000</div>
+        <div style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;">ARS · 3 <span class="lang-es">módulos</span><span class="lang-en">modules</span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-bottom:2rem;">
+      <h3 style="font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:800;margin-bottom:1.5rem;"><span class="lang-es">Cómo pagar</span><span class="lang-en">How to pay</span></h3>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
+      <a href="https://link.mercadopago.com.ar/arteytierra" target="_blank" rel="noopener" class="mtmc-pay-card" style="background:#00B1EA;color:#fff;text-decoration:none;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;opacity:0.85;font-weight:700;margin-bottom:0.5rem;">Mercado Pago</div>
+        <div style="font-size:1.4rem;font-weight:900;margin-bottom:0.6rem;letter-spacing:-0.02em;">Mercado Pago</div>
+        <div style="font-size:0.85rem;opacity:0.95;line-height:1.5;"><span class="lang-es">Tarjeta, débito o saldo MP. Aclará "Tadelakt" en el concepto.</span><span class="lang-en">Card, debit or MP balance. State "Tadelakt" in the note.</span></div>
+        <div style="margin-top:1rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;border-top:1px solid rgba(255,255,255,0.3);padding-top:1rem;"><span class="lang-es">Pagar ahora →</span><span class="lang-en">Pay now →</span></div>
+      </a>
+
+      <div class="mtmc-pay-card" style="background:rgba(245,240,232,0.06);border:1px solid rgba(193,127,58,0.4);color:var(--arena);">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:700;margin-bottom:0.5rem;"><span class="lang-es">Transferencia</span><span class="lang-en">Bank transfer</span></div>
+        <div style="font-size:1.1rem;font-weight:800;margin-bottom:0.6rem;color:var(--blanco);">Banco Ciudad</div>
+        <div style="font-size:0.85rem;line-height:1.6;margin-bottom:0.5rem;">Palma Jonatan Gabriel<br>Cuenta: <span style="font-family:monospace;">531-352269/7</span><br>CBU: <span style="font-family:monospace;font-size:0.78rem;">0290061210000500672939</span></div>
+      </div>
+
+      <div class="mtmc-pay-card" style="background:rgba(245,240,232,0.06);border:1px solid rgba(193,127,58,0.4);color:var(--arena);">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocre);font-weight:700;margin-bottom:0.5rem;">CVU / Alias</div>
+        <div style="font-size:1.1rem;font-weight:800;margin-bottom:0.6rem;color:var(--blanco);">Mercado Pago</div>
+        <div style="font-size:0.85rem;line-height:1.6;">Alias: <span style="font-family:monospace;color:var(--ocre);">arte.y.tierra</span><br>CVU: <span style="font-family:monospace;color:var(--ocre);font-size:0.78rem;">0000003100085460774977</span></div>
+      </div>
+    </div>
+
+    <div style="background:rgba(193,127,58,0.1);border-left:3px solid var(--ocre);padding:1.8rem 2rem;">
+      <h4 style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocre);margin:0 0 1rem;font-weight:800;"><span class="lang-es">📥 Cómo confirmás tu cupo</span><span class="lang-en">📥 How to confirm your spot</span></h4>
+      <ol style="font-size:0.92rem;line-height:1.9;color:var(--arena);margin:0;padding-left:1.3rem;">
+        <li><span class="lang-es">Hacé el pago por el medio que elijas.</span><span class="lang-en">Pay through the method you prefer.</span></li>
+        <li><span class="lang-es">Enviá el comprobante por <strong style="color:var(--ocre);">WhatsApp +54 9 3549 431594</strong> indicando tu nombre completo y tu mail.</span><span class="lang-en">Send the receipt via <strong style="color:var(--ocre);">WhatsApp +54 9 3549 431594</strong> with your full name and your email.</span></li>
+        <li><span class="lang-es">Te confirmamos las fechas de la próxima cohorte y te enviamos la lista de materiales.</span><span class="lang-en">We confirm the next cohort dates and send you the materials list.</span></li>
+        <li><span class="lang-es">¡Te conectás al Zoom el día de la primera sesión!</span><span class="lang-en">Join the Zoom on the first session day!</span></li>
+      </ol>
+    </div>
+
+    <!-- WhatsApp CTA -->
+    <div style="margin-top:2.5rem;text-align:center;">
+      <p style="font-size:0.85rem;color:var(--arena);margin-bottom:1rem;"><span class="lang-es">¿Preferís consultar antes?</span><span class="lang-en">Have questions first?</span></p>
+      <a href="https://wa.me/5493549431594?text=Hola%2C%20quiero%20info%20del%20curso%20Tadelakt%20Online" class="btn-primary" target="_blank">
+        <span class="icon-svg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span> <span class="lang-es">Consultar por WhatsApp</span><span class="lang-en">Ask on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FAQ ═══════ -->
+<section class="section bg-blanco">
+  <div class="section-narrow" style="max-width:820px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="section-label" style="color:var(--monte);">— <span class="lang-es">Preguntas frecuentes</span><span class="lang-en">FAQ</span></div>
+      <h2 class="section-title"><span class="lang-es">¿Te queda alguna <em>duda?</em></span><span class="lang-en">Any <em>questions?</em></span></h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+      <details style="background:var(--arena);padding:1.2rem 1.5rem;border-left:3px solid var(--ocre);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--tierra);font-size:0.95rem;"><span class="lang-es">¿Necesito experiencia previa?</span><span class="lang-en">Do I need previous experience?</span></summary>
+        <p style="color:var(--tierra);font-size:0.9rem;line-height:1.7;margin:1rem 0 0;"><span class="lang-es">No. Empezamos desde los fundamentos. Si ya trabajaste con cal o revoques vas a avanzar más rápido, pero no es requisito.</span><span class="lang-en">No. We start from the fundamentals. If you've worked with lime or plasters before you'll go faster, but it's not required.</span></p>
+      </details>
+
+      <details style="background:var(--arena);padding:1.2rem 1.5rem;border-left:3px solid var(--ocre);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--tierra);font-size:0.95rem;"><span class="lang-es">¿Sirve para hacer mi propio baño en Tadelakt?</span><span class="lang-en">Can I use this to do my own Tadelakt bathroom?</span></summary>
+        <p style="color:var(--tierra);font-size:0.9rem;line-height:1.7;margin:1rem 0 0;"><span class="lang-es">Sí — es justamente el objetivo del curso. Vas a aprender la técnica completa para aplicarla a tu propio proyecto (baño, ducha, cocina, mesada).</span><span class="lang-en">Yes — that's exactly the goal. You'll learn the full technique to apply to your own project (bathroom, shower, kitchen, countertop).</span></p>
+      </details>
+
+      <details style="background:var(--arena);padding:1.2rem 1.5rem;border-left:3px solid var(--ocre);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--tierra);font-size:0.95rem;"><span class="lang-es">¿Y si no puedo conectarme en vivo a alguna sesión?</span><span class="lang-en">What if I can't join one of the live sessions?</span></summary>
+        <p style="color:var(--tierra);font-size:0.9rem;line-height:1.7;margin:1rem 0 0;"><span class="lang-es">Todas las sesiones quedan grabadas y te las enviamos. Después podés consultarnos las dudas por WhatsApp.</span><span class="lang-en">All sessions are recorded and shared. You can later send questions via WhatsApp.</span></p>
+      </details>
+
+      <details style="background:var(--arena);padding:1.2rem 1.5rem;border-left:3px solid var(--ocre);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--tierra);font-size:0.95rem;"><span class="lang-es">¿Cuándo es la próxima cohorte?</span><span class="lang-en">When is the next cohort?</span></summary>
+        <p style="color:var(--tierra);font-size:0.9rem;line-height:1.7;margin:1rem 0 0;"><span class="lang-es">Abrimos cohortes periódicamente según demanda. Inscribite o escribinos por WhatsApp y te avisamos las próximas fechas.</span><span class="lang-en">We open cohorts periodically based on demand. Enroll or message us on WhatsApp and we'll share the next dates.</span></p>
+      </details>
+
+      <details style="background:var(--arena);padding:1.2rem 1.5rem;border-left:3px solid var(--ocre);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--tierra);font-size:0.95rem;"><span class="lang-es">¿Dónde consigo los materiales en mi ciudad?</span><span class="lang-en">Where do I source the materials in my city?</span></summary>
+        <p style="color:var(--tierra);font-size:0.9rem;line-height:1.7;margin:1rem 0 0;"><span class="lang-es">Te orientamos a la inscripción según tu ubicación. La cal y la arena se consiguen en cualquier corralón; la piedra de bruñir y el jabón natural en comercios específicos que te indicamos.</span><span class="lang-en">We orient you on enrollment based on your location. Lime and sand are at any building supplier; the burnishing stone and natural soap at specific shops we'll point you to.</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA FINAL ═══════ -->
+<section class="section bg-tierra">
+  <div class="section-narrow" style="max-width:780px;text-align:center;">
+    <div class="section-label" style="color:var(--ocre);">— <span class="lang-es">Reservá tu cupo</span><span class="lang-en">Book your spot</span></div>
+    <h2 class="section-title" style="color:var(--blanco);"><span class="lang-es">El oficio de la <em>cal viva.</em></span><span class="lang-en">The craft of <em>living lime.</em></span></h2>
+    <p style="font-size:1rem;line-height:1.8;color:var(--arena);margin:1.5rem 0 2.5rem;">
+      <span class="lang-es">Una técnica milenaria al alcance de tus manos — para que cada pared, cada baño, cada superficie cuente su propia historia.</span>
+      <span class="lang-en">A millennial technique within your hands' reach — so that every wall, every bathroom, every surface tells its own story.</span>
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#inscribirme" class="btn-primary"><span class="lang-es">Inscribirme — $90.000</span><span class="lang-en">Enroll — $90.000</span></a>
+      <a href="https://wa.me/5493549431594?text=Hola%2C%20quiero%20info%20del%20curso%20Tadelakt%20Online" class="btn-outline" target="_blank" rel="noopener"><span class="lang-es">Consultar por WhatsApp</span><span class="lang-en">Ask on WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img class="footer-logo-img" src="https://drive.google.com/thumbnail?id=1CFbHxhSX7vd-cVVNTpxF-HzlbOq93NmN&sz=w200" alt="Arte y Tierra">
+          <div>
+            <div class="footer-logo">ARTE Y TIERRA</div>
+            <div class="footer-tagline"><span class="lang-es">Diseño Ecosistémico del Territorio</span><span class="lang-en">Ecosystemic Territory Design</span></div>
+          </div>
+        </div>
+        <p class="footer-addr">Tay Pichín · San Marcos Sierras<br>Córdoba, Argentina</p>
+      </div>
+      <div>
+        <div class="footer-col-title"><span class="lang-es">Secciones</span><span class="lang-en">Sections</span></div>
+        <a href="servicios.html" class="footer-link"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+        <a href="proyectos.html" class="footer-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+        <a href="cursos.html" class="footer-link"><span class="lang-es">Cursos</span><span class="lang-en">Courses</span></a>
+        <a href="taypichin.html" class="footer-link">Tay Pichín</a>
+        <a href="nosotros.html" class="footer-link"><span class="lang-es">Nosotros</span><span class="lang-en">About</span></a>
+        <a href="contacto.html" class="footer-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+      </div>
+      <div>
+        <div class="footer-col-title">Social</div>
+        <a href="https://instagram.com/arteytierrabioconstruccion" class="footer-link">Instagram</a>
+        <a href="https://youtube.com/@arteytierra24" class="footer-link">YouTube</a>
+        <a href="https://wa.me/5493549431594" class="footer-link">WhatsApp</a>
+        <a href="mailto:info.arteytierra@gmail.com" class="footer-link">Email</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Arte y Tierra. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span></p>
+      <p class="footer-copy">arteytierra.org</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5493549431594" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script src="script.js"></script>
+<script src="cms-loader.js"></script>
+</body>
+</html>
